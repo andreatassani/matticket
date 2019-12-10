@@ -1,11 +1,89 @@
 body {
+    background-color: rgb(234,233, 229);
+    margin: 0;
+}
+
+header, div h2, div img, div ul, footer {
     background-color: rgb(51,51, 51);
 }
 
 nav ul li{
     display: inline-block;
-    width: 45%;
-    margin: 10px 0 0;
+    width: 24%;
+    list-style: none;
+}
+
+#logoalto {
+    padding-left: 50%;
+}
+
+div ul li img {
+    height: 75%;
+    width: 75%;
+}
+
+
+#freccia {
+    width: 5%;
+    padding-bottom: 7%;
+}
+
+ul li{
+    display: inline-block;
+    width: 22.5%;
+    list-style: none;
     text-align: center;
+}
+
+#oggetti li {
+    padding-top: 2%;
+    margin: 0;
+    border: 0;
+}
+
+#oggetti {
+    margin: 0;
+    border-top: 2px solid rgb(246, 164, 84);
+    border-bottom: 2px solid rgb(246, 164, 84);
+}
+
+#intestazione {
+    width: 28%;
+    text-align: center;
+    margin: 0 36%;
+    border-top: 2px solid rgb(246, 164, 84);
+    border-right: 2px solid rgb(246, 164, 84);
+    border-left: 2px solid rgb(246, 164, 84);
+    border-top-left-radius: 30px;
+    border-top-right-radius:30px;
+}
+
+
+#maschera {
+    width: 40%;
+    height: 40%;
+    padding-left: 10%;
+    padding-top:0%; 
+}
+
+ul {
+
+    padding: 0%;
+}
+
+header {
+    height: 3%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+}
+
+header ul {
+    margin: 0;
+}
+
+footer {
+    height: 3%;
+    width: 100%;
 }
 

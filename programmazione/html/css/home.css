@@ -45,6 +45,7 @@ ul li{
     margin: 0;
     border-top: 2px solid rgb(246, 164, 84);
     border-bottom: 2px solid rgb(246, 164, 84);
+    margin-bottom:2%;
 }
 
 #intestazione {
@@ -76,10 +77,12 @@ header {
     width: 100%;
     margin: 0;
     border: 0;
+    margin-bottom:2%;
 }
 
 header ul {
     margin: 0;
+   
 }
 
 footer {
@@ -87,3 +90,28 @@ footer {
     width: 100%;
 }
 
+footer ul li{
+    display: inline-block;
+    width: 40%;
+    list-style: none;
+    text-align: center;
+}
+
+#info  {
+    width: 1%;
+    margin-left: 0;
+    margin-right: 30%;
+}
+
+footer ul li p {
+    margin-right: 2%;
+    width:100%;
+}
+
+footer ul li {
+    width: 18%;
+}
+
+#logoinfo {
+    margin-right: 300%;
+}

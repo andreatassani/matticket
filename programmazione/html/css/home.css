@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(51,51, 51);
+}
+
+nav ul li{
+    display: inline-block;
+    width: 45%;
+    margin: 10px 0 0;
+    text-align: center;
+}
+

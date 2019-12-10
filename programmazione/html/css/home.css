@@ -7,14 +7,65 @@ header, div h2, div img, div ul, footer {
     background-color: rgb(51,51, 51);
 }
 
-nav ul li{
+header {
+    margin-bottom:2%;
+}
+
+header ul li{
     display: inline-block;
-    width: 24%;
+    width: 19%;
     list-style: none;
 }
 
-#logoalto {
+header ul {
+    padding : 2.5% 0%;
+    margin: 0;
+}
+
+#menuAPanino {
+    height: 20%;
+    width: 20%;
+}
+
+#Cerca, #Evento, #Lente{
+    background-color : white;
+}
+
+#Evento {
+    border: 2px solid rgb(246, 164, 84);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius:30px;
+}
+
+#Cerca {
+    border-top: 2px solid rgb(246, 164, 84);
+    border-bottom: 2px solid rgb(246, 164, 84);
+}
+
+#Lente{
+    border-top: 2px solid rgb(246, 164, 84);
+    border-bottom: 2px solid rgb(246, 164, 84);
+    border-right: 2px solid rgb(246, 164, 84);
+    padding: 0.6% 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius:30px;
+}
+
+#Lente img {
     padding-left: 50%;
+}
+
+#Cerca h1, #Evento h1 {
+    color : rgb(112,112,112);
+    margin: 1px;
+}
+
+#Evento h1 {
+    color:  rgb(246, 164, 84);
+}
+
+#logoalto {
+    padding-left: 60%;
 }
 
 div ul li img {
@@ -23,22 +74,29 @@ div ul li img {
 }
 
 
-#freccia {
-    width: 5%;
+main #freccia {
+    width: 2%;
     padding-bottom: 7%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 ul li{
     display: inline-block;
-    width: 22.5%;
+    width: 22%;
     list-style: none;
     text-align: center;
 }
 
 #oggetti li {
+    color : white;
     padding-top: 2%;
     margin: 0;
     border: 0;
+}
+
+#oggetti li img {
+    border: 2px solid white;
 }
 
 #oggetti {
@@ -49,6 +107,7 @@ ul li{
 }
 
 #intestazione {
+    color: white;
     width: 28%;
     text-align: center;
     margin: 0 36%;
@@ -60,7 +119,7 @@ ul li{
 }
 
 
-#maschera {
+#logoSubCat {
     width: 40%;
     height: 40%;
     padding-left: 10%;
@@ -68,21 +127,7 @@ ul li{
 }
 
 ul {
-
     padding: 0%;
-}
-
-header {
-    height: 3%;
-    width: 100%;
-    margin: 0;
-    border: 0;
-    margin-bottom:2%;
-}
-
-header ul {
-    margin: 0;
-   
 }
 
 footer {
@@ -109,9 +154,6 @@ footer ul li p {
 }
 
 footer ul li {
-    width: 18%;
+    width: 33%;
 }
 
-#logoinfo {
-    margin-right: 300%;
-}

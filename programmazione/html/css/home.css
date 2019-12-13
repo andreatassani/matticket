@@ -8,23 +8,15 @@ header, div h2, div img, div ul, footer {
     background-color: rgb(51,51, 51);
 }
 
-fieldset {
-    border-style: hidden;
-    width:80%;
-    padding-top: 0;
-}
-
-
 header {
     margin-bottom:2%;
-    height: 1%;
+    height: 5%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 85%;
 }
 
 header ul {
     display: inline-block;
-    width: 19%;
     list-style: none;
 }
 
@@ -32,7 +24,6 @@ header ul {
 #menuAPanino {
     height: 50%;
     width: 50%;
-   
 }
 
 #logoalto {
@@ -52,41 +43,53 @@ header ul {
 
 select {
     border: 2px solid rgb(246, 164, 84);
+    float:right;
     border-top-left-radius: 30px;
     border-bottom-left-radius:30px;
-    width: 300%;
-    height: 500%;
 }
 
-header ul li select option {
-    width: 30%;
+fieldset {
+    border-style: hidden;
+    margin:0;
+    padding:0;
 }
 
 input {
     border: 2px solid rgb(246, 164, 84);
-    border-top-right-radius: 30px;
-    border-bottom-right-radius:30px;
-    width: 300%;
-    height: 500%;
+    width: 100%;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius:5%;
+}
+
+#Lente {
+    padding:0;
+    text-align:right;
+}
+
+#Lente img {
+    width: 10%;
+    height: 10%;
+    float:left;
+    padding:0;
 }
 
 #sinistra {
     text-align:left;
-    width: 32%;
-    margin-left:3%;
+    margin: 0;
+    width: 15%;
 }
 
 #centro {
     display: inline-block;
     text-align:center;
-    width: 28%;
-    margin: 0 5% 0 0;
-    height: 70%;
+    margin: 0;
+    width: 70%;
 }
 
 #destra {
     text-align:right;
-    width: 30%;
+    margin: 0;
+    width: 15%;
 }
 
 div ul li img {
@@ -159,20 +162,6 @@ ul li{
     margin-left: 300%;
 }
 
-#Lente {
-    width: 40%;
-    height: 30%;
-    padding:2% 0 0 0; 
-    text-align:right;
-}
-
-#Lente img {
-    width: 10%;
-    height: 10%;
-    padding: 0 0 0 0;
-}
-
-
 footer ul li p {
     padding-right: 100%;
     margin: 0 0 0 0;
@@ -184,7 +173,7 @@ ul {
 
 footer {
     color:white;
-    height: 2%;
+    height: 10%;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 85%;
@@ -199,17 +188,26 @@ footer ul li{
     display: inline-block;
     list-style: none;
     text-align: center;
-    width: 22%;
+    width:33%;
 }
 
 #logoinfo  {
-    width: 50%;
+    float:left;
 }
+
+#logoinfo img {
+    width: 12%;
+    float:left;
+    padding-left: 3%;
+}
+
 #logobasso {
-    height : 25%;
-    width : 25%;
-    padding-left: 300%;
+    float:right;
 }
-#primo {
-    width: 5%;
+
+#logobasso img {
+    width: 12%;
+    float:right;
+    padding-right: 3%;
 }
+

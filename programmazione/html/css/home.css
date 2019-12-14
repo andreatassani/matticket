@@ -62,7 +62,7 @@ header ul li{
 #liLente {
     margin-top: 5px;
     vertical-align: middle;
-    height: 28px;
+    height: 29px;
     width: 5%;
     background-color : white;
     border-top: 1px solid rgb(246, 164, 84);
@@ -241,6 +241,10 @@ main div ul{
     text-align : center;
 }
 
+#liLocandina:nth-child(6){
+    display: none;
+}
+
 #liLocandina img {
     border: 1px solid white;
     height: 65px;
@@ -298,12 +302,12 @@ footer ul li{
 
 #liScrittaInfo{
     padding-left: 5%;
-    width:87%;
+    width:80%;
 }
 
 
 #liLogoBasso {
-    width: 3%;
+    width: 10%;
     float:right;
     padding-right:1%;
 }
@@ -313,6 +317,154 @@ footer ul li{
     float:right;
 }
 
+/*INIZIO DESKTOP*/
 
+@media only screen and (min-width: 961px) {
+    
+    header {
+        margin-bottom: 45px;
+        height: 60px;
+        font-size: 80%;
+    }
 
-/*BUG LOGO ALTO SOTTO GLI 800PX DI LARGHEZZA DELLA FINESTRA*/
+    #liMenuAPanino {
+        margin-top:7.5px;
+    }
+    
+    #liMenuAPanino img{
+        height: 45px;
+    }
+
+    #liSelectEvento{
+        margin-top: 7.5px;
+        height: 45px;
+    }
+    
+    #liCerca {
+        margin-top: 7.5px;
+        height: 45px;
+    }
+    
+    #liLente {
+        margin-top: 7.5px;
+        height: 42px;
+        border: 1.5px solid rgb(246, 164, 84);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    #liLente img{
+        padding-top:9.75px;
+        height: 22.5px;
+    }
+    
+    #liLogoAlto {
+        height: 60px;
+    }
+    
+    #liLogoAlto img{
+        padding-top: 1.5px;
+        height: 57px;
+    }
+    
+    select{
+        height: 45px;
+        border: 1.5px solid rgb(246, 164, 84);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        font-size: 300%;
+    }
+    
+    fieldset {
+        height: 39px;
+    }
+    
+    input {
+        height: 40px;
+        border-top: 1.5px solid rgb(246, 164, 84);
+        border-bottom: 1.5px solid rgb(246, 164, 84);
+        font-size: 150%;
+    }
+    
+    /*FINE HEADER DESKTOP, INIZIO INTESTAZIONE DESKTOP*/
+    
+    #intestazione {
+        height : 30px;
+        border-top: 1.5px solid rgb(246, 164, 84);
+        border-right: 1.5px solid rgb(246, 164, 84);
+        border-left: 1.5px solid rgb(246, 164, 84);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 77.5%;
+    }
+    
+    #intestazione h2 {
+        padding-top: 3 px;
+    }
+    
+    
+    #liLogoSubCat img{
+        margin-top: 3.75px;
+        height: 22.5px;
+    }
+    
+    /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
+    
+    #oggetti {
+        margin-bottom: 45px;
+        height : 150px;
+        border-top: 1.5px solid rgb(246, 164, 84);
+        border-bottom: 1.5px solid rgb(246, 164, 84);
+        font-size: 75%;
+    }
+    
+    #liFrecciaSx img{
+        margin-top: 67.5px;
+        height: 15px;
+    }
+    
+    #liFrecciaDx img{
+        margin-top: 67.5px;
+        height: 15px;
+    }
+    
+    #liLocandina {
+        width: 18%;
+        padding-top: 7.5px;
+        height: 142.5px;
+    }
+    
+    #liLocandina:nth-child(6){
+    display: inline-block;
+    }
+
+    #liLocandina img {
+        border: 1.5px solid white;
+        height: 97.5px;
+    }
+    
+    #liLocandina img:hover{
+        border: 1.5px solid rgb(246, 164, 84);
+    }
+    
+    /*INIZIO FOOTER DESKTOP*/
+    
+    footer {
+        height: 30px;
+        font-size: 150%;
+    }
+    
+    #liInfo img {
+        height: 30px;
+    }
+    
+    #liInfo img:hover {
+        border-radius: 75px;
+    }
+    
+    #liLogoBasso img {
+        height: 30px;
+    }
+
+  }

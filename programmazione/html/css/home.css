@@ -1,96 +1,117 @@
 body {
     background-color: rgb(234,233, 229);
     margin: 0;
-    
 }
 
 header, div h2, div img, div ul, footer {
     background-color: rgb(51,51, 51);
 }
 
+ul{
+    padding-left:0;
+}
+
+/*INIZIO HEADER*/
+
+
 header {
     margin-bottom:2%;
-    height: 5%;
+    height: 80px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 85%;
 }
 
 header ul {
+    padding: 0;
+    margin: 0;
+}
+
+header ul li{
     display: inline-block;
     list-style: none;
 }
 
-
-#menuAPanino {
-    height: 50%;
-    width: 50%;
+#liMenuAPanino {
+    float:left;
+    margin-top:10px;
+    width: 10%;
 }
 
-#logoalto {
-    height: 100%;
-    width: 100%;
+#liMenuAPanino img{
+    float:center;
+    height: 60px;
 }
 
-#Evento {
-    width: 30%;
-    height: 40%;
+#liSelectEvento{
+    margin-top: 10px;
+    vertical-align: middle;
+    height: 60px;
+    width: 15%;
 }
 
-#Cerca {
-    width:30%;
-    height: 40%;
+#liCerca {
+    margin-top: 10px;
+    vertical-align: middle;
+    height: 60px;
+    width: 59%;
 }
 
-select {
-    border: 2px solid rgb(246, 164, 84);
+#liLente {
+    margin-top: 10px;
+    vertical-align: middle;
+    height: 56px;
+    width: 5%;
+    background-color : white;
+    border-top: 2px solid rgb(246, 164, 84);
+    border-right: 2px solid rgb(246, 164, 84);
+    border-bottom: 2px solid rgb(246, 164, 84);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#liLente img{
+    padding-top:15px;
+    padding-right: 10%;
+    height: 30px;
+}
+
+#liLogoAlto {
     float:right;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius:30px;
+    margin-top:10px;
+    width: 10%;
+}
+
+#liLogoAlto img{
+    float:center;
+    height: 60px;
+}
+
+select{
+    height: 60px;
+    width:100%;
+    border: 2px solid rgb(246, 164, 84);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 fieldset {
+    height: 54px;
+    width:100%;
     border-style: hidden;
     margin:0;
     padding:0;
 }
 
 input {
-    border: 2px solid rgb(246, 164, 84);
-    width: 100%;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius:5%;
+    height: 54px;
+    width:100%;
+    border-style: none;
+    border-top: 2px solid rgb(246, 164, 84);
+    border-bottom: 2px solid rgb(246, 164, 84);
 }
 
-#Lente {
-    padding:0;
-    text-align:right;
-}
+/*FINE HEADER*/
 
-#Lente img {
-    width: 10%;
-    height: 10%;
-    float:left;
-    padding:0;
-}
-
-#sinistra {
-    text-align:left;
-    margin: 0;
-    width: 15%;
-}
-
-#centro {
-    display: inline-block;
-    text-align:center;
-    margin: 0;
-    width: 70%;
-}
-
-#destra {
-    text-align:right;
-    margin: 0;
-    width: 15%;
-}
 
 div ul li img {
     height: 75%;
@@ -99,7 +120,7 @@ div ul li img {
 
 
 main #freccia {
-    width: 2%;
+    width: 2.5%;
     padding-bottom: 7%;
     padding-left: 1%;
     padding-right: 1%;
@@ -141,73 +162,94 @@ ul li{
     border-top: 2px solid rgb(246, 164, 84);
     border-right: 2px solid rgb(246, 164, 84);
     border-left: 2px solid rgb(246, 164, 84);
-    border-top-left-radius: 30px;
-    border-top-right-radius:30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 150%;
 }
 
 #intestazione h2 {
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
-#logoSubCat {
+#intestazione a {
+    color:white;
+    text-decoration: none;
+}
+
+#intestazione a:hover {
+    color:rgb(246, 164, 84);
+}
+
+#liLogoSubCat {
     width: 10%;
-    height: 10%;
-    padding:0 20% 0 0; 
+    float: right;
+    padding-right:4%;
+    margin:0;
 }
 
-#logoSubCat img {
-    text-align: right;
-    margin-left: 300%;
+#liLogoSubCat img{
+    padding-top:2px;
+    width: 70%;
 }
 
 footer ul li p {
     padding-right: 100%;
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
-ul {
-    padding: 0%;
-}
+
+
+/*INIZIO FOOTER*/
+
 
 footer {
     color:white;
-    height: 10%;
-    width: 100%;
+    height: 40px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 85%;
+    white-space: nowrap;
+    font-size: 150%;
 }
-
 
 footer ul {
     margin : 0;
+    padding : 0;
 }
 
 footer ul li{
     display: inline-block;
     list-style: none;
-    text-align: center;
-    width:33%;
 }
 
-#logoinfo  {
+
+#liInfo{
+    width:3%;
+    float:left;
+    padding-left:1%;
+}
+
+#liInfo img {
+    margin-top: 5px;
+    height: 30px;
     float:left;
 }
 
-#logoinfo img {
-    width: 12%;
-    float:left;
-    padding-left: 3%;
+#liScrittaInfo{
+    margin-top: 5px;
+    padding-left: 1%;
+    width:91%;
 }
 
-#logobasso {
+
+#liLogoBasso {
+    width: 3%;
     float:right;
+    padding-right:1%;
 }
 
-#logobasso img {
-    width: 12%;
+#liLogoBasso img {
+    margin-top: 5px;
+    height: 30px;
     float:right;
-    padding-right: 3%;
 }
 

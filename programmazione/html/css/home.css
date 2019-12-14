@@ -92,6 +92,7 @@ select{
     border: 2px solid rgb(246, 164, 84);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    font-size: 200%;
 }
 
 fieldset {
@@ -108,6 +109,7 @@ input {
     border-style: none;
     border-top: 2px solid rgb(246, 164, 84);
     border-bottom: 2px solid rgb(246, 164, 84);
+    font-size: 200%;
 }
 
 /*FINE HEADER*/
@@ -169,6 +171,7 @@ ul li{
 }
 
 #intestazione h2 {
+    float: center;
     margin: 0;
 }
 
@@ -189,8 +192,8 @@ ul li{
 }
 
 #liLogoSubCat img{
-    padding-top:2px;
-    width: 70%;
+    padding-top:5px;
+    width: 50%;
 }
 
 footer ul li p {
@@ -253,3 +256,4 @@ footer ul li{
     float:right;
 }
 
+/*BUG LOGO ALTO SOTTO GLI 800PX DI LARGHEZZA DELLA FINESTRA*/

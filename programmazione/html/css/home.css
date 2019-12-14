@@ -30,8 +30,12 @@ header ul li{
     display: inline-block;
     list-style: none;
 }
+/*HIDDEN*/
+#liLogoAltoSx, #liCategorie, #liMercatino, #liAccount, #liCarrello{
+    display: none;
+}
 
-#liMenuAPanino {
+#liMenuAPanino{
     float:left;
     margin-top:5px;
     width: 10%;
@@ -62,7 +66,7 @@ header ul li{
 #liLente {
     margin-top: 5px;
     vertical-align: middle;
-    height: 29px;
+    height: 28px;
     width: 5%;
     background-color : white;
     border-top: 1px solid rgb(246, 164, 84);
@@ -85,13 +89,13 @@ header ul li{
     height: 15px;
 }
 
-#liLogoAlto {
+#liLogoAltoDx {
     float:right;
     height: 40px;
     width: 21%;
 }
 
-#liLogoAlto img{
+#liLogoAltoDx img{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -241,7 +245,7 @@ main div ul{
     text-align : center;
 }
 
-#liLocandina:nth-child(6){
+#liLocandina:nth-child(6), #liLocandina:nth-child(7){
     display: none;
 }
 
@@ -319,152 +323,184 @@ footer ul li{
 
 /*INIZIO DESKTOP*/
 
-@media only screen and (min-width: 961px) {
-    
-    header {
-        margin-bottom: 45px;
-        height: 60px;
-        font-size: 80%;
+@media (min-width: 961px) {
+
+    /*HIDDEN*/
+
+    #liMenuAPanino, #liLogoAltoDx{
+        display:none;
     }
 
-    #liMenuAPanino {
-        margin-top:7.5px;
+    #liLogoAltoSx{
+        display: inline-block;
+        width: 5%;
+        height: 90px;
     }
+
+    #liLogoAltoSx img{
+        display: block;
+        height: 70px;
+    }
+
     
-    #liMenuAPanino img{
-        height: 45px;
+    #liCategorie, #liMercatino, #liAccount, #liCarrello{
+        padding-top:5px;
+        margin:0;
+        display: inline-block;
+        width:15%;
+        height: 90px;
+    }
+
+    #liCategorie h1, #liMercatino h1, #liAccount h1, #liCarrello h1{
+        text-align: center;
+        margin: 0;
+        float:left;
+        width: 70%;
+    }
+
+    #liCategorie img, #liMercatino img, #liAccount img, #liCarrello img{
+        margin: 0;
+        height:90px;
+    }
+
+    #liCategorie a, #liMercatino a, #liAccount a, #liCarrello a{
+        color:white;
+        text-decoration: none;
+    }
+
+    #liCategorie a:hover, #liMercatino a:hover, #liAccount a:hover, #liCarrello a:hover{
+        color:rgb(246, 164, 84);
+    }
+
+
+    header {
+        margin-bottom: 30px;
+        height: 120px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 180%;
     }
 
     #liSelectEvento{
-        margin-top: 7.5px;
-        height: 45px;
+        height: 90px;
+        width: 9%;
     }
-    
+
     #liCerca {
-        margin-top: 7.5px;
-        height: 45px;
+        height: 90px;
+        width: 20%;
     }
-    
+
     #liLente {
-        margin-top: 7.5px;
-        height: 42px;
-        border: 1.5px solid rgb(246, 164, 84);
+        margin-top: 0;
+        height: 84px;
+        width: 4%;
+        border: 3px solid rgb(246, 164, 84);
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
     }
-    
+
     #liLente img{
-        padding-top:9.75px;
-        height: 22.5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top:20px;
+        height: 50px;
     }
-    
-    #liLogoAlto {
-        height: 60px;
-    }
-    
-    #liLogoAlto img{
-        padding-top: 1.5px;
-        height: 57px;
-    }
-    
+
     select{
-        height: 45px;
-        border: 1.5px solid rgb(246, 164, 84);
+        height: 90px;
+        border: 3px solid rgb(246, 164, 84);
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
-        font-size: 300%;
+        font-size: 200%;
     }
-    
+
     fieldset {
-        height: 39px;
+        height: 78px;
     }
-    
+
     input {
-        height: 40px;
-        border-top: 1.5px solid rgb(246, 164, 84);
-        border-bottom: 1.5px solid rgb(246, 164, 84);
+        height: 82px;
+        border-top: 3px solid rgb(246, 164, 84);
+        border-bottom: 3px solid rgb(246, 164, 84);
         font-size: 150%;
     }
     
     /*FINE HEADER DESKTOP, INIZIO INTESTAZIONE DESKTOP*/
     
     #intestazione {
-        height : 30px;
+        height : 90px;
         border-top: 1.5px solid rgb(246, 164, 84);
         border-right: 1.5px solid rgb(246, 164, 84);
         border-left: 1.5px solid rgb(246, 164, 84);
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 77.5%;
-    }
-    
-    #intestazione h2 {
-        padding-top: 3 px;
+        font-size: 240%;
     }
     
     
     #liLogoSubCat img{
-        margin-top: 3.75px;
-        height: 22.5px;
+        margin-top: 10px;
+        height: 67.5px;
     }
     
     /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
     
     #oggetti {
         margin-bottom: 45px;
-        height : 150px;
-        border-top: 1.5px solid rgb(246, 164, 84);
-        border-bottom: 1.5px solid rgb(246, 164, 84);
-        font-size: 75%;
+        height : 450px;
+        border-top: 3px solid rgb(246, 164, 84);
+        border-bottom: 3px solid rgb(246, 164, 84);
+        font-size: 225%;
     }
     
     #liFrecciaSx img{
-        margin-top: 67.5px;
-        height: 15px;
+        margin-top: 210px;
+        height: 45px;
     }
     
     #liFrecciaDx img{
-        margin-top: 67.5px;
-        height: 15px;
+        margin-top: 210px;
+        height: 45px;
     }
     
     #liLocandina {
-        width: 18%;
-        padding-top: 7.5px;
-        height: 142.5px;
+        width: 15%;
+        padding-top: 22px;
+        height: 406px;
     }
     
-    #liLocandina:nth-child(6){
+    #liLocandina:nth-child(6), #liLocandina:nth-child(7){
     display: inline-block;
     }
 
     #liLocandina img {
-        border: 1.5px solid white;
-        height: 97.5px;
+        border: 3px solid white;
+        height: 294px;
     }
     
     #liLocandina img:hover{
-        border: 1.5px solid rgb(246, 164, 84);
+        border: 3px solid rgb(246, 164, 84);
     }
     
     /*INIZIO FOOTER DESKTOP*/
     
     footer {
-        height: 30px;
-        font-size: 150%;
+        height: 60px;
+        font-size: 300%;
     }
     
     #liInfo img {
-        height: 30px;
+        height: 60px;
     }
     
     #liInfo img:hover {
-        border-radius: 75px;
+        border-radius: 150px;
     }
     
     #liLogoBasso img {
-        height: 30px;
+        height: 60px;
     }
 
   }

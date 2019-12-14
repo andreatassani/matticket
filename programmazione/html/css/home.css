@@ -42,6 +42,11 @@ header ul li{
     height: 60px;
 }
 
+#liMenuAPanino img:hover {
+    background-color: rgb(246, 164, 84);
+    border-radius: 12px;
+}
+
 #liSelectEvento{
     margin-top: 10px;
     vertical-align: middle;
@@ -65,14 +70,18 @@ header ul li{
     border-top: 2px solid rgb(246, 164, 84);
     border-right: 2px solid rgb(246, 164, 84);
     border-bottom: 2px solid rgb(246, 164, 84);
+    border-left: 2px solid rgb(246, 164, 84);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
+#liLente:hover{
+    background-color : rgb(246, 164, 84);
+}
+
 #liLente img{
-    padding-top:15px;
-    padding-right: 10%;
-    height: 30px;
+    padding-top:8px;
+    height: 44px;
 }
 
 #liLogoAlto {
@@ -93,6 +102,12 @@ select{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     font-size: 200%;
+}
+
+select:hover {
+    color:white;
+    background-color : rgb(246, 164, 84);
+    cursor: pointer;
 }
 
 fieldset {
@@ -192,8 +207,13 @@ ul li{
 }
 
 #liLogoSubCat img{
-    padding-top:5px;
+    margin-top:5px;
     width: 50%;
+}
+
+#liLogoSubCat img:hover {
+    background-color: rgb(246, 164, 84);
+    border-radius: 5px;
 }
 
 footer ul li p {
@@ -235,6 +255,11 @@ footer ul li{
     margin-top: 5px;
     height: 30px;
     float:left;
+}
+
+#liInfo img:hover {
+    background-color: rgb(246, 164, 84);
+    border-radius: 50px;
 }
 
 #liScrittaInfo{

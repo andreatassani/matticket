@@ -60,7 +60,7 @@ header ul li{
     margin-top: 5px;
     vertical-align: middle;
     height: 30px;
-    width: 43%;
+    width: 42%;
 }
 
 #liLente {
@@ -234,7 +234,7 @@ main div ul{
 }
 
 #liLocandina {
-    width : 22.5%;
+    width : 21.5%;
     padding-top: 5px;
     height: 95px;
     color : white;
@@ -327,12 +327,20 @@ footer ul li{
 
     /*HIDDEN*/
 
+    
+    header {
+        margin-bottom: 30px;
+        height: 120px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 150%;
+    }
+
     #liMenuAPanino, #liLogoAltoDx{
         display:none;
     }
-
     #liLogoAltoSx{
         display: inline-block;
+        padding-left:1%;
         width: 5%;
         height: 90px;
     }
@@ -344,10 +352,10 @@ footer ul li{
 
     
     #liCategorie, #liMercatino, #liAccount, #liCarrello{
-        padding-top:5px;
+        padding:0;
         margin:0;
         display: inline-block;
-        width:15%;
+        width:14%;
         height: 90px;
     }
 
@@ -360,7 +368,7 @@ footer ul li{
 
     #liCategorie img, #liMercatino img, #liAccount img, #liCarrello img{
         margin: 0;
-        height:90px;
+        height:70px;
     }
 
     #liCategorie a, #liMercatino a, #liAccount a, #liCarrello a{
@@ -372,25 +380,42 @@ footer ul li{
         color:rgb(246, 164, 84);
     }
 
-
-    header {
-        margin-bottom: 30px;
-        height: 120px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 180%;
-    }
-
     #liSelectEvento{
+        padding: 0;
+        margin:0;
         height: 90px;
         width: 9%;
     }
 
+    select{
+        height: 90px;
+        border: 3px solid rgb(246, 164, 84);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        font-size: 200%;
+    }
+
     #liCerca {
+        padding: 0;
+        margin:0;
         height: 90px;
         width: 20%;
     }
 
+    fieldset {
+        height: 78px;
+    }
+
+    input {
+        height: 82px;
+        border-top: 3px solid rgb(246, 164, 84);
+        border-bottom: 3px solid rgb(246, 164, 84);
+        font-size: 150%;
+    }
+    
     #liLente {
+        padding: 0;
+        margin:0;
         margin-top: 0;
         height: 84px;
         width: 4%;
@@ -405,25 +430,6 @@ footer ul li{
         margin-right: auto;
         padding-top:20px;
         height: 50px;
-    }
-
-    select{
-        height: 90px;
-        border: 3px solid rgb(246, 164, 84);
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        font-size: 200%;
-    }
-
-    fieldset {
-        height: 78px;
-    }
-
-    input {
-        height: 82px;
-        border-top: 3px solid rgb(246, 164, 84);
-        border-bottom: 3px solid rgb(246, 164, 84);
-        font-size: 150%;
     }
     
     /*FINE HEADER DESKTOP, INIZIO INTESTAZIONE DESKTOP*/
@@ -466,7 +472,7 @@ footer ul li{
     }
     
     #liLocandina {
-        width: 15%;
+        width: 14%;
         padding-top: 22px;
         height: 406px;
     }

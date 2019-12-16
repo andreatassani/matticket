@@ -100,7 +100,7 @@ header ul li{
     height: 28px;
 }
 
-select{
+#liSelectEvento select{
     height: 30px;
     width:100%;
     border: 1px solid rgb(246, 164, 84);
@@ -108,6 +108,7 @@ select{
     border-bottom-left-radius: 10px;
     font-size: 200%;
 }
+
 
 select:hover {
     color:white;
@@ -129,7 +130,10 @@ input {
     border-style: none;
     border-top: 1px solid rgb(246, 164, 84);
     border-bottom: 1px solid rgb(246, 164, 84);
-    font-size: 100%;
+    font-size: 175%;
+    font-style: italic;
+    font-weight: lighter;
+    color: rgb(112,112,112);
 }
 
 /*FINE HEADER, INIZIO INTESTAZIONE*/
@@ -138,6 +142,7 @@ main div ul{
 }
 
 #intestazione {
+    display: block;
     color: white;
     width: 28%;
     height : 20px;
@@ -149,7 +154,6 @@ main div ul{
     border-top-right-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50%;
-    display: inline-block;
     list-style: none;
 }
 
@@ -189,6 +193,7 @@ main div ul{
 /*FINE INTESTAZIONE, INIZIO LOCANDINE*/
 
 #oggetti {
+    vertical-align: top;
     margin-bottom: 30px;
     color: white;
     height : 100px;
@@ -198,7 +203,6 @@ main div ul{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50%;
     text-align: center;
-    display: inline-block;
     list-style: none;
 }
 
@@ -230,7 +234,8 @@ main div ul{
 }
 
 #liLocandina {
-    width : 21.5%;
+    vertical-align: top;
+    width : 18.5%;
     padding-top: 5px;
     height: 95px;
     color : white;
@@ -254,8 +259,8 @@ main div ul{
     border: 1px solid rgb(246, 164, 84);
 }
 
-#liLocandina h3 {
-    margin : 0;
+#liLocandina p {
+    margin-top : 5px;
 }
 
 /*INIZIO FOOTER*/
@@ -301,7 +306,7 @@ footer ul li{
 }
 
 #liScrittaInfo{
-    padding-left: 5%;
+    padding-left: 1%;
     width:80%;
 }
 
@@ -327,16 +332,18 @@ color:white;
 
 /*INIZIO DESKTOP*/
 
-@media (min-width: 961px) {
+@media (min-width: 1000px) {
 
     /*HIDDEN*/
-
+    header ul {
+        height: 0;
+    }
     
     header {
         margin-bottom: 30px;
-        height: 100px;
+        height: 70px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 100%;
+        font-size: 65%;
     }
 
     #liMenuAPanino, #liLogoAltoDx{
@@ -347,15 +354,28 @@ color:white;
         vertical-align: top;
         display: inline-block;
         padding-left:1%;
-        width: 5%;
-        height: 90px;
+        width: 7%;
+        height: 40px;
     }
 
     #liLogoAltoSx img{
-        margin-top: 10px;
-        height: 50px;
+        margin-top: 5px;
+        height: 30px;
     }
 
+    #liCategorie select{
+        
+        margin-right: 5px;
+        -webkit-appearance: none;
+        vertical-align: top;
+        margin-top: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 195%;
+        border: 0;
+        color : white;
+        background-color: rgb(51,51, 51);
+    }
     
     #liCategorie, #liMercatino, #liAccount, #liCarrello{
         vertical-align: top;
@@ -363,28 +383,29 @@ color:white;
         margin-top:15px;
         display: inline-block;
         width:14%;
-        height: 90px;
+        height: 40px;
     }
 
-    #liCategorie h1, #liMercatino h1, #liAccount h1, #liCarrello h1{
-        text-align: center;
-        margin-top: 17.8px;
+    #liMercatino h1, #liAccount h1, #liCarrello h1{
+        text-align: right;
+        margin-right: 5px;
+        margin-top: 7.6px;
         margin-bottom: 0px;
         float:left;
-        width: 80%;
+        width: 70%;
     }
 
     #liCategorie img, #liMercatino img, #liAccount img, #liCarrello img{
-        margin-top: 10px;
-        height:40px;
+        margin-top: 5px;
+        height:30px;
     }
 
-    #liCategorie a, #liMercatino a, #liAccount a, #liCarrello a{
+    #liMercatino a, #liAccount a, #liCarrello a{
         color:white;
         text-decoration: none;
     }
 
-    #liCategorie a:hover, #liMercatino a:hover, #liAccount a:hover, #liCarrello a:hover{
+    #liMercatino a:hover, #liAccount a:hover, #liCarrello a:hover{
         color:rgb(246, 164, 84);
     }
 
@@ -392,13 +413,13 @@ color:white;
         vertical-align: top;
         padding:0;
         margin-top:15px;
-        height: 80px;
+        height: 40px;
         width: 8%;
     }
 
-    select{
-        height: 60px;
-        border: 3px solid rgb(246, 164, 84);
+    #liSelectEvento select{
+        height: 38px;
+        border: 2px solid rgb(246, 164, 84);
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         font-size: 150%;
@@ -413,13 +434,14 @@ color:white;
     }
 
     fieldset {
-        height: 48px;
+        height: 28px;
     }
 
     input {
-        height: 52px;
-        border-top: 3px solid rgb(246, 164, 84);
-        border-bottom: 3px solid rgb(246, 164, 84);
+        padding:0;
+        height: 34px;
+        border-top: 2px solid rgb(246, 164, 84);
+        border-bottom: 2px solid rgb(246, 164, 84);
         font-size: 150%;
     }
     
@@ -427,9 +449,9 @@ color:white;
         vertical-align: top;
         padding:0;
         margin-top:15px;
-        height: 54px;
+        height: 34px;
         width: 4%;
-        border: 3px solid rgb(246, 164, 84);
+        border: 2px solid rgb(246, 164, 84);
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
     }
@@ -438,25 +460,25 @@ color:white;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        padding-top:20px;
+        padding-top:7px;
         height: 20px;
     }
     
     /*FINE HEADER DESKTOP, INIZIO INTESTAZIONE DESKTOP*/
-    
+
     #intestazione {
-        height : 60px;
-        border-top: 1.5px solid rgb(246, 164, 84);
-        border-right: 1.5px solid rgb(246, 164, 84);
-        border-left: 1.5px solid rgb(246, 164, 84);
+        height : 40px;
+        border-top: 2px solid rgb(246, 164, 84);
+        border-right: 2px solid rgb(246, 164, 84);
+        border-left: 2px solid rgb(246, 164, 84);
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 150%;
+        font-size: 100%;
     }
     
     #intestazione h2 {
-        padding-top: 10.4px;
+        padding-top: 6.4px;
         padding-left:5%;
         width: 75%;
         float: left;
@@ -466,8 +488,8 @@ color:white;
     }
     
     #liLogoSubCat img{
-        margin-top: 10px;
-        height: 45px;
+        margin-top: 7.5px;
+        height: 25px;
     }
     
     /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
@@ -475,9 +497,9 @@ color:white;
     #oggetti {
         margin-bottom: 45px;
         height : 250px;
-        border-top: 3px solid rgb(246, 164, 84);
-        border-bottom: 3px solid rgb(246, 164, 84);
-        font-size: 150%;
+        border-top: 2px solid rgb(246, 164, 84);
+        border-bottom: 2px solid rgb(246, 164, 84);
+        font-size: 100%;
     }
     
     #liFrecciaSx img, #liFrecciaDx img{
@@ -488,7 +510,7 @@ color:white;
     #liLocandina {
         width: 14%;
         padding-top: 22px;
-        height: 406px;
+        height: 200px;
     }
     
     #liLocandina:nth-child(6), #liLocandina:nth-child(7){
@@ -501,7 +523,7 @@ color:white;
     }
     
     #liLocandina img:hover{
-        border: 3px solid rgb(246, 164, 84);
+        border: 2px solid rgb(246, 164, 84);
     }
     
     /*INIZIO FOOTER DESKTOP*/
@@ -511,9 +533,13 @@ color:white;
     }
 
     footer {
-        font-size: 150%;
+        font-size: 100%;
     }
     
+    footer ul li p {
+        margin-top: 5.8px;
+    }
+
     #liInfo img:hover {
         border-radius: 150px;
     }

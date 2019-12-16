@@ -30,7 +30,7 @@ header ul li{
     display: inline-block;
     list-style: none;
 }
-/*HIDDEN*/
+
 #liLogoAltoSx, #liCategorie, #liMercatino, #liAccount, #liCarrello{
     display: none;
 }
@@ -69,10 +69,7 @@ header ul li{
     height: 28px;
     width: 5%;
     background-color : white;
-    border-top: 1px solid rgb(246, 164, 84);
-    border-right: 1px solid rgb(246, 164, 84);
-    border-bottom: 1px solid rgb(246, 164, 84);
-    border-left: 1px solid rgb(246, 164, 84);
+    border: 1px solid rgb(246, 164, 84);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -308,6 +305,14 @@ footer ul li{
     width:80%;
 }
 
+#liScrittaInfo a{
+text-decoration: none;
+color:white;
+}
+
+#liScrittaInfo a:hover{
+    color: rgb(246, 164, 84);
+}
 
 #liLogoBasso {
     width: 10%;
@@ -475,12 +480,7 @@ footer ul li{
         font-size: 225%;
     }
     
-    #liFrecciaSx img{
-        margin-top: 210px;
-        height: 45px;
-    }
-    
-    #liFrecciaDx img{
+    #liFrecciaSx img, #liFrecciaDx img{
         margin-top: 210px;
         height: 45px;
     }
@@ -506,21 +506,16 @@ footer ul li{
     
     /*INIZIO FOOTER DESKTOP*/
     
-    footer {
+    footer, #liInfo img, #liLogoBasso img{
         height: 60px;
-        font-size: 300%;
     }
-    
-    #liInfo img {
-        height: 60px;
+
+    footer {
+        font-size: 300%;
     }
     
     #liInfo img:hover {
         border-radius: 150px;
-    }
-    
-    #liLogoBasso img {
-        height: 60px;
     }
 
   }

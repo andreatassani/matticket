@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "it">
+<a lang = "it">
 <head>
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
     <title>MaTTicket - Teatro</title>
@@ -7,49 +7,62 @@
 </head>
 <body>
     <header>
-            <ul>
-                 <li><a href=""><img src="./img/icone/Teatro.png"alt="immagine stilizzata di una maschera da teatro classico"height="10%"width="10%"id="menuAPanino"/></a></li><li id="Evento"><h1>Evento</h1></li><li id="Cerca"><h1>Cerca</h1></li><li id="Lente"><img src="./img/icone/Cerca.png"alt="lente di ingrandimento per la ricerca"height="16.5%"width="16.5%"/></li><li><a class="logo"href="home.html"><img src="./img/Logo.png"alt="logo MaTTicket"height="40%"width="40%"id="logoalto"/></a></li>
-            </ul>  
+        <ul>
+            <li id = "liLogoAltoSx"><a href="home.html"><img src="./img/Logo.png"alt="logo MaTTicket"/></a></li>
+            <li id = "liCategorie"><a href="categorie.html"><h1>Home</h1><img src="./img/icone/Tendina.png"alt="immagine rappresentativa di una tendina di oggetti"/></a></li>
+            <li id = "liMenuAPanino"><a href=""><img src="./img/icone/MenuAPanino.png"alt="menù a panino"/></a></li>
+            <li id = "liMercatino"><a href="mercatino.html"><h1>Mercatino</h1><img src="./img/icone/Mercatino.png"alt="immagine stilizzata di una bancarella"/></a></li>
+            <li id="liSelectEvento"><select><option value="Evento">Evento</option><option value="Artista">Artista</option><option value="Data">Data</option><option value="Città">Città</option></select></li><li id="liCerca"><fieldset form="form1"><input type="text" name="username"></fieldset></li><li id="liLente"><a href=""><img src="./img/icone/Lente.png"alt="lente di ingrandimento per la ricerca"/></a></li>
+            <li id = "liLogoAltoDx"><a href="home.html"><img src="./img/Logo.png"alt="logo MaTTicket"/></a></li>
+            <li id = "liAccount"><a href="account.html"><h1>Account</h1><img src="./img/icone/Account.png"alt="immagine stilizzata di un omino"/></a></li>
+            <li id = "liCarrello"><a href="carrello.html"><h1>Carrello</h1><img src="./img/icone/Carrello.png"alt="immagine stilizzata di un carrello"/></a></li>
+        </ul>
     </header>
 
     <!--MAIN-->
     
     <main>
         <div>
-            <h2 id="intestazione">In scadenza</h2>
-            <ul id="oggetti">
-                <img id="freccia" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><img id="freccia" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso Destra"/>
-            </ul>
-        </div>
-        <div>
-            <h2 id="intestazione">I più richiesti</h2>
-            <ul id="oggetti">
-                <img id="freccia" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><img id="freccia" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso Destra"/>
-            </ul>
-        </div>
-
-        <!-- CATEGORIE-->
-
-        <div>
             <ul id="intestazione">
-                <li><h2>Cabaret</h2></li><li><img src = "./img/icone/Cabaret.png" alt="immagine stilizzata di una faccia di uomo con cilindro, baffi e occhiali" id="logoSubCat"/></li>
-            </ul> 
+                <li><h2>I più richiesti</h2></a></li>
+                <li id="liLogoSubCat"><img src = "./img/icone/IPiuRichiesti.png" alt="immagine rappresentativa di un like"/></a></li>
+            </ul>
             <ul id="oggetti">
-                <img id="freccia" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><img id="freccia" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso Destra"/>
+                <li id="liFrecciaSx"><a href=""><img src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id="liFrecciaDx"><a href=""><img src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
             </ul>
         </div>
         <div>
             <ul id="intestazione">
-                <li><h2>Musical</h2></li><li><img src = "./img/icone/Musical.png" alt="immagine stilizzata di una coppia che balla in costume" id="logoSubCat"/></li>
+                <li><a href="teatro.html"><h2>Teatro</h2></a></li>
+                <li id="liLogoSubCat"><a href="teatro.html"><img src = "./img/icone/Teatro.png" alt="immagine stilizzata di una maschera da teatro"/></a></li>
             </ul> 
             <ul id="oggetti">
-                <img id="freccia" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><li><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/> <h3>Nome evento <br> 00,00€</h3></li><img id="freccia" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso Destra"/>
+                <li id="liFrecciaSx"><a href=""><img src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id = "liLocandina"><a href= ""><img src = "./img/locandine/teatro/pucci.jpg" alt="Andrea Pucci spettacolo"/></a> <h3>Nome evento <br> 00,00€</h3></li>
+                <li id="liFrecciaDx"><a href=""><img src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
             </ul>
         </div>
     </main>
+
+    <!-- FOOTER-->
     <footer>
         <ul>
-            <li><p>Informazioni Generali</p></li><li><a href="info.html"><img src = "./img/icone/Info.png" alt="logo info" height="10%"  width="10%" id="logoinfo"/></a></li><li><img class="logo" src = "./img/logo.png" alt="logo MaTTicket" height="40%"  width="40%" id="logobasso"/></li>
+            <li id="liInfo"><a href="info.html"><img src = "./img/icone/Info.png" alt="logo info"/></a></li>
+            <li id="liScrittaInfo"><a href="Info.html"><p>Informazioni Generali</p></a></li>
+            <li id="liLogoBasso"><a href="home.html"><img src = "./img/logo.png" alt="logo MaTTicket"/></a></li>
         </ul>
     </footer>
 </body>
+

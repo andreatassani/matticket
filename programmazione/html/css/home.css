@@ -334,9 +334,9 @@ color:white;
     
     header {
         margin-bottom: 30px;
-        height: 120px;
+        height: 100px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 150%;
+        font-size: 100%;
     }
 
     #liMenuAPanino, #liLogoAltoDx{
@@ -353,7 +353,7 @@ color:white;
 
     #liLogoAltoSx img{
         margin-top: 10px;
-        height: 70px;
+        height: 50px;
     }
 
     
@@ -371,12 +371,12 @@ color:white;
         margin-top: 17.8px;
         margin-bottom: 0px;
         float:left;
-        width: 70%;
+        width: 80%;
     }
 
     #liCategorie img, #liMercatino img, #liAccount img, #liCarrello img{
         margin-top: 10px;
-        height:70px;
+        height:40px;
     }
 
     #liCategorie a, #liMercatino a, #liAccount a, #liCarrello a{
@@ -392,16 +392,16 @@ color:white;
         vertical-align: top;
         padding:0;
         margin-top:15px;
-        height: 90px;
-        width: 9%;
+        height: 80px;
+        width: 8%;
     }
 
     select{
-        height: 90px;
+        height: 60px;
         border: 3px solid rgb(246, 164, 84);
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
-        font-size: 200%;
+        font-size: 150%;
     }
 
     #liCerca {
@@ -413,11 +413,11 @@ color:white;
     }
 
     fieldset {
-        height: 78px;
+        height: 48px;
     }
 
     input {
-        height: 82px;
+        height: 52px;
         border-top: 3px solid rgb(246, 164, 84);
         border-bottom: 3px solid rgb(246, 164, 84);
         font-size: 150%;
@@ -427,7 +427,7 @@ color:white;
         vertical-align: top;
         padding:0;
         margin-top:15px;
-        height: 84px;
+        height: 54px;
         width: 4%;
         border: 3px solid rgb(246, 164, 84);
         border-top-right-radius: 15px;
@@ -439,20 +439,20 @@ color:white;
         margin-left: auto;
         margin-right: auto;
         padding-top:20px;
-        height: 50px;
+        height: 20px;
     }
     
     /*FINE HEADER DESKTOP, INIZIO INTESTAZIONE DESKTOP*/
     
     #intestazione {
-        height : 90px;
+        height : 60px;
         border-top: 1.5px solid rgb(246, 164, 84);
         border-right: 1.5px solid rgb(246, 164, 84);
         border-left: 1.5px solid rgb(246, 164, 84);
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 240%;
+        font-size: 150%;
     }
     
     #intestazione h2 {
@@ -467,22 +467,22 @@ color:white;
     
     #liLogoSubCat img{
         margin-top: 10px;
-        height: 67.5px;
+        height: 45px;
     }
     
     /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
     
     #oggetti {
         margin-bottom: 45px;
-        height : 450px;
+        height : 250px;
         border-top: 3px solid rgb(246, 164, 84);
         border-bottom: 3px solid rgb(246, 164, 84);
-        font-size: 225%;
+        font-size: 150%;
     }
     
     #liFrecciaSx img, #liFrecciaDx img{
-        margin-top: 210px;
-        height: 45px;
+        margin-top: 120px;
+        height: 35px;
     }
     
     #liLocandina {
@@ -497,7 +497,7 @@ color:white;
 
     #liLocandina img {
         border: 3px solid white;
-        height: 294px;
+        height: 150px;
     }
     
     #liLocandina img:hover{
@@ -507,11 +507,11 @@ color:white;
     /*INIZIO FOOTER DESKTOP*/
     
     footer, #liInfo img, #liLogoBasso img{
-        height: 60px;
+        height: 30px;
     }
 
     footer {
-        font-size: 300%;
+        font-size: 150%;
     }
     
     #liInfo img:hover {

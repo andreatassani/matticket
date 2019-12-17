@@ -31,6 +31,58 @@ header ul li{
     list-style: none;
 }
 
+.dropdown .dropbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: inherit;
+}
+
+.dropdown-content {
+    margin-left:-0.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 205%;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 13.5px 16px 0px rgba(0,0,0,0.6);
+    border: 1.5px solid rgb(246, 164, 84);
+    border-top: 0;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    background-color: rgb(51,51, 51);
+    color: white;
+    padding: 12px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a img{
+      float:right;
+      height: 24.8px;
+  }
+
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    color: rgb(246, 164, 84);
+  }
+
+  .dropdown-content a:hover {
+    font-size: 120%;
+    background-color: rgb(246, 164, 84);
+    color: white;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
 #liLogoAltoSx, #liMercatino, #liAccount, #liCarrello, #liTendina, .dropdown{
     display: none;
 }
@@ -384,58 +436,11 @@ color:white;
         display:block;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 205%;
-        font-weight: bold;
-        border: none;
-        color: white;
-        background-color: inherit;
         padding:0;
         margin-top: 22px;
         margin-bottom:23.5px;
     }
 
-    .dropdown-content {
-        margin-left:-0.5%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 205%;
-        font-weight: bold;
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 150px;
-        box-shadow: 0px 13.5px 16px 0px rgba(0,0,0,0.6);
-        border: 1.5px solid rgb(246, 164, 84);
-        border-top: 0;
-        z-index: 1;
-      }
-
-      .dropdown-content a {
-        float: none;
-        background-color: rgb(51,51, 51);
-        color: white;
-        padding: 12px 8px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-
-      .dropdown-content a img{
-          float:right;
-          height: 24.8px;
-      }
-
-      .topnav a:hover, .dropdown:hover .dropbtn {
-        color: rgb(246, 164, 84);
-      }
-
-      .dropdown-content a:hover {
-        font-size: 120%;
-        background-color: rgb(246, 164, 84);
-        color: white;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
 
     #liMercatino{
         vertical-align: top;
@@ -674,5 +679,124 @@ color:white;
         width: 18%;
         padding-left:3%;
     }
+
+    .HeaderOpen > ul > #liMenuAPanino {
+        position: absolute;
+    }
+
+    .HeaderOpen > ul > #liSelectEvento {
+        padding-left:13%;
+    }
+
+    .HeaderOpen > ul > #liMercatino{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        margin:0;
+        margin-top: 5px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 160%;
+        width: 100%;
+        border-top: 1px solid rgb(246, 164, 84);
+    }
+
+    .HeaderOpen > ul > #liMercatino > a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .HeaderOpen > ul > #liMercatino > a > h1{
+        text-align: center;
+        margin: 0;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liAccount{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        padding:0;
+        margin:0;
+        margin-top: 37.2px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 160%;
+        width: 100%;
+        border-top: 1px solid rgb(246, 164, 84);
+    }
+
+    .HeaderOpen > ul > #liAccount > a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .HeaderOpen > ul > #liAccount > a > h1{
+        text-align: center;
+        margin: 0;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liCarrello{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        padding:0;
+        margin:0;
+        margin-top: 70.4px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 160%;
+        width: 100%;
+        border-top: 1px solid rgb(246, 164, 84);
+    }
+
+    .HeaderOpen > ul > #liCarrello > a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .HeaderOpen > ul > #liCarrello > a > h1{
+        text-align: center;
+        margin: 0;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > .dropdown{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        padding:0;
+        margin-top: 105px;
+        padding-bottom: 5px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        border-top: 1px solid rgb(246, 164, 84);
+        border-bottom: 1px solid rgb(246, 164, 84);
+        width: 100%;
+        text-align: center;
+    }
+
+    .HeaderOpen > ul > .dropdown > .dropbtn{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 300%;
+    }
+
+    .HeaderOpen > ul > .dropdown > .dropdown-content{
+        width: 100.5%;
+        border: 0;
+        border-top: 1px solid rgb(246, 164, 84);
+    }
+    
+    .HeaderOpen > ul > .dropdown > .dropdown-content > a{
+        border-bottom: 1px solid rgb(246, 164, 84);
+    }
+    
   }
   

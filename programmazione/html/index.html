@@ -9,7 +9,18 @@
     <header>
         <ul>
             <li id = "liLogoAltoSx"><a href="home.html"><img src="./img/Logo.png"alt="logo MaTTicket"/></a></li>
-            <li id = "liCategorie"><select><option value="Categorie">Categorie</option><a href="teatro.html"><option value="Teatro">Teatro</option></a><option value="Sport">Sport</option><option value="Musica">Musica</option><option value="Mostre">Mostre</option></select><img src="./img/icone/Tendina.png"alt="immagine rappresentativa di una tendina di oggetti"/></li>
+            <li class="dropdown">
+                <button class="dropbtn">Categorie 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="teatro.html">Teatro<img src = "./img/icone/Teatro.png" alt="immagine stilizzata di una maschera da teatro"/></a>
+                  <a href="sport.html">Sport<img src = "./img/icone/Sport.png" alt="immagine stilizzata di un pallone da calcio"/></a>
+                  <a href="musica.html">Musica<img src = "./img/icone/Musica.png" alt="immagine di una chiave di violino"/></a>
+                  <a href="mostre.html">Mostre<img src = "./img/icone/Mostre.png" alt="immagine stilizzata del quadro 'L'Urlo di Munch'"/></a>
+                </div>
+            </li>
+            <li id = "liTendina"><img src="./img/icone/Tendina.png"alt="immagine rappresentativa di una tendina di oggetti"/></li>
             <li id = "liMenuAPanino"><a href=""><img src="./img/icone/MenuAPanino.png"alt="menù a panino"/></a></li>
             <li id = "liMercatino"><a href="mercatino.html"><h1>Mercatino</h1><img src="./img/icone/Mercatino.png"alt="immagine stilizzata di una bancarella"/></a></li>
             <li id = "liSelectEvento"><select><option value="Evento">Evento</option><option value="Artista">Artista</option><option value="Data">Data</option><option value="Città">Città</option></select></li><li id="liCerca"><fieldset form="form1"><input type="text" name="username" value="  Cerca"></fieldset></li><li id="liLente"><a href=""><img src="./img/icone/Lente.png"alt="lente di ingrandimento per la ricerca"/></a></li>

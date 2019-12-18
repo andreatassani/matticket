@@ -1,3 +1,573 @@
 header {
     background-color: rgb(51,51, 51);
 }
+
+
+header {
+    margin-bottom: 30px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40%;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+}
+
+header ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.dropdown .dropbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: inherit;
+}
+
+.dropdown-content {
+    margin-left:-0.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 205%;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 150px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
+    border: 1.5px solid rgb(246, 164, 84);
+    border-top: 0;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    background-color: rgb(51,51, 51);
+    color: white;
+    padding: 12px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a img{
+      float:right;
+      height: 24.8px;
+  }
+
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    color: rgb(246, 164, 84);
+  }
+
+  .dropdown-content a:hover {
+    font-size: 120%;
+    background-color: rgb(246, 164, 84);
+    color: white;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+#liLogoAltoSx, #liMercatino, #liAccount, #liCarrello, #liTendina, .dropdown{
+    display: none;
+}
+
+#liMenuAPanino{
+    float:left;
+    margin-top:5px;
+    width: 10%;
+}
+
+#liMenuAPanino img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+}
+
+
+#liSelectEvento{
+    margin-top: 5px;
+    vertical-align: middle;
+    height: 30px;
+    width: 20%;
+}
+
+#liCerca {
+    margin-top: 5px;
+    vertical-align: middle;
+    height: 30px;
+    width: 42%;
+}
+
+#liLente {
+    margin-top: 5px;
+    vertical-align: middle;
+    height: 28px;
+    width: 5%;
+    background-color : white;
+    border: 1px solid rgb(246, 164, 84);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#liLente:hover{
+    background-color : rgb(246, 164, 84);
+}
+
+#liLente img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:6.5px;
+    height: 15px;
+}
+
+#liLogoAltoDx {
+    float:right;
+    height: 40px;
+    width: 21%;
+}
+
+#liLogoAltoDx img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6px;
+    height: 28px;
+}
+
+#liSelectEvento select{
+    height: 30px;
+    width:100%;
+    border: 1px solid rgb(246, 164, 84);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 200%;
+}
+
+
+select:hover {
+    color:white;
+    background-color : rgb(246, 164, 84);
+    cursor: pointer;
+}
+
+fieldset {
+    height: 26px;
+    width:100%;
+    border-style: hidden;
+    margin:0;
+    padding:0;
+}
+
+input {
+    height: 26px;
+    width:100%;
+    border-style: none;
+    border-top: 1px solid rgb(246, 164, 84);
+    border-bottom: 1px solid rgb(246, 164, 84);
+    font-size: 175%;
+    font-style: italic;
+    font-weight: lighter;
+    color: rgb(112,112,112);
+}
+
+@media screen and (min-width: 768px){
+    header ul {
+        height: 0;
+    }
+    
+    header {
+        margin-bottom: 30px;
+        height: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 65%;
+    }
+
+    #liMenuAPanino, #liLogoAltoDx{
+        display:none;
+    }
+
+    #liLogoAltoSx{
+        padding-top: 15px;
+        vertical-align: top;
+        display: inline-block;
+        padding-left:1%;
+        width: 6%;
+        height: 40px;
+    }
+
+    #liLogoAltoSx img{
+        margin-top: 5px;
+        height: 30px;
+    } 
+
+    #liTendina{
+        display: inline-block;
+        vertical-align: top;
+        width: 3%;
+    }
+
+    #liTendina img {
+        margin-left: 17%;
+        margin-top: 20px;
+        height: 30px;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+
+    .dropdown .dropbtn {
+        display:block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 205%;
+        padding:0;
+        margin-top: 22px;
+        margin-bottom:23.5px;
+    }
+
+
+    #liMercatino{
+        vertical-align: top;
+        padding:0;
+        padding-left:1%;
+        margin-top:15px;
+        display: inline-block;
+        width:14%;
+        height: 40px;
+    }
+
+    #liAccount{
+        vertical-align: top;
+        padding:0;
+        margin-top:15px;
+        display: inline-block;
+        width:13%;
+        height: 40px;
+    }
+
+    #liCarrello{
+        vertical-align: top;
+        padding:0;
+        margin-top:15px;
+        display: inline-block;
+        width:13%;
+        height: 40px;
+    }
+
+    #liMercatino h1, #liAccount h1, #liCarrello h1{
+        text-align: right;
+        margin-right: 5px;
+        margin-top: 7.6px;
+        margin-bottom: 0px;
+        float:left;
+        width: 70%;
+    }
+
+    #liMercatino img, #liAccount img, #liCarrello img{
+        padding-left:1%;
+        margin-top: 5px;
+        height:30px;
+    }
+
+    #liMercatino a, #liAccount a, #liCarrello a{
+        color:white;
+        text-decoration: none;
+    }
+
+    #liMercatino a:hover, #liAccount a:hover, #liCarrello a:hover{
+        color:rgb(246, 164, 84);
+    }
+
+    #liSelectEvento{
+        vertical-align: top;
+        padding:0;
+        margin-top:15px;
+        height: 40px;
+        width: 8%;
+        padding-left:2%;
+    }
+
+    #liSelectEvento select{
+        height: 38px;
+        border: 2px solid rgb(246, 164, 84);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        font-size: 150%;
+    }
+
+    #liCerca {
+        vertical-align: top;
+        padding:0;
+        margin-top:15px;
+        height: 90px;
+        width: 20%;
+    }
+
+    fieldset {
+        height: 28px;
+    }
+
+    input {
+        padding:0;
+        height: 34px;
+        border-top: 2px solid rgb(246, 164, 84);
+        border-bottom: 2px solid rgb(246, 164, 84);
+        font-size: 150%;
+    }
+    
+    #liLente {
+        vertical-align: top;
+        padding:0;
+        margin-top:15px;
+        height: 34px;
+        width: 4%;
+        border: 2px solid rgb(246, 164, 84);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    #liLente img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top:7px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #liCarrello img, #liTendina img, #liAccount img, #liMercatino img {
+        display: none;
+    }
+    header li {
+        padding:0;
+    }
+    #liLogoAltoSx{
+        width:8%;
+    }
+    #liMercatino{
+        padding:0;
+    }
+    #liAccount{
+        padding-left:1%;
+        width:10%;
+    }
+    #liCarrello {
+        width:10%;
+        float:right;
+        padding-right: 1%;
+    }
+    #liSelectEvento{
+        padding:0;
+        width:10%;
+    }
+}
+
+@media screen and (max-width: 764px){
+    #liSelectEvento{
+        width: 18%;
+        padding-left:3%;
+    }
+
+    .HeaderOpen > ul > #liMenuAPanino {
+        position: absolute;
+    }
+
+    .HeaderOpen > ul > #liSelectEvento {
+        padding-left:13%;
+    }
+
+    .HeaderOpen > ul > #liMercatino{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        margin:0;
+        margin-top: 5px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 160%;
+        width: 40%;
+        border-top: 1px solid rgb(246, 164, 84);
+        border-right: 1px solid rgb(246, 164, 84);
+        padding-left: 1%;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
+    }
+
+    .HeaderOpen > ul > #liMercatino > a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .HeaderOpen > ul > #liMercatino > a > h1{
+        float: left;
+        vertical-align: middle;
+        width: 60%;
+        margin: 0;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liMercatino > a > img{
+        
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        width: 23.2px;
+        padding:0;
+        margin:0;
+        margin-top: 5.5px;
+        margin-left: 15%;
+    }
+
+    .HeaderOpen > ul > #liAccount{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        padding:0;
+        margin:0;
+        margin-top: 37.2px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 160%;
+        width: 40%;
+        border-top: 1px solid rgb(246, 164, 84);
+        border-right: 1px solid rgb(246, 164, 84);
+        padding-left: 1%;
+        box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.6);
+    }
+
+    .HeaderOpen > ul > #liAccount > a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .HeaderOpen > ul > #liAccount > a > h1{
+        float: left;
+        vertical-align: middle;
+        width: 60%;
+        margin: 0;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liAccount > a > img{
+        
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        width: 23.2px;
+        padding:0;
+        margin:0;
+        margin-top: 5.5px;
+        margin-left: 15%;
+    }
+
+    .HeaderOpen > ul > #liCarrello{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        padding:0;
+        margin:0;
+        margin-top: 70.4px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 160%;
+        width: 40%;
+        border-top: 1px solid rgb(246, 164, 84);
+        border-right: 1px solid rgb(246, 164, 84);
+        padding-left: 1%;
+        box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.6);
+    }
+
+    .HeaderOpen > ul > #liCarrello > a{
+        text-decoration: none;
+        color: white;
+        width: 60%;
+    }
+
+    .HeaderOpen > ul > #liCarrello > a > h1{
+        float: left;
+        vertical-align: middle;
+        width: 60%;
+        margin: 0;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liCarrello > a > img{
+        
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        width: 23.2px;
+        padding:0;
+        margin:0;
+        margin-top: 5.5px;
+        margin-left: 15%;
+    }
+
+    .HeaderOpen > ul > .dropdown{
+        position: absolute;
+        z-index: 10;
+        display: block;
+        padding:0;
+        margin-top: 105px;
+        padding-bottom: 5px;
+        background-color: rgb(51,51, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        border-top: 1px solid rgb(246, 164, 84);
+        border-bottom: 1px solid rgb(246, 164, 84);
+        border-right: 1px solid rgb(246, 164, 84);
+        width: 40%;
+        text-align: left;
+        padding-left: 1%;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
+    }
+
+    .HeaderOpen > ul > .dropdown > .dropbtn{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 300%;
+        padding-top: 5px;
+        padding-left: 0;
+    }
+
+    .HeaderOpen > ul > .dropdown > .dropdown-content{
+        width:80%;
+        background-color: rgb(51,51, 51);
+        margin-top: -29.4px;
+        font-size: 260%;
+        margin-left: 98%;
+        border: 1px solid rgb(246, 164, 84);
+        border-bottom: 0;
+    }
+    
+    .HeaderOpen > ul > .dropdown > .dropdown-content > a{
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-bottom: 1px solid rgb(246, 164, 84);
+
+    }
+    
+
+    .HeaderOpen > ul > .dropdown > .dropdown-content > a > img {
+        
+        float:right;
+        padding-right:5%;
+    }
+    
+  }

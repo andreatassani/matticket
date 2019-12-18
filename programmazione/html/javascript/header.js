@@ -1,13 +1,16 @@
+var immagine;
+
 function onHoverCategorie()
 {
     var item = document.getElementById("Tendina");
+    immagine = item.getAttribute('src');
     item.setAttribute('src', './img/icone/TendinaAperto.png');
 }
 
 function offHoverCategorie()
 {
     var item = document.getElementById("Tendina");
-    item.setAttribute('src', './img/icone/Tendina.png');
+    item.setAttribute('src', immagine);
 }
 
 function clickMenuAPanino(){

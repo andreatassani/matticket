@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-header, main div ul, footer {
+main div ul{
     background-color: rgb(51,51, 51);
 }
 
@@ -47,8 +47,8 @@ header ul li{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 13.5px 16px 0px rgba(0,0,0,0.6);
+    width: 150px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
     border: 1.5px solid rgb(246, 164, 84);
     border-top: 0;
     z-index: 1;
@@ -348,7 +348,7 @@ footer ul li{
 }
 
 #liInfo img {
-    height: 20px;
+    height: 15px;
     float:left;
 }
 
@@ -358,7 +358,7 @@ footer ul li{
 }
 
 #liScrittaInfo{
-    padding-left: 1%;
+    padding-left: 15px;
     width:80%;
 }
 
@@ -698,8 +698,11 @@ color:white;
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
         font-size: 160%;
-        width: 100%;
+        width: 40%;
         border-top: 1px solid rgb(246, 164, 84);
+        border-right: 1px solid rgb(246, 164, 84);
+        padding-left: 1%;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
     }
 
     .HeaderOpen > ul > #liMercatino > a{
@@ -708,10 +711,24 @@ color:white;
     }
 
     .HeaderOpen > ul > #liMercatino > a > h1{
-        text-align: center;
+        float: left;
+        vertical-align: middle;
+        width: 60%;
         margin: 0;
         padding-top:5px;
         padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liMercatino > a > img{
+        
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        width: 23.2px;
+        padding:0;
+        margin:0;
+        margin-top: 5.5px;
+        margin-left: 15%;
     }
 
     .HeaderOpen > ul > #liAccount{
@@ -725,8 +742,11 @@ color:white;
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
         font-size: 160%;
-        width: 100%;
+        width: 40%;
         border-top: 1px solid rgb(246, 164, 84);
+        border-right: 1px solid rgb(246, 164, 84);
+        padding-left: 1%;
+        box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.6);
     }
 
     .HeaderOpen > ul > #liAccount > a{
@@ -735,10 +755,24 @@ color:white;
     }
 
     .HeaderOpen > ul > #liAccount > a > h1{
-        text-align: center;
+        float: left;
+        vertical-align: middle;
+        width: 60%;
         margin: 0;
         padding-top:5px;
         padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liAccount > a > img{
+        
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        width: 23.2px;
+        padding:0;
+        margin:0;
+        margin-top: 5.5px;
+        margin-left: 15%;
     }
 
     .HeaderOpen > ul > #liCarrello{
@@ -752,20 +786,38 @@ color:white;
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
         font-size: 160%;
-        width: 100%;
+        width: 40%;
         border-top: 1px solid rgb(246, 164, 84);
+        border-right: 1px solid rgb(246, 164, 84);
+        padding-left: 1%;
+        box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.6);
     }
 
     .HeaderOpen > ul > #liCarrello > a{
         text-decoration: none;
         color: white;
+        width: 60%;
     }
 
     .HeaderOpen > ul > #liCarrello > a > h1{
-        text-align: center;
+        float: left;
+        vertical-align: middle;
+        width: 60%;
         margin: 0;
         padding-top:5px;
         padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liCarrello > a > img{
+        
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        width: 23.2px;
+        padding:0;
+        margin:0;
+        margin-top: 5.5px;
+        margin-left: 15%;
     }
 
     .HeaderOpen > ul > .dropdown{
@@ -779,50 +831,54 @@ color:white;
         font-family: Arial, Helvetica, sans-serif;
         border-top: 1px solid rgb(246, 164, 84);
         border-bottom: 1px solid rgb(246, 164, 84);
-        width: 100%;
-        text-align: center;
+        border-right: 1px solid rgb(246, 164, 84);
+        width: 40%;
+        text-align: left;
+        padding-left: 1%;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
     }
 
     .HeaderOpen > ul > .dropdown > .dropbtn{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 300%;
         padding-top: 5px;
+        padding-left: 0;
     }
 
     .HeaderOpen > ul > .dropdown > .dropdown-content{
-        width: 45%;
+        width:80%;
         background-color: rgb(51,51, 51);
-        margin-top: 6px;
+        margin-top: -29.4px;
         font-size: 260%;
-        margin-left: 27.5%;
+        margin-left: 98%;
         border: 1px solid rgb(246, 164, 84);
-    }
-
-    .HeaderOpen > ul > .dropdown > .dropdown-content > a:nth-child(1) {
-        background-color: rgb(70,70,70);
-    }
-
-    .HeaderOpen > ul > .dropdown > .dropdown-content > a:nth-child(4) {
-        background-color: rgb(70,70,70); 
-        padding-right: 7px;
+        border-bottom: 0;
     }
     
     .HeaderOpen > ul > .dropdown > .dropdown-content > a{
-        text-align: center; 
+        width: 100%;
+        text-align: center;
         display: inline-block;
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
+        border-bottom: 1px solid rgb(246, 164, 84);
 
-
-        /*border-left: 1px solid rgb(246, 164, 84);
-        border-right: 1px solid rgb(246, 164, 84);*/
     }
+    
 
     .HeaderOpen > ul > .dropdown > .dropdown-content > a > img {
-        /*display: none;*/
-       padding-left: 4px;
+        
+        float:right;
+        padding-right:5%;
+    }
+
+   #Tendina2 {
+        margin-top: 800px;
+        width: 1000px;
+        display:block;
+        background-color: green;
     }
     
   }

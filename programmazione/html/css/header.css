@@ -20,6 +20,10 @@ header ul li{
     list-style: none;
 }
 
+.dropbtn:hover{
+    cursor: pointer;
+}
+
 .dropdown .dropbtn {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -281,7 +285,7 @@ input {
         text-decoration: none;
     }
 
-    #liMercatino a:hover, #liAccount a:hover, #liCarrello a:hover{
+    #liMercatino:hover h1, #liAccount:hover h1, #liCarrello:hover h1{
         color:rgb(246, 164, 84);
     }
 
@@ -415,6 +419,10 @@ input {
         padding-bottom:5px;
     }
 
+    .HeaderOpen > ul > #liMercatino > a:hover {
+        color:rgb(246, 164, 84);
+    }
+
     .HeaderOpen > ul > #liMercatino > a > img{
         
         position: absolute;
@@ -457,6 +465,10 @@ input {
         margin: 0;
         padding-top:5px;
         padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liAccount > a:hover {
+        color:rgb(246, 164, 84);
     }
 
     .HeaderOpen > ul > #liAccount > a > img{
@@ -502,6 +514,10 @@ input {
         margin: 0;
         padding-top:5px;
         padding-bottom:5px;
+    }
+
+    .HeaderOpen > ul > #liCarrello > a:hover {
+        color:rgb(246, 164, 84);
     }
 
     .HeaderOpen > ul > #liCarrello > a > img{

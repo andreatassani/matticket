@@ -1,16 +1,16 @@
-var immagine;
+var tendinaAttuale;
 
 function onHoverCategorie()
 {
     var item = document.getElementById("Tendina");
-    immagine = item.getAttribute('src');
-    item.setAttribute('src', './img/icone/TendinaAperto.png');
+    tendinaAttuale = item.getAttribute('src');
+    item.setAttribute('src', './img/icone/TendinaArancione.png');
 }
 
 function offHoverCategorie()
 {
     var item = document.getElementById("Tendina");
-    item.setAttribute('src', immagine);
+    item.setAttribute('src', tendinaAttuale);
 }
 
 function clickMenuAPanino(){
@@ -19,7 +19,7 @@ function clickMenuAPanino(){
 
         if (x.className === "Header") {
           x.className += "Open";
-          y.setAttribute('src', './img/icone/MenuAPaninoAperto.png');
+          y.setAttribute('src', './img/icone/MenuAPaninoArancione.png');
         } else {
           x.className = "Header";
           y.setAttribute('src', './img/icone/MenuAPanino.png');

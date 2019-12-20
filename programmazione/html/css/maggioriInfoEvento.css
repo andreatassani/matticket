@@ -1,0 +1,260 @@
+body {
+    background-color: rgb(234,233, 229);
+    margin: 0;
+}
+
+main div ul{
+    background-color: rgb(51,51, 51);
+}
+
+ul{
+    padding-left:0;
+}
+
+main div ul{
+    margin : 0;
+}
+
+/*INIZIO INTESTAZIONE*/
+
+#intestazione h2 {
+    padding-top:3.2px;
+    width: 60%;
+    padding:0;
+    vertical-align: middle;
+}
+
+
+#intestazione {
+    display: block;
+    color: white;
+    width: 20%;
+    height : 20px;
+    margin: 0 40%;
+    border-top: 1px solid rgb(246, 164, 84);
+    border-right: 1px solid rgb(246, 164, 84);
+    border-left: 1px solid rgb(246, 164, 84);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50%;
+    list-style: none;
+}
+
+#intestazione a {
+    padding: 0;
+    width: 65%;
+    color:white;
+    text-decoration: none;
+}
+
+
+/*FINE INTESTAZIONE, INIZIO LOCANDINE*/
+
+#descrizione {
+    padding-bottom: 35px;
+    vertical-align: top;
+    margin-bottom: 30px;
+    height : 100px;
+    width:60%;
+    margin-left: 20%;
+    border: 3px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+
+#piantina {
+    padding-bottom: 35px;
+    vertical-align: top;
+    margin-bottom: 30px;
+    height : 600px;
+    width:60%;
+    margin-left: 20%;
+    border: 3px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+
+}
+
+#oggetti, #tabella {
+    vertical-align: top;
+    margin:0;
+    margin-bottom: 30px;
+    color: white;
+    height : 100px;
+    width:60%;
+    margin-left: 20%;
+    border:0;
+    border-top: 1px solid rgb(246, 164, 84);
+    border-bottom: 1px solid rgb(246, 164, 84);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50%;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+
+#oggetti > iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  iframe {
+      border-radius: 10px;
+  }
+
+.linkEsterni{
+    width: 25%;
+    height: 20%;
+    margin: 5%;
+    margin-top:3.5%;
+    display: inline-block;
+    border: 2px solid rgb(246, 164, 84);
+    border-radius: 10px;
+
+  }
+
+.linkEsterni p {
+    
+    text-decoration: none;
+    color: rgb(234,233, 229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+table {
+    width: 90%;
+    margin: 2.5% 5%;
+}
+
+th {
+    border: 1px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(234,233, 229);
+    background-color: rgb(51,51, 51);
+    height: 45px;
+}
+
+tbody td {
+    border: 1px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(51,51, 51);
+    background-color: rgb(234,233, 229);
+    height: 45px;
+}
+
+tbody th {
+    border: 1px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(246, 164, 84);
+    height: 45px;
+}
+
+tfoot td a {
+    text-decoration: none;
+    color: rgb(51,51, 51);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.foto {
+    border: 2px solid rgb(246, 164, 84);
+    background-color: rgba(246, 164, 84, 0.3);
+    width: 10%;
+    margin-top: 2%;
+    margin-left: 6%;
+    height: 90px;
+    float: left;
+}
+
+#tabella {
+    height: 200px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.nome , .città, .data {
+    height: 30px;
+    display: inline-block;
+    border: 2px solid rgb(246, 164, 84);
+    background-color: rgb(234,233, 229);
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+
+
+/* INIZIO DESKTOP*/
+
+@media screen and (min-width: 768px) {
+    
+    /*INIZIO INTESTAZIONE DESKTOP*/
+
+    #intestazione {
+        height : 40px;
+        border-top: 2px solid rgb(246, 164, 84);
+        border-right: 2px solid rgb(246, 164, 84);
+        border-left: 2px solid rgb(246, 164, 84);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100%;
+    }
+    
+    #intestazione h2 {
+        padding-top: 6.4px;
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0;
+    }
+    
+    /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
+    
+    #oggetti, #tabella {
+        margin-bottom: 45px;
+        height : 250px;
+        border: 0;
+        width:60%;
+        margin-left: 20%;
+        border: 2px solid rgb(246, 164, 84);
+        border-radius: 10px;
+        font-size: 100%;
+    }
+    
+    #tabella {
+        height: 200px;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .nome , .città, .data {
+        height: 40px;
+        display: inline-block;
+        border: 2px solid rgb(246, 164, 84);
+        background-color: rgb(234,233, 229);
+        border-radius: 10px;
+        width: 20%;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+  }
+ 
+  @media screen and (min-width: 560px){
+
+  }
+
+  @media screen and (min-width: 880px){
+
+}

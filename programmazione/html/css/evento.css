@@ -15,35 +15,6 @@ main div ul{
     margin : 0;
 }
 
-/*BOTTONE*/
-
-#vendi {
-    display: block;
-    
-    background-color: rgb(234,233, 229);
-    margin-left: 35%;
-    width: 30%;
-    height : 65px;
-    border: 4px solid rgb(51,51, 51);
-    border-radius: 20px;
-    font-size: 150%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:bolder;
-    margin-bottom: 45px;
-    box-shadow: 8px 8px 2px rgb(51,51, 51, 0.6);
-}
-
-#vendi a {
-    color: rgb(51,51, 51);
-    text-decoration: none;
-}
-
-#vendi:hover {
-    background-color: rgb(246, 164, 84);
-    font-weight:bolder;
-    cursor: pointer;
-}
-
 /*INIZIO INTESTAZIONE*/
 
 #intestazione h2 {
@@ -57,9 +28,9 @@ main div ul{
 #intestazione {
     display: block;
     color: white;
-    width: 40%;
+    width: 20%;
     height : 20px;
-    margin: 0 30%;
+    margin: 0 40%;
     border-top: 1px solid rgb(246, 164, 84);
     border-right: 1px solid rgb(246, 164, 84);
     border-left: 1px solid rgb(246, 164, 84);
@@ -77,87 +48,132 @@ main div ul{
     text-decoration: none;
 }
 
-#liLogoSubCat {
-    width: 20%;
-    float: right;
-    padding-top: 0px;
-    margin:0;
-}
 
 /*FINE INTESTAZIONE, INIZIO LOCANDINE*/
 
-#oggetti {
+#descrizione {
+    padding-bottom: 35px;
     vertical-align: top;
+    margin-bottom: 30px;
+    height : 300px;
+    width:60%;
+    margin-left: 20%;
+    border: 3px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+
+
+#oggetti, #tabella {
+    vertical-align: top;
+    margin:0;
     margin-bottom: 30px;
     color: white;
     height : 100px;
-    width:100%;
+    width:60%;
+    margin-left: 20%;
+    border:0;
     border-top: 1px solid rgb(246, 164, 84);
     border-bottom: 1px solid rgb(246, 164, 84);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50%;
     text-align: center;
-    list-style: none;display: inline-block;
-}
-
-
-#liFrecciaSx {
-    width:  5%;
-    float:left;
-}
-
-#liFrecciaSx img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 45px;
-    height: 10px;
-}
-
-#liFrecciaDx {
-    width:  5%;
-    float:right;
-}
-
-#liFrecciaDx img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 45px;
-    height: 10px;
-}
-
-#liLocandina {
-    vertical-align: top;
-    width : 18.5%;
-    padding-top: 5px;
-    height: 95px;
-    color : white;
-    margin: 0;
-    border: 0;
+    list-style: none;
     display: inline-block;
-    list-style : none;
-    text-align : center;
 }
 
-#liLocandina:nth-child(6), #liLocandina:nth-child(7){
-    display: none;
+#oggetti > iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  iframe {
+      border-radius: 10px;
+  }
+
+.linkEsterni{
+    width: 25%;
+    height: 20%;
+    margin: 5%;
+    margin-top:3.5%;
+    display: inline-block;
+    border: 2px solid rgb(246, 164, 84);
+    border-radius: 10px;
+
+  }
+
+.linkEsterni p {
+    
+    text-decoration: none;
+    color: rgb(234,233, 229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
 }
 
-#liLocandina img {
-    border: 1px solid white;
-    height: 65px;
+table {
+    width: 90%;
+    margin: 2.5% 5%;
+    height: 90%;
+
+    
 }
 
-#liLocandina img:hover{
+th {
     border: 1px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(234,233, 229);
+    background-color: rgb(51,51, 51);
+    height: 45px;
 }
 
-#liLocandina p {
-    margin-top : 5px;
+tbody td {
+    border: 1px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(51,51, 51);
+    background-color: rgb(234,233, 229);
+    height: 45px;
 }
 
-/*INIZIO DESKTOP*/
+tfoot td {
+    border: 1px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(246, 164, 84);
+    height: 45px;
+}
+
+tfoot td a {
+    text-decoration: none;
+    color: rgb(51,51, 51);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#descrizione li p {
+    border: 2px solid rgb(246, 164, 84);
+    background-color: rgba(246, 164, 84, 0.3);
+    width: 17%;
+    margin-top: 7%;
+    margin-left: 3%;
+    height: 200px;
+    float: left;
+}
+
+#tabella {
+    height: 400px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+
+/* INIZIO DESKTOP*/
 
 @media screen and (min-width: 768px) {
     
@@ -184,14 +200,23 @@ main div ul{
     
     /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
     
-    #oggetti {
+    #oggetti, #tabella {
         margin-bottom: 45px;
         height : 250px;
-        border-top: 2px solid rgb(246, 164, 84);
-        border-bottom: 2px solid rgb(246, 164, 84);
+        border: 0;
+        width:60%;
+        margin-left: 20%;
+        border: 2px solid rgb(246, 164, 84);
+        border-radius: 10px;
         font-size: 100%;
     }
     
+    #tabella {
+        height: 400px;
+        width: 50%;
+        margin-left: 25%;
+    }
+
     #liFrecciaSx img, #liFrecciaDx img{
         margin-top: 120px;
         height: 35px;
@@ -213,6 +238,8 @@ main div ul{
     }
   }
   
+  }
+ 
   @media screen and (min-width: 560px){
     #liLocandina:nth-child(6){
         display: inline-block;
@@ -229,6 +256,4 @@ main div ul{
     #liLocandina {
         width: 14%;
     }
-  }
-  
-  
+}

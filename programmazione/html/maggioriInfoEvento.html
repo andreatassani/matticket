@@ -2,8 +2,8 @@
 <a lang = "it">
 <head>
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
-    <title>MaTTicket - Nuovo Evento</title>
-    <link rel = "stylesheet" type = "text/css" href = "./css/nuovoEvento.css" />
+    <title>MaTTicket - Ulteriori Informazioni Evento</title>
+    <link rel = "stylesheet" type = "text/css" href = "./css/maggioriInfoEvento.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/header.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/footer.css" />
     <script src="./javascript/header.js" type="text/javascript"></script>
@@ -34,36 +34,34 @@
     <main>
         <div>
             <ul id="intestazione">
-                <li><a><h2>Dettagli</h2></a></li>
+                    <li><a><h2>Informazioni</h2></a></li>
+                </ul><ul id="descrizione">
+                    <li class="foto"><p></p></li>
+                    <li class="nome"><p>Nome Evento</p></li>
+                    <li class="città"><p>Città</p></li>
+                    <li class="data"><p>Data</p></li>
             </ul>
-            <ul id="oggetti">
-                <li><label for=”insTitolo″>Titolo:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insArtista″>Artista:</label><input id=”insArtista″ class="form"/></li>
-                <li><label for=”insData″>Data:</label><input id=”insData″ class="form"/></li>
-                <li><label for=”insCittà″>Città:</label><input id=”insCittà″ class="form"/></li>
-                <li><label for=”insLuogo″>Luogo:</label><input id=”insLuogo″ class="form"/></li>
-                <li><label for=”insParterre″>Prezzo Parterre:</label><input id=”insParterre″ class="form"/></li>
-                <li><label for=”insParterre″>Prezzo Tribuna:</label><input id=”insParterre″ class="form"/></li>
+        </div>
+        <div>
+            <ul id="intestazione">
+                    <li><a><h2>Dettagli</h2></a></li>
+                </ul><ul id="tabella">
+                    <table>
+                        <thead>
+                            <tr><th>Posizione</th><th>Posti Liberi</th><th>Prezzo</th><th></th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Parterre</td><td>0000/0000</td><td>00,00€</td><th><a href="carrello.html"></a>Carrello</th></tr>
+                            <tr><td>Tribuna</td><td>0000/0000</td><td>00,00€</td><th><a href="carrello.html"></a>Carrello</th></tr>
+                        </tbody>
+                    </table>
                 </ul>
         </div>
         <div>
             <ul id="intestazione">
-                <li><a><h2>Descrizione</h2></a></li>
-            </ul>
-            <ul id="descrizione">
-                <textarea name="desc" id="insDesc" cols="" rows=""></textarea>
-            </ul>
+                    <li><a><h2>Piantina</h2></a></li>
+                </ul><ul id="piantina"></ul>
         </div>
-        <div>
-            <ul id="intestazione">
-                <li><a><h2>Immagine</h2></a></li>
-            </ul>
-            <ul id="immagine">
-                <li><p></p></li>
-                <li><input type="file" id="file" accept=".png, .jpg, .jpeg"></li>
-            </ul>
-        </div>
-        <button id="termina"><a href="">Termina e crea</a></button>
     </main>
     <!-- FOOTER-->
     <footer>

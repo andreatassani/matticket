@@ -17,20 +17,13 @@ main div ul{
 
 /*INIZIO INTESTAZIONE*/
 
-#intestazione h2 {
-    padding-top:3.2px;
-    width: 60%;
-    padding:0;
-    vertical-align: middle;
-}
-
 
 #intestazione {
     display: block;
     color: white;
-    width: 20%;
+    width: 28%;
     height : 20px;
-    margin: 0 40%;
+    margin: 0 36%;
     border-top: 1px solid rgb(246, 164, 84);
     border-right: 1px solid rgb(246, 164, 84);
     border-left: 1px solid rgb(246, 164, 84);
@@ -41,15 +34,88 @@ main div ul{
     list-style: none;
 }
 
+#intestazione h2 {
+    padding-top:3.2px;
+    width: 80%;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+
 #intestazione a {
-    padding: 0;
-    width: 65%;
     color:white;
     text-decoration: none;
 }
 
+#intestazione a:hover {
+    color:rgb(246, 164, 84);
+}
 
+#liLogoSubCat {
+    width: 20%;
+    float: right;
+    padding-top: 0px;
+    margin:0;
+}
+
+#liLogoSubCat img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5px;
+    height: 15px;
+}
 /*FINE INTESTAZIONE, INIZIO LOCANDINE*/
+
+#descrizione {
+    padding-bottom: 35px;
+    vertical-align: top;
+    margin-bottom: 30px;
+    height : 200px;
+    width:90%;
+    margin-left: 5%;
+    border: 3px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#descrizione li p {
+    border: 2px solid rgb(246, 164, 84);
+    background-color: rgba(246, 164, 84, 0.3);
+    width: 100px;
+    margin-top: 7%;
+    margin-left: 3%;
+    margin-right:3%;
+    height: 100px;
+    float: left;
+}
+
+article {
+    text-align: left;
+    color: rgb(234,233, 229);
+    font-size: 75%;
+    padding: 3%;   
+
+}
+#oggetti {
+    vertical-align: top;
+    margin-bottom: 30px;
+    color: white;
+    height : 100px;
+    width:100%;
+    border-top: 1px solid rgb(246, 164, 84);
+    border-bottom: 1px solid rgb(246, 164, 84);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50%;
+    text-align: center;
+    list-style: none;
+}
+
 
 #liFrecciaSx {
     width:  5%;
@@ -107,64 +173,6 @@ main div ul{
     margin-top : 5px;
 }
 
-article {
-    width: 70%;
-    height: 90%;
-    padding: 0;
-    margin: 3%;
-    border: 2px solid rgb(246, 164, 84);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 150%;
-    border-radius: 10px;
-    resize: none;
-    display: inline-block;
-}
-
-#descrizione {
-    padding-bottom: 35px;
-    vertical-align: top;
-    margin-bottom: 30px;
-    height : 300px;
-    width:60%;
-    margin-left: 20%;
-    border: 3px solid rgb(246, 164, 84);
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    list-style: none;
-    display: inline-block;
-}
-
-
-#oggetti {
-    vertical-align: top;
-    margin:0;
-    margin-bottom: 30px;
-    color: white;
-    height : 100px;
-    width:100%;
-    border:0;
-    border-top: 1px solid rgb(246, 164, 84);
-    border-bottom: 1px solid rgb(246, 164, 84);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50%;
-    text-align: center;
-    list-style: none;
-    display: inline-block;
-}
-
-#descrizione li p {
-    border: 2px solid rgb(246, 164, 84);
-    background-color: rgba(246, 164, 84, 0.3);
-    width: 17%;
-    margin-top: 7%;
-    margin-left: 3%;
-    height: 200px;
-    float: left;
-}
-
-
-
 
 /* INIZIO DESKTOP*/
 
@@ -185,23 +193,53 @@ article {
     
     #intestazione h2 {
         padding-top: 6.4px;
-        width: 100%;
+        padding-left:5%;
+        width: 75%;
+        float: left;
         text-align: center;
         vertical-align: middle;
         margin: 0;
     }
     
+    #liLogoSubCat img{
+        margin-top: 7.5px;
+        height: 25px;
+    }
+    
     /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
+    #descrizione {
+        width:75%;
+        margin-left: 12.5%;
+        overflow: hidden;
+    }
+    
+    #descrizione li p {
+        border: 2px solid rgb(246, 164, 84);
+        background-color: rgba(246, 164, 84, 0.3);
+        width: 150px;
+        margin-top: 3.5%;
+        margin-left: 3%;
+        margin-right:3%;
+        height: 150px;
+        float: left;
+    }
+    
+    article {
+        text-align: left;
+        color: rgb(234,233, 229);
+        font-size: 100%;
+        padding: 3%;   
+       
+    }
     
     #oggetti {
         margin-bottom: 45px;
         height : 250px;
-        border: 0;
         border-top: 2px solid rgb(246, 164, 84);
         border-bottom: 2px solid rgb(246, 164, 84);
         font-size: 100%;
     }
-        
+    
     #liFrecciaSx img, #liFrecciaDx img{
         margin-top: 120px;
         height: 35px;
@@ -221,9 +259,10 @@ article {
     #liLocandina img:hover{
         border: 2px solid rgb(246, 164, 84);
     }
+    
+    
   }
-  
-  }
+
  
   @media screen and (min-width: 560px){
     #liLocandina:nth-child(6){
@@ -241,5 +280,4 @@ article {
     #liLocandina {
         width: 14%;
     }
-  }
-  
+}

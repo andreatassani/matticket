@@ -17,23 +17,16 @@ main div ul{
 
 /*INIZIO INTESTAZIONE*/
 
-#intestazione h2 {
-    padding-top:3.2px;
-    width: 60%;
-    padding:0;
-    vertical-align: middle;
-}
-
 
 #intestazione {
     display: block;
     color: white;
-    width: 20%;
+    width: 28%;
     height : 20px;
-    margin: 0 40%;
-    border-top: 1px solid rgb(246, 164, 84);
-    border-right: 1px solid rgb(246, 164, 84);
-    border-left: 1px solid rgb(246, 164, 84);
+    margin: 0 36%;
+    border-top: 1.5px solid rgb(246, 164, 84);
+    border-right: 1.5px solid rgb(246, 164, 84);
+    border-left: 1.5px solid rgb(246, 164, 84);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,11 +34,37 @@ main div ul{
     list-style: none;
 }
 
+#intestazione h2 {
+    padding-top:3.2px;
+    width: 80%;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+
 #intestazione a {
-    padding: 0;
-    width: 65%;
     color:white;
     text-decoration: none;
+}
+
+#intestazione a:hover {
+    color:rgb(246, 164, 84);
+}
+
+#liLogoSubCat {
+    width: 20%;
+    float: right;
+    padding-top: 0px;
+    margin:0;
+}
+
+#liLogoSubCat img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5px;
+    height: 15px;
 }
 
 
@@ -55,10 +74,10 @@ main div ul{
     vertical-align: top;
     margin-bottom: 30px;
     color: white;
-    height : 300px;
-    width:60%;
-    margin-left: 20%;
-    border: 3px solid rgb(246, 164, 84);
+    height : 385px;
+    width:90%;
+    margin-left: 5%;
+    border: 1.5px solid rgb(246, 164, 84);
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50%;
@@ -75,38 +94,57 @@ main div ul{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 150%;
     float: left;
-    margin-left:20%;
-    width: 30%;
+    margin-left:5%;
+    width: 40%;
     text-align: left;
 }
 
 .form{
-    width: 25%;
+    width: 50%;
     display:block;
-    border: 2px solid rgb(246, 164, 84);
+    border: 1.5px solid rgb(246, 164, 84);
     border-radius: 10px;
+    float:left;
+    margin-bottom: 30px;
+    margin-top: -10px;
 }
+
+
+.hform {
+    width: 22%;
+    display: block;
+    border: 1.5px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    margin: 0 0;
+    float: left;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+
+.hform:nth-of-type(1) , .hform:nth-of-type(3){
+    margin-right: 5%;
+}
+
 
 textArea {
     width: 90%;
-    height: 80%;
-    vertical-align: middle;
+    height: 90%;
     padding: 0;
-    margin: 5%;
-    border: 2px solid rgb(246, 164, 84);
+    border: 1.5px solid rgb(246, 164, 84);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 150%;
+    margin-top: 3%;
     border-radius: 10px;
     resize: none;
 }
 
 #descrizione {
-    padding-bottom: 35px;
     vertical-align: top;
     margin-bottom: 30px;
-    height : 300px;
-    width:60%;
-    margin-left: 20%;
+    height : 250px;
+    width:90%;
+    margin-left: 5%;
     border: 3px solid rgb(246, 164, 84);
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -133,17 +171,16 @@ textArea {
 #immagine li p {
     border: 2px solid rgb(246, 164, 84);
     background-color: rgba(246, 164, 84, 0.3);
-    width: 15%;
-    margin-left: 42.5%;
+    width: 75%;
+    margin-left: 12.5%;
     height: 150px;
 }
 
 #file {
-    width: 13%;
-    margin: 0 43.5%;
-    height: 10%;
-    border: 2px solid rgb(246, 164, 84);
+    width: 136px;
+    height: 7%;
     border-radius: 10px;
+    border: 2px solid rgb(246, 164, 84);
     text-align:center;
     float:center;
 
@@ -164,6 +201,36 @@ textArea {
     margin-bottom: 45px;
     box-shadow: 8px 8px 2px rgb(51,51, 51, 0.6);
 }
+
+#termina {
+    display: block;
+    background-color: rgb(51,51, 51);
+    margin-left: 20%;
+    width: 60%;
+    height : 40px;
+    border: 2px solid rgb(234,233, 229);
+    border-radius: 13px;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    margin-bottom: 45px;
+    box-shadow: 6px 6px 2px rgb(51,51, 51, 0.6);
+}
+
+#termina a {
+    color: rgb(234,233, 229);
+    text-decoration: none;
+}
+
+#termina:hover {
+    background-color: rgb(246, 164, 84);
+    cursor: pointer;
+}
+
+#termina:hover a {
+    font-weight:bolder;
+    
+}  
 
 
 
@@ -187,20 +254,80 @@ textArea {
     
     #intestazione h2 {
         padding-top: 6.4px;
-        width: 100%;
+        padding-left:5%;
+        width: 75%;
+        float: left;
         text-align: center;
         vertical-align: middle;
         margin: 0;
     }
     
+    #liLogoSubCat img{
+        margin-top: 7.5px;
+        height: 25px;
+    }
     /*FINE INTESTAZIONE DESKTOP, INIZIO LOCANDINE DESKTOP*/
     
     #oggetti {
         margin-bottom: 45px;
-        height : 510px;
+        width: 75%;
+        margin-left: 12.5%;
+        height : 435px;
         border-top: 2px solid rgb(246, 164, 84);
         border-bottom: 2px solid rgb(246, 164, 84);
         font-size: 100%;
+    }
+
+    .hform:nth-of-type(1) , .hform:nth-of-type(3){
+        margin-right: 5.5%;
+    }
+    
+    #descrizione {
+        height: 350px;
+        width: 75%;
+        margin-left:12.5%;
+    }
+
+    textArea {
+        width: 90%;
+        height: 90%;
+        margin: 1.5%;
+        padding: 0;
+        border: 2px solid rgb(246, 164, 84);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 150%;
+        border-radius: 10px;
+        resize: none;
+    }
+    
+    #file {
+        width: 376px;
+        height: 7%;
+        border-radius: 10px;
+        border: 2px solid rgb(246, 164, 84);
+        text-align:center;
+        float:center;
+    
+    }
+
+    #immagine {
+        width: 50%;
+        margin-left:25%;
+    }
+    
+    #immagine li p {
+        border: 2px solid rgb(246, 164, 84);
+        background-color: rgba(246, 164, 84, 0.3);
+        width: 150px;
+        margin: 20px auto;
+        height: 150px;
+    }
+
+    #termina {
+        width: 35%;
+        margin-left:32.5%;
+        font-size: 150%;
+        height: 50px;
     }
   
   }

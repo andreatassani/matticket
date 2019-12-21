@@ -40,7 +40,7 @@ function onHoverGenerico() {
     lastX = x;
     lastY = y;
     lastId = id;
-    id = id.replace("li", "")
+    id = id.replace("li", "");
     if(id.includes("Alto")){
       id = id.replace("Alto", "");
     }

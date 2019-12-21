@@ -12,7 +12,7 @@ function onHoverFreccia() {
         elementMouseIsOver.setAttribute('src', './img/icone/FrecciaDxArancione.png');
     }
 }
-  
+
 function offHoverFreccia() {
     var Logo = document.elementFromPoint(lastArrowX, lastArrowY);
     var id = Logo.getAttribute('id');

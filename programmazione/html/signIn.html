@@ -2,15 +2,16 @@
 <a lang = "it">
 <head>
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
-    <title>MaTTicket - Log In</title>
-    <link rel = "stylesheet" type = "text/css" href = "./css/account.css" />
+    <title>MaTTicket - Home</title>
+    <link rel = "stylesheet" type = "text/css" href = "./css/signIn.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/header.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/footer.css" />
-    <script src="./javascript/header.js" type="text/javascript"></script>
+    <script src="./javascript/header.js" type="text/javascript"></script> 
+    <script src="./javascript/utility.js" type="text/javascript"></script>
 </head>
 <body onclick ="clickCerca(); clickMenuAPanino();">
     <header class ="Header" id ="header">
-        <ul>
+        <ul id = "ulHeader"class="Cerca">
             <li id = "liLogoAltoSx" ><a href="index.html"><img id = "LogoSx" src="./img/Logo.png"alt="logo MaTTicket"/></a></li>
             <li class="dropdown" onmouseover="onHoverCategorie();" onmouseout="offHoverCategorie();">
                 <button class="dropbtn">Categorie <i class="fa fa-caret-down"></i></button>
@@ -21,12 +22,12 @@
                     <a href="mostre.html">Mostre<img src = "./img/icone/Mostre.png" alt="immagine stilizzata del quadro 'L'Urlo di Munch'"/></a>
                 </div>
             </li>
-            <li id = "liTendina"><img id = "Tendina" src="./img/icone/AccountArancione.png"alt="immagine rappresentativa di una tendina di oggetti"/></li>
-            <li id = "liMenuAPanino"><img id = "MenuAPanino" src="./img/icone/AccountArancione.png"alt="menù a panino"/></li>
+            <li id = "liTendina"><img id = "Tendina" src="./img/icone/Tendina.png"alt="immagine rappresentativa di una tendina di oggetti"/></li>
+            <li id = "liMenuAPanino"><img id = "MenuAPanino" src="./img/icone/Account.png"alt="menù a panino"/></li>
             <li id = "liMercatino" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="mercatino.html"><h1>Mercatino</h1><img id = "Mercatino" src="./img/icone/Mercatino.png"alt="immagine stilizzata di una bancarella"/></a></li>
-            <li id = "liSelectEvento"><select><option value="Evento">Evento</option><option value="Artista">Artista</option><option value="Data">Data</option><option value="Città">Città</option></select></li><li id="liCerca"><fieldset form="form1"><input id="inputCerca" type="text" name="username" value="Cerca"></fieldset></li><li id="liLente"><a href=""><img src="./img/icone/Lente.png"alt="lente di ingrandimento per la ricerca"/></a></li>
+            <li id = "liNomePagina"><h1>SIGN IN</h1></li><li id = "liSelectEvento"><select><option value="Evento">Evento</option><option value="Artista">Artista</option><option value="Data">Data</option><option value="Città">Città</option></select></li><li id="liCerca"><fieldset form="form1"><input id="inputCerca" type="text" name="username" value="Cerca"></fieldset></li><li id="liLente"   onclick="clickShowSelectCerca();"><a><img src="./img/icone/Lente.png"alt="lente di ingrandimento per la ricerca"/></a></li>
             <li id = "liLogoAltoDx" ><a href="index.html"><img id = "LogoDx" src="./img/Logo.png"alt="logo MaTTicket"/></a></li>
-            <li id = "liAccount" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="logIn.html"><h1>Account</h1><img id = "Account" src="./img/icone/Account.png"alt="immagine stilizzata di un omino"/></a></li>
+            <li id = "liAccount" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="logIn.html"><h1>Account</h1><img id = "Account" src="./img/icone/AccountArancione.png"alt="immagine stilizzata di un omino"/></a></li>
             <li id = "liCarrello" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="carrello.html"><h1>Carrello</h1><img id = "Carrello" src="./img/icone/Carrello.png"alt="immagine stilizzata di un carrello"/></a></li>
         </ul>
     </header>
@@ -39,20 +40,16 @@
             </ul>
             <ul id="oggetti">
                 <li><label for=”insTitolo″>Nome:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insArtista″>Cognome:</label><input id=”insArtista″ class="form"/></li>
-                <li><label for=”insData″>Tipologia Account:</label><select><option value="Cliente">Cliente</option><option value="Organizzatore">Organizzatore</option><option value="Amministratore">Amministratore</option></select></li>
-                <li><label for=”insCittà″>Email:</label><input id=”insCittà″ class="form"/></li>
+                <li><label for=”insTitolo″>Cognome:</label><input id=”insTitolo″ class="form"/></li>
+                <li><label for=”insTitolo″>Nick Name:</label><input id=”insTitolo″ class="form"/></li>
+                <li><label for=”insTitolo″>Email:</label><input id=”insTitolo″ class="form"/></li>
+                <li><label for=”insTitolo″>Password:</label><input id=”insTitolo″ class="form"/></li>
+                <li><label for=”insTitolo″>Reinserisci Password:</label><input id=”insTitolo″ class="form"/></li>
                 </ul>
         </div>
         <div>
-            <ul id="intestazione">
-                <li><a><h2>Preferenze</h2></a></li>
-            </ul>
-            <ul id="immagine">
-
-            </ul>
+            <button id="termina"><a href="account.html">Termina e Accedi</a></button>
         </div>
-        <button id="termina"><a href="accountCliente.html">Conferma Preferenze</a></button>
     </main>
     <!-- FOOTER-->
     <footer>
@@ -63,4 +60,3 @@
         </ul>
     </footer>
 </body>
-

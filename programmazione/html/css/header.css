@@ -82,7 +82,7 @@ header ul li{
     display: block;
   }
 
-#liLogoAltoSx, #liMercatino, #liAccount, #liCarrello, #liTendina, .dropdown{
+#liLogoAltoSx, #liMercatino, #liAccount, #liCarrello, #liTendina, .dropdown {
     display: none;
 }
 
@@ -99,24 +99,52 @@ header ul li{
     height: 30px;
 }
 
+.Cerca > #liSelectEvento, .Cerca > #liCerca {
+    display:none;
+}
+
+
+.CercaShown > #liNomePagina {
+    display: none;
+}
+
+#liNomePagina {
+    display: inline-block;
+    vertical-align: top;
+    width:63%;
+    text-align: center;
+    color: rgb(234,233,229);
+    font-size: 200%;
+    margin:0;
+    margin-top: 4px;
+}
+
+
+#liNomePagina h1 {
+    border: 1.5px solid rgb(246, 164, 84);
+    padding: 0 1%;
+    border-radius: 5px;
+    margin:0;
+    display: inline-block;
+}
+
 
 #liSelectEvento{
     margin-top: 5px;
-    vertical-align: middle;
+    vertical-align: top;
     height: 30px;
     width: 20%;
 }
 
 #liCerca {
     margin-top: 5px;
-    vertical-align: middle;
+    vertical-align: top;
     height: 30px;
     width: 42%;
 }
 
 #liLente {
     margin-top: 5px;
-    vertical-align: middle;
     height: 28px;
     width: 5%;
     background-color : white;
@@ -127,6 +155,7 @@ header ul li{
 
 #liLente:hover{
     background-color : rgb(246, 164, 84);
+    cursor: pointer;
 }
 
 #liLente img{
@@ -296,6 +325,16 @@ input {
         color:rgb(246, 164, 84);
     }
 
+    #liNomePagina{
+        width:29%;
+        margin-top: 10px;
+    }
+
+    #liNomePagina h1{
+        border: 2px solid rgb(246, 164, 84);
+        border-radius: 10px;
+    }
+
     #liSelectEvento{
         vertical-align: top;
         padding:0;
@@ -353,6 +392,7 @@ input {
     }
 }
 
+/*ICONE TOPBAR TOLTE*/
 @media screen and (max-width: 950px) {
     #liCarrello img, #liTendina img, #liAccount img, #liMercatino img {
         display: none;
@@ -381,7 +421,14 @@ input {
     }
 }
 
+/*APERTURA MENU A PANINO*/
 @media screen and (max-width: 764px){
+
+    .HeaderOpen > ul >#liNomePagina{
+        margin-left: 10%;
+    }
+
+
     #liSelectEvento{
         width: 18%;
         padding-left:3%;

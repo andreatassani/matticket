@@ -3,19 +3,20 @@ var paninoAttuale;
 var lastId;
 var lastX;
 var lastY;
-
+var n = 0;
 
 function clickMenuAPanino(){
-  console.log("qui");
   var x = document.getElementById("header");
   var y = document.getElementById("MenuAPanino");
+  if(n == 0){
+    n++;
+  paninoAttuale = y.getAttribute('src');
+  }
   var xc = event.clientX;
   var yc = event.clientY;
   var elementMouseIsOver = document.elementFromPoint(xc, yc);
   if(elementMouseIsOver.getAttribute("id") != null && elementMouseIsOver.getAttribute("id").includes("Panino") && x.className === "Header"){
-    console.log("qui");
     x.className += "Open";
-    paninoAttuale = y.getAttribute('src');
     y.setAttribute('src', './img/icone/MenuAPaninoArancione.png');
   } else if(elementMouseIsOver.getAttribute('class') != "dropbtn"){
     x.className = "Header";
@@ -93,8 +94,6 @@ var sticky = header.offsetTop;
   }
 }
 
-
-
 function clickCerca() {
   var xc = event.clientX;
   var yc = event.clientY;
@@ -105,6 +104,15 @@ function clickCerca() {
   } else {
   var click = document.getElementById("inputCerca");
   click.setAttribute('value', "Cerca");
+  }
+}
+
+function clickShowSelectCerca(){
+  var x = document.getElementById("ulHeader");
+  if(x.className === "Cerca"){
+    x.className += "Shown";
+  } else {
+    x.className = "Cerca";
   }
 }
 

@@ -1,0 +1,66 @@
+#listaForm {
+    margin-bottom: 45px;
+    color: white;
+    width:60%;
+    margin-left: 20%;
+    border: 1.5px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50%;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+
+#listaForm li {
+    margin: 30px 0px;
+}
+
+#listaForm label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    display: inline-block;
+    margin:0;
+    margin-right:5%;
+    width: 30%;
+    text-align: left;
+}
+
+.form{
+    width: 60%;
+    display:block;
+    border: 1.5px solid rgb(246, 164, 84);
+    border-radius: 10px;
+}
+
+#listaForm input{
+    display: inline-block;
+    width: 60%;
+}
+  
+#listaForm select{
+    height: 38px;
+    width: 60%;
+    display:inline-block;
+    border: 1.5px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-size: 150%;
+}
+
+
+/*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+    #listaForm {
+        border: 2px solid rgb(246, 164, 84);
+        font-size: 100%;
+    }
+
+    .form{
+        width: 50%;
+        display:block;
+        border: 2px solid rgb(246, 164, 84);
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,6 @@
+PROGRAMMAZIONE
+-aggiunta scelta/creazione artista a 'nuovoEvento.html'
+-aggiunta Data a 'nuovoEvento.html'
+-aggiunta daltonie sign-in + utente
+DB
+-sostituire TUTTI gli id con i nomi, perchè Maio fa cagare 

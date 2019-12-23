@@ -148,7 +148,7 @@ header ul li{
     height: 28px;
     width: 5%;
     background-color : white;
-    border: 1px solid rgb(246, 164, 84);
+    border: 1.5px solid rgb(246, 164, 84);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -216,6 +216,7 @@ input {
     color: rgb(112,112,112);
 }
 
+/*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
 @media screen and (min-width: 768px){
     header ul {
         height: 0;
@@ -226,6 +227,7 @@ input {
         height: 70px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 65%;
+        border-bottom: 2px solid rgb(246, 164, 84);
     }
 
 

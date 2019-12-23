@@ -1,0 +1,40 @@
+.buttonMain {
+    display: block;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    margin-left: 35%;
+    min-width: 30%;
+    height : 40px;
+    border: 3px solid white;
+    border-radius: 9px;
+    font-size: 120%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    margin-bottom: 45px;
+    box-shadow: 8px 8px 2px rgb(51,51, 51, 0.6);
+}
+
+.buttonMain a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttonMain:hover {
+    background-color: rgb(246, 164, 84);
+    cursor: pointer;
+}
+
+.buttonMain:hover a{
+    font-weight: bolder;
+}
+
+/*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
+@media screen and (min-width: 768px){
+    .buttonMain{
+        margin-left: 40%;
+        min-width: 20%;
+        height : 60px;
+        border: 4px solid white;
+        border-radius: 12px;
+    }
+}

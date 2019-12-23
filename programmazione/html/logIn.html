@@ -3,9 +3,11 @@
 <head>
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
     <title>MaTTicket - Log In</title>
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/header.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/footer.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/intestazioni.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/bottoni.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/logIn.css" />
-    <link rel = "stylesheet" type = "text/css" href = "./css/header.css" />
-    <link rel = "stylesheet" type = "text/css" href = "./css/footer.css" />
     <script src="./javascript/header.js" type="text/javascript"></script> 
     <script src="./javascript/utility.js" type="text/javascript"></script>
 </head>
@@ -25,7 +27,7 @@
             <li id = "liTendina"><img id = "Tendina" src="./img/icone/Tendina.png"alt="immagine rappresentativa di una tendina di oggetti"/></li>
             <li id = "liMenuAPanino"><img id = "MenuAPanino" src="./img/icone/AccountArancione.png"alt="menù a panino"/></li>
             <li id = "liMercatino" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="mercatino.html"><h1>Mercatino</h1><img id = "Mercatino" src="./img/icone/Mercatino.png"alt="immagine stilizzata di una bancarella"/></a></li>
-            <li id = "liNomePagina"><h1>LOG IN</h1></li><li id = "liSelectEvento"><select><option value="Evento">Evento</option><option value="Artista">Artista</option><option value="Data">Data</option><option value="Città">Città</option></select></li><li id="liCerca"><fieldset form="form1"><input id="inputCerca" type="text" name="username" value="Cerca"></fieldset></li><li id="liLente"   onclick="clickShowSelectCerca();"><a><img src="./img/icone/Lente.png"alt="lente di ingrandimento per la ricerca"/></a></li>
+            <li id = "liNomePagina"><h1>HOME</h1></li><li id = "liSelectEvento"><select><option value="Evento">Evento</option><option value="Artista">Artista</option><option value="Data">Data</option><option value="Città">Città</option></select></li><li id="liCerca"><fieldset form="form1"><input id="inputCerca" type="text" name="username" value="Cerca"></fieldset></li><li id="liLente"   onclick="clickShowSelectCerca();"><a><img src="./img/icone/Lente.png"alt="lente di ingrandimento per la ricerca"/></a></li>
             <li id = "liLogoAltoDx" ><a href="index.html"><img id = "LogoDx" src="./img/Logo.png"alt="logo MaTTicket"/></a></li>
             <li id = "liAccount" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="logIn.html"><h1>Account</h1><img id = "Account" src="./img/icone/AccountArancione.png"alt="immagine stilizzata di un omino"/></a></li>
             <li id = "liCarrello" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="carrello.html"><h1>Carrello</h1><img id = "Carrello" src="./img/icone/Carrello.png"alt="immagine stilizzata di un carrello"/></a></li>
@@ -39,13 +41,13 @@
                 <li><a><h2>Dati Personali</h2></a></li>
             </ul>
             <ul id="oggetti">
-                <li><label for=”insTitolo″>Nome/Email:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insLuogo″>Password:</label><input id=”insLuogo″ class="form"/></li>
-                </ul>
+                <li><label for=”insEmail″>Email:</label><input id=”insEmail″ class="form"/></li>
+                <li><label for=”insPassword″>Password:</label><input id=”insPassword″ class="form"/></li>
+            </ul>
         </div>
         <div>
-            <button id="termina"><a href="account.html">Accedi</a></button>
-            <button id="termina"><a href="signIn.html">Iscrivimi</a></button>
+            <button class = "buttonMain"><a href="account.html">Accedi</a></button>
+            <button class = "buttonMain"><a href="signIn.html">Iscrivimi</a></button>
         </div>
     </main>
     <!-- FOOTER-->

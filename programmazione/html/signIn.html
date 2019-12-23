@@ -3,9 +3,11 @@
 <head>
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
     <title>MaTTicket - Sign In</title>
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/header.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/footer.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/intestazioni.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/bottoni.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/signIn.css" />
-    <link rel = "stylesheet" type = "text/css" href = "./css/header.css" />
-    <link rel = "stylesheet" type = "text/css" href = "./css/footer.css" />
     <script src="./javascript/header.js" type="text/javascript"></script> 
     <script src="./javascript/utility.js" type="text/javascript"></script>
 </head>
@@ -39,16 +41,17 @@
                 <li><a><h2>Dati Personali</h2></a></li>
             </ul>
             <ul id="oggetti">
-                <li><label for=”insTitolo″>Nome:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insTitolo″>Cognome:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insTitolo″>Nick Name:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insTitolo″>Email:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insTitolo″>Password:</label><input id=”insTitolo″ class="form"/></li>
-                <li><label for=”insTitolo″>Reinserisci Password:</label><input id=”insTitolo″ class="form"/></li>
+                <li><label for=”insNome″>Nome:</label><input id=”insNome″ class="form"/></li>
+                <li><label for=”insCognome″>Cognome:</label><input id=”insCognome″ class="form"/></li>
+                <li><label for=”insNickName″>Nick Name:</label><input id=”insNickName″ class="form"/></li>
+                <li><label for=”insTipo″>Tipologia Account:</label><select class="form"><option value="Cliente">Cliente</option><option value="Organizzatore">Organizzatore</option></select></li>
+                <li><label for=”insEmail″>Email:</label><input id=”insEmail″ class="form"/></li>
+                <li><label for=”insPassword″>Password:</label><input id=”insPassword″ class="form"/></li>
+                <li><label for=”insRePassword″>Reinserisci Password:</label><input id=”insRePassword″ class="form"/></li>
                 </ul>
         </div>
         <div>
-            <button id="termina"><a href="account.html">Termina e Accedi</a></button>
+            <button class = "buttonMain"><a href="account.html">Termina e Accedi</a></button>
         </div>
     </main>
     <!-- FOOTER-->

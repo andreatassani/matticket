@@ -14,6 +14,7 @@
 
 #listaForm li {
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 #liImg{
@@ -34,7 +35,10 @@
     margin:0 1%;
     width: 38%;
     text-align: left;
-    color: rgb(246, 164, 84);
+}
+
+.labelAccount{
+    color: rgb(246, 164, 84)!important;
 }
 
 .form{
@@ -46,12 +50,12 @@
 
 #listaForm input{
     display: inline-block;
-    width: 60%;
+    width: 50%;
 }
   
 #listaForm select{
     height: 38px;
-    width: 60%;
+    width: 50%;
     display:inline-block;
     border: 1.5px solid rgb(246, 164, 84);
     border-radius: 10px;

@@ -23,6 +23,14 @@
     margin: 0;
 }
 
+#intestazione h2:hover{
+    cursor: default;
+}
+
+.clickable h2:hover{
+    cursor:pointer !important;
+}
+
 #intestazione a {
     color:white;
     text-decoration: none;

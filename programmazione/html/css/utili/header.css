@@ -128,6 +128,9 @@ header ul li{
     display: inline-block;
 }
 
+#liNomePagina h1:hover{
+    cursor: default;
+}
 
 #liSelectEvento{
     margin-top: 5px;

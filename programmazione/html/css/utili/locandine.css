@@ -44,6 +44,10 @@
     margin-top : 5px;
 }
 
+#liLocandina p:hover{
+    cursor:default;
+}
+
 /*FRECCE*/
 #liFrecciaSx {
     width:  5%;

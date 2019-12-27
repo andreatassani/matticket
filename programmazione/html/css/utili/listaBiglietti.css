@@ -16,6 +16,9 @@
     text-align: center;
 }
 
+.liLocandina p:hover{
+    cursor: default;
+}
 
 .liLocandina .locandina {
     margin: 0;

@@ -1,0 +1,50 @@
+#oggetti{
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 9px;
+    margin-bottom: 30px;
+    border:1.5px solid rgb(246, 164, 84);
+}
+
+.linkEsterni{
+    font-size: 80%;
+    text-align: center;
+    width: 40%;
+    height: 20%;
+    margin: 12.5px 3%;
+    display: inline-block;
+    border: 1.5px solid rgb(246, 164, 84);
+    border-radius: 7px;
+  }
+
+.linkEsterni a {
+    text-decoration: none;
+    color: rgb(234,233, 229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.linkEsterni a:hover {
+    color: rgb(246, 164, 84);
+}
+
+/*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+    #oggetti{
+        margin-left: 12.5%;
+        width: 75%;
+        border-radius: 12px;
+        border:2px solid rgb(246, 164, 84);
+    }
+    .linkEsterni{
+        font-size: 150%;
+        width: 40%;
+        height: 20%;
+        margin: 35px 3%;
+        display: inline-block;
+        border: 1.5px solid rgb(246, 164, 84);
+        border-radius: 7px;
+    }
+}

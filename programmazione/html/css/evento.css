@@ -9,7 +9,7 @@
     border:0;
     border-top: 1px solid rgb(246, 164, 84);
     border-bottom: 1px solid rgb(246, 164, 84);
-    border-radius: 10px;
+    border-radius: 9px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50%;
     text-align: center;
@@ -26,24 +26,6 @@
       border-radius: 10px;
   }
 
-.linkEsterni{
-    width: 40%;
-    height: 20%;
-    margin: 12.5px 3%;
-    display: inline-block;
-    border: 1.5px solid rgb(246, 164, 84);
-    border-radius: 7px;
-
-  }
-
-.linkEsterni p {
-    
-    text-decoration: none;
-    color: rgb(234,233, 229);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-style: italic;
-}
 
 #tabella {
     vertical-align: top;
@@ -123,7 +105,7 @@ tfoot td a {
         width:75%;
         margin-left: 12.5%;
         border: 2px solid rgb(246, 164, 84);
-        border-radius: 10px;
+        border-radius: 12px;
         font-size: 100%;
     }
     
@@ -144,14 +126,5 @@ tfoot td a {
         height: 85%;
         font-size: 150%;
         
-    }
-   
-    .linkEsterni{
-        width: 40%;
-        height: 20%;
-        margin: 35px 3%;
-        display: inline-block;
-        border: 1.5px solid rgb(246, 164, 84);
-        border-radius: 7px;
     }
 }

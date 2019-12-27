@@ -2,6 +2,7 @@
 #listaBiglietti{
     border-top: 1.5px solid rgb(246, 164, 84);
     border-bottom: 1.5px solid rgb(246, 164, 84);
+    margin-bottom: 30px;
 }
 
 .liLocandina {
@@ -26,7 +27,7 @@
     margin-top: 7.5px;
 }
 
-.liLocandina p{
+.liLocandina > p{
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -36,17 +37,29 @@
 
 .liLocandina button{
     padding: 0;
-    margin: 0 1%;
-    width: 5%;
-    margin-top: 38.9px;
+    margin: 0 1% !important;
+    margin-top: 38.9px !important;
+    float: right;
+}
+
+#buttonPiccolo > p {
+    margin: 0;
+    
 }
 
 .liLocandina .cestino{
     padding: 0;
     margin: 0 1%;
-    height: 16px;
-    width: 14.5px;
+    height: 20px;
     margin-top: 38.9px;
+}
+
+.liLocandina .cestino:hover{
+    cursor: pointer;
+}
+
+.liLocandina #pTotale {
+    border: 1.5px solid rgb(246, 164, 84);
 }
 
 /*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
@@ -61,7 +74,7 @@
 }
 
 
-.liLocandina img {
+.liLocandina .locandina {
     border: 2px solid white;
     height: 91px;
     margin-left: 2%;
@@ -74,11 +87,8 @@
     margin-top: 38.9px;
 }
 
-.liLocandina button{
-    margin: 0 1%;
-    width: 7%;
-    float: right;
-    margin-top: 38.9px;
+.liLocandina .cestino{
+    height: 30px;
 }
 
 }

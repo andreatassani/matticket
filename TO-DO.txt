@@ -2,5 +2,8 @@ PROGRAMMAZIONE
 -aggiunta scelta/creazione artista a 'nuovoEvento.html'
 -aggiunta Data a 'nuovoEvento.html'
 -aggiunta daltonie sign-in + utente
+-spostare mappa EVENTO--->MAGGIORIINFO
 DB
--sostituire TUTTI gli id con i nomi, perchè Maio fa cagare 
+-sostituire TUTTI gli id con i nomi, perchè Maio fa cagare
+-creare biglietti
+-aggiungere percorsi img

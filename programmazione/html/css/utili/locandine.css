@@ -30,7 +30,7 @@ a{
     text-align : center;
 }
 
-#liLocandina:nth-child(6), #liLocandina:nth-child(7){
+#liLocandina:nth-child(n+6){
     display: none;
 }
 

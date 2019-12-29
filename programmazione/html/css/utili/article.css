@@ -15,11 +15,12 @@
     overflow: hidden;
 }
 
-#descrizione li p {
+#descrizione li img {
     border: 2px solid rgb(246, 164, 84);
     background-color: rgba(246, 164, 84, 0.3);
     width: 100px;
-    margin-top: 7%;
+    margin-top: 15px;
+    margin-bottom:15px;
     margin-left: 3%;
     margin-right:3%;
     height: 100px;

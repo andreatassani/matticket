@@ -7,6 +7,7 @@
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/footer.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/intestazioni.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/bottoni.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/inputImg.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/nuovoEvento.css" />
     <script src="./javascript/header.js" type="text/javascript"></script> 
     <script src="./javascript/utility.js" type="text/javascript"></script>
@@ -65,8 +66,8 @@
                 <li id="liLogoSubCat"><img src = "./img/icone/Disegno.png" alt="immagine rappresentativa di un disegno"/></a></li>
             </ul>
             <ul id="immagine">
-                <li><p></p></li>
-                <li><input type="file" id="file" accept=".png, .jpg, .jpeg"></li>
+                <li id = "liImmagine"><img id="ImmagineLocandina"src="./img/icone/LocandinaVuota.png" alt=""></li>
+                <li><input type="file" id="file" accept=".png, .jpg, .jpeg" onchange="document.getElementById('ImmagineLocandina').src = window.URL.createObjectURL(this.files[0])">></li>
             </ul>
         </div>
         <button class="buttonMain"><a href="">Termina e crea</a></button>

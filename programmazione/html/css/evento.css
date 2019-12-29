@@ -1,3 +1,10 @@
+#descrizione img {
+    height: 120px;
+    margin: 10px;
+    border: 1.5px solid rgb(234,233, 229);
+    float: left;
+}
+
 #oggetti {
     vertical-align: top;
     margin:0;
@@ -96,6 +103,12 @@ tfoot td a {
 @media screen and (min-width: 768px) {
     iframe {
         height: 300px;
+    }
+
+    #descrizione img {
+        height: 180px;
+        margin: 15px;
+        border: 2px solid rgb(234,233, 229);
     }
 
     #oggetti{

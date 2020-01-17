@@ -1,0 +1,19 @@
+LOCANDINE EVENTI SCHERMATE PRINCIPALI DIVISE PER CATEGORIA:
+SELECT artista.nome, evento.nome, evento.immagine 
+FROM evento, artista 
+WHERE evento.categoria = 'musica' 
+AND artista.IDartista = evento.IDartista
+
+TUTTI GLI EVENTI DI UN DETERMINATO ARTISTA:
+SELECT artista.nome, artista.descrizione, artista.immagine, artista.sito, evento.nome, evento. descrizione, evento.immagine, date.data, date.luogo, date.città 
+FROM artista, evento, date 
+WHERE artista.nome = 'Vasco Rossi' 
+AND artista.IDartista = evento.IDartista 
+AND evento.IDevento = date.IDevento
+
+EVENTI IN SCADENZA ULTIMI 7 GIORNI:
+SELECT artista.nome, artista.descrizione, artista.immagine, artista.sito, evento.nome, evento. descrizione, evento.immagine, date.data, date.luogo, date.città 
+FROM artista, evento, date 
+WHERE date.data between CURDATE() and CURDATE()+7 
+AND artista.IDartista = evento.IDartista 
+AND evento.IDevento = date.IDevento

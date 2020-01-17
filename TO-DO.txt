@@ -4,6 +4,3 @@ PROGRAMMAZIONE
 -aggiunta daltonie sign-in + utente
 -togliere onHover/offHover dalla pagina specificata
 DB
--sostituire TUTTI gli id con i nomi, perchè Maio fa cagare
--creare biglietti
--aggiungere percorsi img

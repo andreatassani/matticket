@@ -98,20 +98,19 @@ function clickCerca() {
   var xc = event.clientX;
   var yc = event.clientY;
   var elementMouseIsOver = document.elementFromPoint(xc, yc);
-  if(elementMouseIsOver.getAttribute("id") != null && elementMouseIsOver.getAttribute("id").includes("Cerca")){
-    var click = document.getElementById("inputCerca");
-  click.setAttribute('value', "");
-  } else {
-  var click = document.getElementById("inputCerca");
-  click.setAttribute('value', "Cerca");
+  if(elementMouseIsOver.getAttribute("id") != null &&  document.getElementById("inputCerca").value == 'Cerca'){
+    document.getElementById("inputCerca").value = '';
+  } else if (elementMouseIsOver != document.getElementById("inputCerca")){
+  document.getElementById("inputCerca").value = "Cerca";
   }
 }
 
 function clickShowSelectCerca(){
   var x = document.getElementById("ulHeader");
+  var click = document.getElementById("inputCerca");
   if(x.className === "Cerca"){
     x.className += "Shown";
-  } else {
+  } else if(click.value == "Cerca"){
     x.className = "Cerca";
   }
 }

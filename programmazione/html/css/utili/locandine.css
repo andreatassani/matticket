@@ -1,10 +1,13 @@
 /*LOCANDINE*/
+a{
+    text-decoration: none;
+}
 
 #oggetti {
     vertical-align: top;
     margin-bottom: 30px;
     color: white;
-    height : 100px;
+    height : 120px;
     width:100%;
     border-top: 1px solid rgb(246, 164, 84);
     border-bottom: 1px solid rgb(246, 164, 84);
@@ -27,7 +30,7 @@
     text-align : center;
 }
 
-#liLocandina:nth-child(6), #liLocandina:nth-child(7){
+#liLocandina:nth-child(n+6){
     display: none;
 }
 
@@ -42,10 +45,22 @@
 
 #liLocandina p {
     margin-top : 5px;
+    margin-bottom : 5px;
 }
 
 #liLocandina p:hover{
     cursor:default;
+}
+
+.NomeArtista{
+    text-decoration: none;
+    color: rgb(234, 233, 229);
+    font-weight: bold;
+}
+
+.NomeArtista:hover{
+    color: rgb(246, 164, 84);
+    cursor: pointer !important;
 }
 
 /*FRECCE*/
@@ -94,7 +109,7 @@
     }
     
     #liLocandina {
-        padding-top: 22px;
+        padding-top: 10px;
         height: 200px;
     }
     

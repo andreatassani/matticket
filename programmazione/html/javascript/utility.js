@@ -22,4 +22,3 @@ function offHoverFreccia() {
         Logo.setAttribute('src', './img/icone/FrecciaDx.png');
     }
 }
-  

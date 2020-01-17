@@ -1,0 +1,59 @@
+
+#immagine {
+    vertical-align: top;
+    margin-bottom: 30px;
+    height : 250px;
+    width:60%;
+    margin-left: 20%;
+    border: 3px solid rgb(246, 164, 84);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+
+}
+
+#immagine #liImmagine img {
+    border: 2px solid rgb(246, 164, 84);
+    margin: 15px 0;
+    height: 150px;
+    width: 106px;
+}
+
+#immagine #liImmagineProf img {
+    border: 2px solid rgb(246, 164, 84);
+    margin: 15px 0;
+    height: 100px;
+    width: 100px;
+}
+
+#file {
+    width: 136px;
+    height: 7%;
+    border-radius: 10px;
+    border: 2px solid rgb(246, 164, 84);
+    text-align:center;
+    float:center;
+
+}
+
+/*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
+@media screen and (min-width: 768px) {
+
+    #file {
+        width: 376px;
+        height: 7%;
+        border-radius: 10px;
+        border: 2px solid rgb(246, 164, 84);
+        text-align:center;
+        float:center;
+    
+    }
+
+    #immagine {
+        width: 50%;
+        margin-left:25%;
+    }
+
+}

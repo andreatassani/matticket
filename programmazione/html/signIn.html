@@ -9,7 +9,7 @@
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/bottoni.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/tabella.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/form.css" />
-    <link rel = "stylesheet" type = "text/css" href = "./css/signIn.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/utili/inputImg.css" />
     <script src="./javascript/header.js" type="text/javascript"></script> 
     <script src="./javascript/utility.js" type="text/javascript"></script>
 </head>
@@ -67,6 +67,16 @@
                         </tbody>
                     </table>
                 </ul>
+        </div>
+        <div>
+            <ul id="intestazione">
+                <li><a><h2>Immagine</h2></a></li>
+                <li id="liLogoSubCat"><img src = "./img/icone/Disegno.png" alt="immagine rappresentativa di un disegno"/></a></li>
+            </ul>
+            <ul id="immagine">
+                <li id = "liImmagineProf"><img id="ImmagineProf"src="./img/icone/ImmagineVuota.png" alt=""></li>
+                <li><input type="file" id="file" accept=".png, .jpg, .jpeg" onchange="document.getElementById('ImmagineProf').src = window.URL.createObjectURL(this.files[0])"></li>
+            </ul>
         </div>
         <div>
             <button class = "buttonMain"><a href="account.html">Termina e Accedi</a></button>

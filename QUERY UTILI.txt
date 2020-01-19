@@ -2,17 +2,17 @@
 ------------------------LOCANDINE EVENTI SCHERMATE PRINCIPALI DIVISE PER CATEGORIA:
 SELECT artista.nome, evento.nome, evento.immagine 
 FROM evento, artista 
-WHERE evento.categoria = 'musica' 
-AND artista.IDartista = evento.IDartista
+WHERE categoria = ' ' 
+AND IDartista = IDartistaE
 
 ------------------------EVENTI IN SCADENZA ULTIMI 7 GIORNI:
-SELECT artista.nome, artista.descrizione, artista.immagine, artista.sito, evento.nome, evento. descrizione, evento.immagine, date.data, date.luogo, date.città 
+SELECT nomeA, nomeE, immagineE, prezzo
 FROM artista, evento, date 
-WHERE date.data between CURDATE() and CURDATE()+7 
-AND artista.IDartista = evento.IDartista 
-AND evento.IDevento = date.IDevento
+WHERE giornata between CURDATE() and CURDATE()+7 
+AND IDartista = IDartistaE
+AND IDeventoE = IDevento
 
-------------------------EVENTI PIU' RICHIESTI
+------------------------EVENTI PIU' RICHIESTI:
 SELECT DISTINCT nomeA, nomeE, immagineE, prezzo 
 FROM artista, evento, giorno 
 WHERE IDartista = IDartistaE AND IDeventoE = IDevento 
@@ -20,11 +20,31 @@ ORDER BY postiL/postiT ASC LIMIT 10
 **/
 
 ------------------------TUTTI GLI EVENTI DI UN DETERMINATO ARTISTA:
-SELECT artista.nome, artista.descrizione, artista.immagine, artista.sito, evento.nome, evento. descrizione, evento.immagine, date.data, date.luogo, date.città 
+SELECT nomeA, nomeE, immagineE, prezzo
 FROM artista, evento, date 
-WHERE artista.nome = 'Vasco Rossi' 
-AND artista.IDartista = evento.IDartista 
-AND evento.IDevento = date.IDevento
+WHERE nomeA = ' ' 
+AND IDartista = IDartistaE
+AND IDeventoE = IDevento
+
+------------------------TUTTI GLI EVENTI PIU' RICHIESTI DI UNA DETERMINATA CATEGORIA:
+SELECT DISTINCT nomeA, nomeE, immagineE, prezzo
+FROM artista, evento, giorno 
+WHERE categoria = ' ' 
+AND IDartista = IDartistaE AND IDeventoE = IDevento 
+ORDER BY postiL/postiT ASC LIMIT 10
+
+------------------------TUTTI GLI EVENTI DI UNA SUBCAT:
+SELECT DISTINCT nomeA, nomeE, immagineE, prezzo
+FROM artista, evento, giorno 
+WHERE genere = ' ' 
+AND IDartista = IDartistaE AND IDeventoE = IDevento
+
+------------------------TUTTI GLI EVENTI IN SCADENZA DI UNA DETEMRINATA CATEGORIA:
+SELECT DISTINCT nomeA, nomeE, immagineE, prezzo 
+FROM artista, evento, giorno 
+WHERE giornata between CURDATE() and CURDATE()+11 
+AND categoria = ' ' AND IDartista = IDartistaE AND IDeventoE = IDevento 
+
 
 
 

@@ -13,6 +13,15 @@
     display: inline-block;
 }
 
+#descrizione img {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+    border: 1.5px solid rgb(234,233, 229);
+    float: left;
+}
+
+
 #piantina {
     padding-bottom: 35px;
     vertical-align: top;
@@ -145,6 +154,13 @@ tfoot td a {
 /*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
 
 @media screen and (min-width: 768px) {
+
+    #descrizione img {
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+        border: 2px solid rgb(234,233, 229);
+    }
 
     #oggetti, #tabella {
         margin-bottom: 45px;

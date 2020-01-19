@@ -2,11 +2,13 @@
 <a lang = "it">
 <head>
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
-    <title>MaTTicket - Home</title>
+    <title>MaTTicket - <?php echo ucfirst(strtolower($templateParams["nomePagina"])) ?></title>
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/header.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/footer.css" />
-    <link rel = "stylesheet" type = "text/css" href = "./css/utili/locandine.css" />
     <link rel = "stylesheet" type = "text/css" href = "./css/utili/intestazioni.css" />
+    <?php foreach($templateParams ["csss"] as $css): ?>
+        <link rel = "stylesheet" type = "text/css" href = <?php echo $css ?> />
+    <?php endforeach; ?>
     <script src="./javascript/header.js" type="text/javascript"></script> 
     <script src="./javascript/utility.js" type="text/javascript"></script>
     <?php
@@ -28,7 +30,6 @@
         require($templateParams["contenuto"]);
         ?>
     </main>
-
     <footer>
         <?php
         require($templateParams["footer"]);

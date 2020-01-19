@@ -98,6 +98,10 @@ tfoot td a {
     font-style: italic;
 }
 
+tfoot td a:hover {
+    color: rgb(246, 164, 84);
+}
+
 /*-----------------------------------------------------INIZIO DESKTOP-----------------------------------------------------*/
 
 @media screen and (min-width: 768px) {

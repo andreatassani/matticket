@@ -1,5 +1,4 @@
 #descrizione img {
-    height: 120px;
     margin: 10px;
     border: 1.5px solid rgb(234,233, 229);
     float: left;
@@ -110,7 +109,6 @@ tfoot td a:hover {
     }
 
     #descrizione img {
-        height: 180px;
         margin: 15px;
         border: 2px solid rgb(234,233, 229);
     }

@@ -170,5 +170,62 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function getAdmEMails(){
+        $stmt = $this->db->prepare("SELECT email 
+                                    FROM utente 
+                                    WHERE tipoaccount = 'amministratore'");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getInfoByNickname($username){
+        $stmt = $this->db->prepare("SELECT * 
+                                    FROM utente 
+                                    WHERE nickname = ?");
+        $stmt->bind_param('s',$username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    } 
+
+    public function checkLogin($username, $password){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM utente 
+                                    WHERE nickname = ? 
+                                    AND password = ?");
+        $stmt->bind_param('ss',$username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    } 
+
+    public function checkAlreadyExist($nickname, $email){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM utente 
+                                    WHERE nickname = ? 
+                                    AND email = ?");
+        $stmt->bind_param('ss',$nickname, $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function insertNewUser($n, $c, $l, $t, $d, $a, $e, $z, $p, $zz) {
+        
+        $stmt = $this->db->prepare("INSERT INTO utente (IDutente, nomeU, cognomeU, nickname, immagineU, dataregistrazione, tipoaccount, email, puntiaccumulati, password, confermato) 
+                                    VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param('sssssssisi', $n, $c, $l, $t, $d, $a, $e, $z, $p, $zz);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        var_dump("cacca");
+        return $result->fetch_all(MYSQLI_ASSOC);
+        
+    
+    }
 }
 ?>

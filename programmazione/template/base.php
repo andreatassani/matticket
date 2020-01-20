@@ -18,13 +18,12 @@
 </head>
 <body onclick ="clickCerca(); clickMenuAPanino();">
     <div id="placeholder">
-    <header class ="Header" id ="header">
-        <?php
-        require($templateParams["header"]);
-        ?>
-    </header>
+        <header class ="Header" id ="header">
+            <?php
+            require($templateParams["header"]);
+            ?>
+        </header>
     </div>
-    
     <main>
         <?php
         require($templateParams["contenuto"]);

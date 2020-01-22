@@ -4,6 +4,8 @@ require_once("dbh.php");
 $templateParams["csss"] = $linkingCss->linkingCss("signIn");
     $templateParams["contenuto"]="contenutoSignIn.php";
     $templateParams["nomePagina"] = "SIGN IN";
+
+    
 //controllo se parametri sono specificati
 if(isset($_POST["Nome"]) && isset($_POST["Cognome"]) && 
    isset($_POST["NickName"]) && isset($_POST["Email"]) &&
@@ -14,17 +16,24 @@ if(isset($_POST["Nome"]) && isset($_POST["Cognome"]) &&
         $templateParams["erroreSignIn"] = "Errore! Le due password inserite non corrispondono";
     } else {
       //controllo se nel db è già registrato utente con stessa email e nickname
-        $login_result = $dbh->checkAlreadyExist($_POST["NickName"], $_POST["Email"]);
-        if(count($login_result)== 0){
+        $login_result1 = $dbh->checkNickAlreadyExist($_POST["NickName"]);
+        $login_result2 = $dbh->checkEmailAlreadyExist($_POST["Email"]);
+        if(count($login_result1)== 0 && count($login_result2) == 0){
         //nessuna corrispondenza trovata, procedere con registrazione
         $templateParams["erroreSignIn"] = "";
-        $dbh-> insertNewUser($_POST["Nome"], $_POST["Cognome"], $_POST["NickName"], "taax.jpg", date("Y/m/d"), $_POST["TipoAccount"], $_POST["Email"], 0, $_POST["Password"] ,0 );
+        $img = $_FILES["fileToUpload"];
+        $imgName = str_replace(" ","", $img["name"]);
+        $utils->uploadImage($img, UPLOAD_PROFILO);
+        $data = date("Y/m/d");
+        $dbh-> insertNewUser($_POST["Nome"], $_POST["Cognome"], $_POST["NickName"], $imgName, $_POST["TipoAccount"], $_POST["Email"], $_POST["Password"], $data);
+        $arrayOfPreferences = $utils->getArrayOfPreferences($_POST["cabaret"], $_POST["musical"], $_POST["partite"], $_POST["manifestazioni"], $_POST["internazionali"], $_POST["italiane"], $_POST["fotografia"],$_POST["pittura"]);
+        $IDUtente = $dbh->getIDByEmail($_POST["Email"]);
+        $dbh-> setPreferences($IDUtente[0]["IDutente"], $arrayOfPreferences);
         header("location: ./logIn.php");
       } else {
         $templateParams["erroreSignIn"] = "Errore! Trovato un account registrato con l'email o il nickname specificati!";
       }
     }  
 }
-
 require("./template/base.php");
 ?>

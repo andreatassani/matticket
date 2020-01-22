@@ -10,7 +10,8 @@
                 case 'info' : return $csss = array("./css/utili/article.css","./css/utili/linkEsterni.css");
                 case 'signIn' : return $csss = array("./css/utili/bottoni.css","./css/utili/form.css","./css/utili/tabella.css","./css/utili/inputImg.css");
                 case 'logIn' : return $csss = array("./css/utili/bottoni.css","./css/logIn.css");
-                case 'account' : return $csss = array("./css/utili/bottoni.css","./css/utili/tabella.css","./css/utili/form.css");
+                case 'account' : return $csss = array("./css/utili/bottoni.css","./css/utili/tabella.css","./css/utili/form.css", "./css/utili/locandine.css");
+                case 'nuovoEvento' : return $csss = array("./css/utili/bottoni.css","./css/utili/inputImg.css","./css/nuovoEvento.css");
             }
         }
     }

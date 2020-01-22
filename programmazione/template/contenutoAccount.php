@@ -1,20 +1,4 @@
 <?php
-$preferenze = '<div>
-    <ul id="intestazione">                
-            <li><h2>Preferenze</h2></li>
-            <li id="liLogoSubCat"><img src = "./img/icone/Preferenze.png" alt="immagine rappresentativa di un uomo con un cuore sul petto"/></a></li>
-    </ul>
-    <ul id="tabella" class="tabellaAccount">
-        <table>
-            <tbody>
-                <tr><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td></tr>
-                <tr><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td></tr>
-                <tr><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td><td><label class="container"><p>One</p><input type="checkbox" checked="checked"></label></td></tr>
-            </tbody>
-        </table>
-        <button class = "buttonMain"><a href="account.html">Aggiorna Preferenze</a></button>
-    </ul>
-</div>';
 $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuovo Evento</a></button>'
 ?>
 <?php foreach($templateParams["infoUser"] as $user): ?>
@@ -41,8 +25,28 @@ $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuov
         <li><label class="labelAccount" for=”insEmail″>Email:</label><label class="labelInfo"><?php echo $email?></label></li>
     </ul>
 </div>
-<?php if($tipoAccount != "amministratore"){ echo $preferenze; }?>
 <div>
     <?php if($tipoAccount != "cliente"){ echo $nuovoEvento; }?>
+</div>
+<div>
+    <ul id="intestazione">
+        <li><h2>Preferenze</h2></a></li>
+        <li id="liLogoSubCat"><img src = "./img/icone/Preferenze.png" alt="immagine rappresentativa di un like"/></a></li>
+    </ul><ul id="oggetti">
+        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx"src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
+        <?php foreach($templateParams["locandine"] as $evento): ?>
+        <?php
+            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
+            $prezzo = $evento["prezzo"] . " €";
+            $IDevento = $evento["IDeventoE"];
+            $IDartista = $evento["IDartistaE"];
+        ?>
+        <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
+        <?php endforeach; ?>
+        <li id="liFrecciaDx"><a href= ><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
+    </ul>
+</div>
+<div>
     <button class = "buttonMain"><a href="logout.php">Log Out</a></button>
 </div>

@@ -1,3 +1,10 @@
+<?php
+$tdAperto='<td>';
+$tdChiuso='</td>';
+$maggioriInfo1='<td><a href="infoEvento.php?dataEvento=';
+$maggioriInfo2='&IDevento=';
+$maggioriInfo3='" ><p>Maggiori Info</p></a></td>';
+?>
 <div>
     <ul id="intestazione">
     <?php foreach($templateParams["infoEvento"] as $evento): ?>
@@ -62,14 +69,14 @@
                     $tmp++;
                 ?>
                 <?php endforeach; ?>
-                <tr><th>Città</th><td><?php echo $citta1 ?></td><td><?php echo $citta2 ?></td></tr>
-                <tr><th>Luogo</th><td><?php echo $luogo1 ?></td><td><?php echo $luogo2 ?></td></tr>
-                <tr><th>Data</th><td><?php echo $giornata1 ?></td><td><?php echo $giornata2 ?></td></tr>
-                <tr><th>Posti</th><td><?php echo $postiLiberi1 ?></td><td><?php echo $postiLiberi2 ?></td></tr>
-                <tr><th>Prezzo</th><td><?php echo $prezzo." €" ?></td><td><?php echo $prezzo." €" ?></td></tr>
+                <tr><th>Città</th><td><?php echo $citta1 ?></td><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$citta2.$tdChiuso;}?></tr>
+                <tr><th>Luogo</th><td><?php echo $luogo1 ?></td><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$luogo2.$tdChiuso;}?></tr>
+                <tr><th>Data</th><td><?php echo $giornata1 ?><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$giornata1.$tdChiuso;}?></tr>
+                <tr><th>Posti</th><td><?php echo $postiLiberi1 ?><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$postiLiberi2.$tdChiuso;}?></tr>
+                <tr><th>Prezzo</th><td><?php echo $prezzo." €" ?><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$prezzo.' €'.$tdChiuso;}?></tr>
                 </tbody>
                 <tfoot>
-                <tr><td></td><p></p><td><a href=<?php echo "infoEvento.php?dataEvento=$giornata1&IDevento=$IDevento" ?>><p>Maggiori Info</p></a></td><td><a href=<?php echo "infoEvento.php?dataEvento=$giornata2&IDevento=$IDevento" ?>><p>Maggiori Info</p></a></td></tr>
+                <tr><td></td><p></p><td><a href=<?php echo "infoEvento.php?dataEvento=$giornata1&IDevento=$IDevento" ?>><p>Maggiori Info</p></a></td><?php if ($evento["IDeventoE"]<=33){echo $maggioriInfo1.$giornata2.$maggioriInfo2.$IDevento.$maggioriInfo3;}?></tr>
                 </tfoot>
             </table>
         </ul>

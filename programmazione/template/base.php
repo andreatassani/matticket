@@ -9,8 +9,7 @@
     <?php foreach($templateParams ["csss"] as $css): ?>
         <link rel = "stylesheet" type = "text/css" href = <?php echo $css ?> />
     <?php endforeach; ?>
-    <script src="./javascript/header.js" type="text/javascript"></script> 
-    <script src="./javascript/utility.js" type="text/javascript"></script>
+    <script src="./javascript/header.js" type="text/javascript"></script>
     <?php
     $templateParams["header"]="header.php";
     $templateParams["footer"]="footer.php";

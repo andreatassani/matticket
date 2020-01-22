@@ -119,5 +119,10 @@
             var_dump($array);
             return $array;
         }
+
+        public function hashFunc($stringa){
+            $newString = hash("md5", $stringa, $raw_output=false);
+            return $newString;
+        }
     }
 ?>

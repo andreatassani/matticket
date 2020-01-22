@@ -10,12 +10,15 @@
         <link rel = "stylesheet" type = "text/css" href = <?php echo $css ?> />
     <?php endforeach; ?>
     <script src="./javascript/header.js" type="text/javascript"></script>
+    <script src="./javascript/notifications.js" type="text/javascript"></script>
     <?php
     $templateParams["header"]="header.php";
     $templateParams["footer"]="footer.php";
     ?>
 </head>
 <body onclick ="clickCerca(); clickMenuAPanino();">
+        <?php if(isset($templateParams["notifica"])){
+            require($templateParams["notifica"]);}?>
     <div id="placeholder">
         <header class ="Header" id ="header">
             <?php

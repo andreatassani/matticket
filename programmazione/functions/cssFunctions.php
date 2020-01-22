@@ -12,6 +12,7 @@
                 case 'logIn' : return $csss = array("./css/utili/bottoni.css","./css/logIn.css");
                 case 'account' : return $csss = array("./css/utili/bottoni.css","./css/utili/tabella.css","./css/utili/form.css", "./css/utili/locandine.css");
                 case 'nuovoEvento' : return $csss = array("./css/utili/bottoni.css","./css/utili/inputImg.css","./css/nuovoEvento.css");
+                case 'carrello' : return $csss = array("./css/utili/bottoni.css","./css/utili/locandine.css","./css/utili/listaBiglietti.css");
             }
         }
     }

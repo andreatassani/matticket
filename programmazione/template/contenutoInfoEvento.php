@@ -18,7 +18,7 @@
             <li><a><h2><?php echo ucfirst($nomeEvento)?></h2></a></li>
         </ul><ul id="descrizione">
             <li><img src=<?php echo $img?> alt=<?php echo $alt?>></li>
-            <li class="nome"><p><?php echo $città?></p></li>
+            <li class="nome" ><p><?php echo $città?></p></li>
             <li class="città"><p><?php echo $giornata?></p></li>
             <li class="data"><p><?php echo $prezzo." €"?></p></li>
     </ul>
@@ -32,5 +32,5 @@
             </ul>
 </div>
 <div>
-    <button class = "buttonMain"><a href="">Aggiungi al Carrello</a></button>
+<button class = "buttonMain" ><a href =<?php echo "infoEvento.php?pressed=1&giornata=".$giornata."&IDevento=".$IDevento ?>> Aggiungi al Carrello</a></button>
 </div>

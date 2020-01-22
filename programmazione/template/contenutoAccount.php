@@ -30,7 +30,7 @@ $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuov
 </div>
 <div>
     <ul id="intestazione">
-        <li><h2>Preferenze</h2></a></li>
+        <li><h2>Consigliati Per Te</h2></a></li>
         <li id="liLogoSubCat"><img src = "./img/icone/Preferenze.png" alt="immagine rappresentativa di un like"/></a></li>
     </ul><ul id="oggetti">
         <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx"src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>

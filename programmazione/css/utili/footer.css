@@ -17,6 +17,12 @@ main div ul{
 
 footer {
     background-color: rgb(51,51, 51);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1.5px solid rgb(246, 164, 84);
+    padding-top: 3px;
+
 }
 
 footer ul li p {

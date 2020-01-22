@@ -9,7 +9,7 @@
     </ul>
     <ul id="oggetti">
         <li>
-            <label for="nickname">Email / Nickname:</label><input id="nickname" name="nickname" type="text" class="form"/>
+            <label for="nickname">Nickname:</label><input id="nickname" name="nickname" type="text" class="form"/>
         </li>
         <li>
             <label for="password">Password:</label><input id="password" name="password" type="password" class="form"/>

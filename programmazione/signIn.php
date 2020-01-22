@@ -25,7 +25,8 @@ if(isset($_POST["Nome"]) && isset($_POST["Cognome"]) &&
         $imgName = str_replace(" ","", $img["name"]);
         $utils->uploadImage($img, UPLOAD_PROFILO);
         $data = date("Y/m/d");
-        $dbh-> insertNewUser($_POST["Nome"], $_POST["Cognome"], $_POST["NickName"], $imgName, $_POST["TipoAccount"], $_POST["Email"], $_POST["Password"], $data);
+        $pass = $utils->hashFunc($_POST["Password"]);
+        $dbh-> insertNewUser($_POST["Nome"], $_POST["Cognome"], $_POST["NickName"], $imgName, $_POST["TipoAccount"], $_POST["Email"], $pass, $data);
         $arrayOfPreferences = $utils->getArrayOfPreferences($_POST["cabaret"], $_POST["musical"], $_POST["partite"], $_POST["manifestazioni"], $_POST["internazionali"], $_POST["italiane"], $_POST["fotografia"],$_POST["pittura"]);
         $IDUtente = $dbh->getIDByEmail($_POST["Email"]);
         $dbh-> setPreferences($IDUtente[0]["IDutente"], $arrayOfPreferences);

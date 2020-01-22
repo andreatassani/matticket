@@ -322,5 +322,25 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function  insertCartByIDutente($utente, $evento, $giornata) {
+        $stmt = $this->db->prepare("INSERT INTO carrello (IDutenteC, IDeventoC, giornataC, quantità) VALUES (?, ?, ?, 1)");
+        $stmt->bind_param('iis',$utente, $evento, $giornata);
+        $stmt->execute();
+    }
+
+    public function getEventAddedOnCartByIDutente($utente) {
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM evento, giorno, carrello, artista
+                                    WHERE IDutenteC = ?
+                                    AND IDeventoC = IDeventoE
+                                    AND IDartistaE = IDartista
+                                    AND giornataC = giornata");
+        $stmt->bind_param('i', $utente);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 ?>

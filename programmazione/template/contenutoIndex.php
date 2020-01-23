@@ -3,7 +3,6 @@
         <li><h2>I più richiesti</h2></a></li>
         <li id="liLogoSubCat"><img src = "./img/icone/IPiuRichiesti.png" alt="immagine rappresentativa di un like"/></a></li>
     </ul><ul id="oggetti">
-        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx"src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
         <?php foreach($templateParams ["eventiPiuRichiesti"] as $evento): ?>
         <?php
             $img =  "./img/locandine/" . $evento["immagineE"] .".png";
@@ -14,15 +13,13 @@
         ?>
         <li id = "liLocandina" ><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
         <?php endforeach; ?>
-<li id="liFrecciaDx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
-    </ul>
+</ul>
 </div>
 <div>
     <ul id="intestazione">
         <li><h2>In Scadenza</h2></a></li>
         <li id="liLogoSubCat"><img src = "./img/icone/InScadenza.png" alt="immagine rappresentativa di un like"/></a></li>
     </ul><ul id="oggetti">
-        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx"src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
         <?php foreach($templateParams["eventiInScadenza"] as $evento): ?>
         <?php
             $img =  "./img/locandine/" . $evento["immagineE"] .".png";
@@ -33,7 +30,6 @@
         ?>
         <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
         <?php endforeach; ?>
-        <li id="liFrecciaDx"><a href= ><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
     </ul>
 </div>
 <div>
@@ -42,7 +38,6 @@
         <li id="liLogoSubCat"><a href="teatro.html"><img src = "./img/icone/Teatro.png" alt="immagine stilizzata di una maschera da teatro"/></a></li>
     </ul> 
     <ul id="oggetti">
-        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
         <?php foreach($templateParams["eventiTeatro"] as $evento): ?>
         <?php
             $img =  "./img/locandine/" . $evento["immagineE"] .".png";
@@ -53,7 +48,6 @@
         ?>
         <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
         <?php endforeach; ?>
-        <li id="liFrecciaDx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
     </ul>
 </div>
 <div>
@@ -62,7 +56,6 @@
         <li id="liLogoSubCat"><a href="sport.html"><img src = "./img/icone/Sport.png" alt="immagine stilizzata di una maschera da teatro"/></a></li>
     </ul> 
     <ul id="oggetti">
-        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
         <?php foreach($templateParams["eventiSport"] as $evento): ?>
         <?php
             $img =  "./img/locandine/" . $evento["immagineE"] .".png";
@@ -73,7 +66,6 @@
         ?>
         <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
         <?php endforeach; ?>
-        <li id="liFrecciaDx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
     </ul>
 </div>
 <div>
@@ -82,7 +74,6 @@
         <li id="liLogoSubCat"><a href="musica.html"><img src = "./img/icone/Musica.png" alt="immagine stilizzata di una maschera da teatro"/></a></li>
     </ul> 
     <ul id="oggetti">
-        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
         <?php foreach($templateParams["eventiMusica"] as $evento): ?>
         <?php
             $img =  "./img/locandine/" . $evento["immagineE"] .".png";
@@ -93,7 +84,6 @@
         ?>
         <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
         <?php endforeach; ?>
-        <li id="liFrecciaDx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
     </ul>
 </div>
 <div>
@@ -102,7 +92,6 @@
         <li id="liLogoSubCat"><a href="mostre.html"><img src = "./img/icone/Mostre.png" alt="immagine stilizzata di una maschera da teatro"/></a></li>
     </ul> 
     <ul id="oggetti">
-        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx" src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
         <?php foreach($templateParams["eventiMostre"] as $evento): ?>
         <?php
             $img =  "./img/locandine/" . $evento["immagineE"] .".png";
@@ -113,6 +102,5 @@
         ?>
         <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
         <?php endforeach; ?>
-        <li id="liFrecciaDx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
     </ul>
 </div>

@@ -71,7 +71,7 @@ $maggioriInfo3='" ><p>Maggiori Info</p></a></td>';
                 <?php endforeach; ?>
                 <tr><th>Città</th><td><?php echo $citta1 ?></td><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$citta2.$tdChiuso;}?></tr>
                 <tr><th>Luogo</th><td><?php echo $luogo1 ?></td><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$luogo2.$tdChiuso;}?></tr>
-                <tr><th>Data</th><td><?php echo $giornata1 ?><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$giornata1.$tdChiuso;}?></tr>
+                <tr><th>Data</th><td><?php echo $giornata1 ?><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$giornata2.$tdChiuso;}?></tr>
                 <tr><th>Posti</th><td><?php echo $postiLiberi1 ?><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$postiLiberi2.$tdChiuso;}?></tr>
                 <tr><th>Prezzo</th><td><?php echo $prezzo." €" ?><?php if ($evento["IDeventoE"]<=33){echo $tdAperto.$prezzo.' €'.$tdChiuso;}?></tr>
                 </tbody>

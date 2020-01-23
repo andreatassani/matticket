@@ -30,10 +30,23 @@ $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuov
 </div>
 <div>
     <ul id="intestazione">
-        <li><h2>Consigliati Per Te</h2></a></li>
+        <li><h2>Eventi acquistati</h2></li>
+        <li id="liLogoSubCat"><img src = "./img/icone/ITuoiBiglietti.png" alt="immagine rappresentativa di una coppia di biglietti"/></a></li>
+    </ul>
+    <ul id="listaBiglietti">
+        <?php foreach($templateParams["eventiAcquistati"] as $giornata): ?>
+            <?php
+            $temp += $giornata["prezzo"]*$giornata["quantità"];
+            ?> 
+            <li class="liLocandina"><a href= <?php echo 'evento.php?IDevento='.$giornata["IDeventoE"] ?>><img class = "locandina" src = <?php echo "./img/locandine/".$giornata["immagineE"].".png" ?> alt=<?php echo "locandina dell'evento ". $giornata["immagineE"]."dell'artista ". $giornata["nomeA"]?>/></a><p id="nomeEvento"><?php echo $giornata["nomeE"] ?></p><p><?php echo $giornata["giornata"] ?></p><p><?php echo $giornata["città"]." - ".$giornata["luogo"] ?></p><p>quantità: <?php echo $giornata["quantità"] ?></p></li>
+        <?php endforeach; ?> 
+    </ul>
+</div>
+<div>
+    <ul id="intestazione">
+        <li><h2>Consigliati</h2></a></li>
         <li id="liLogoSubCat"><img src = "./img/icone/Preferenze.png" alt="immagine rappresentativa di un like"/></a></li>
     </ul><ul id="oggetti">
-        <li id="liFrecciaSx"><a href=""><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaSx"src = "./img/icone/FrecciaSx.png" alt="icona di una freccia che punta verso sinistra"/></a></li>
         <?php foreach($templateParams["locandine"] as $evento): ?>
         <?php
             $img =  "./img/locandine/" . $evento["immagineE"] .".png";
@@ -44,7 +57,6 @@ $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuov
         ?>
         <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
         <?php endforeach; ?>
-        <li id="liFrecciaDx"><a href= ><img onmouseover="onHoverFreccia();" onmouseout="offHoverFreccia();" id = "FrecciaDx" src = "./img/icone/FrecciaDx.png" alt="icona di una freccia che punta verso destra"/></a></li>
     </ul>
 </div>
 <div>

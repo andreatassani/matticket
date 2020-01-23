@@ -25,7 +25,7 @@
 </div>
 <div>
     <ul id="intestazione">
-            <li><a><h2>Mappa per <?php echo ucfirst($luogo)?></h2></a></li>
+            <li><a><h2><?php echo ucfirst($luogo)?></h2></a></li>
             <li id="liLogoSubCat"><img src = "./img/icone/Mappa.png" alt="immagine rappresentativa di un localizzatore"/></a></li>
         </ul><ul id="oggetti">
                 <?php echo $mappa?>

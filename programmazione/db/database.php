@@ -324,7 +324,7 @@ class DatabaseHelper{
     }
 
     public function  insertCartByIDutente($utente, $evento, $giornata) {
-        $stmt = $this->db->prepare("INSERT INTO carrello (IDutenteC, IDeventoC, giornataC, quantità) VALUES (?, ?, ?, 1)");
+        $stmt = $this->db->prepare("INSERT INTO carrello (IDutenteC, IDeventoC, giornataC, quantità, acquistato) VALUES (?, ?, ?, 1, 0)");
         $stmt->bind_param('iis',$utente, $evento, $giornata);
         $stmt->execute();
     }
@@ -333,6 +333,7 @@ class DatabaseHelper{
         $stmt = $this->db->prepare("SELECT *
                                     FROM evento, giorno, carrello, artista
                                     WHERE IDutenteC = ?
+                                    AND acquistato = 0
                                     AND IDeventoC = IDeventoE
                                     AND IDartistaE = IDartista
                                     AND giornataC = giornata");
@@ -341,6 +342,148 @@ class DatabaseHelper{
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function removeEventByIDutente($utente) {
+        $stmt = $this->db->prepare("DELETE 
+                                    FROM carrello
+                                    WHERE IDutenteC = ?
+                                    AND acquistato = 0");
+        $stmt->bind_param('i', $utente);
+        $stmt->execute();
+    }
+
+    public function getEventBoughtByIDutente($utente) {
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM evento, giorno, carrello, artista
+                                    WHERE IDutenteC = ?
+                                    AND acquistato = 1
+                                    AND IDeventoC = IDeventoE
+                                    AND IDartistaE = IDartista
+                                    AND giornataC = giornata");
+        $stmt->bind_param('i', $utente);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function checkAlreadyExistingEventInCart($IDutente, $IDevento, $giornata){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM carrello
+                                    WHERE IDutenteC = ?
+                                    AND acquistato = 0
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?");
+        $stmt->bind_param('iis', $IDutente, $IDevento, $giornata);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+
+    }
+
+    public function updateQuantity($IDutente, $IDevento, $giornata, $numero){
+        $stmt = $this->db->prepare("UPDATE carrello SET quantità= quantità+?
+                                    WHERE IDutenteC = ?
+                                    AND acquistato = 0
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?");
+        $stmt->bind_param('iiis',$numero, $IDutente, $IDevento, $giornata);
+        $stmt->execute();
+
+    }
+
+    public function updateBought($IDutente, $IDevento, $giornata){
+        $stmt = $this->db->prepare("UPDATE carrello SET acquistato= 1
+                                    WHERE IDutenteC = ?
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?");
+        $stmt->bind_param('iis', $IDutente, $IDevento, $giornata);
+        $stmt->execute();
+    }
+
+    public function updateQuantityBought($IDutente, $IDevento, $giornata, $quantità){
+        $stmt = $this->db->prepare("UPDATE carrello SET quantità= quantità + ?
+                                    WHERE IDutenteC = ?
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?");
+        $stmt->bind_param('iiis', $quantità, $IDutente, $IDevento, $giornata);
+        $stmt->execute();
+
+    }
+
+
+
+    public function checkAlreadyExistingBoughtEvent($IDutente, $IDevento, $giornata){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM carrello
+                                    WHERE IDutenteC = ?
+                                    AND acquistato = 1
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?");
+        $stmt->bind_param('iis', $IDutente, $IDevento, $giornata);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+
+    }
+
+    public function deleteBoughtTicket($IDutente, $IDevento, $giornata){
+        $stmt = $this->db->prepare("DELETE 
+                                    FROM carrello
+                                    WHERE IDutenteC = ?
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?
+                                    AND acquistato = 0");
+        $stmt->bind_param('iis', $IDutente, $IDevento, $giornata);
+        $stmt->execute();
+    }
+
+    public function searchArtists($messaggio){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM artista
+                                    WHERE nomeA LIKE ?");
+        $stmt->bind_param('s', $messaggio);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function searchEvents($messaggio){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM evento, artista, giorno
+                                    WHERE nomeE LIKE ?
+                                    AND IDartistaE = IDartista
+                                    AND IDevento = IDeventoE");
+        $stmt->bind_param('s', $messaggio);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function searchCity($messaggio){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM artista, evento, giorno
+                                    WHERE città LIKE ?
+                                    AND IDevento = IDeventoE
+                                    AND IDartistaE = IDartista");
+        $stmt->bind_param('s', $messaggio);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function updateFreeChair($posti, $IDevento, $giornata) {
+            $stmt = $this->db->prepare("UPDATE giorno SET postiL = postiL - ?
+                                        WHERE IDevento = ?
+                                        AND giornata = ?");
+            $stmt->bind_param('iis', $posti, $IDevento, $giornata);
+            $stmt->execute();
     }
 }
 ?>

@@ -13,5 +13,7 @@ $templateParams["eventiPiuRichiesti"] = $dbh->getMostRequiredEvents();
 
 $templateParams["csss"] = $linkingCss->linkingCss("index");
 
+
+
 require("template/base.php");
 ?>

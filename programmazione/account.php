@@ -4,6 +4,26 @@ require_once("dbh.php");
 
 $templateParams["contenuto"]="contenutoAccount.php";
 $templateParams["nomePagina"] = "ACCOUNT";
+
+if(isset($_GET["acquistato"]) && $_GET["acquistato"] == 1){
+    $templateParams["eventiAggiunti"] =$dbh-> getEventAddedOnCartByIDutente($_SESSION["IDutente"]);
+    foreach($templateParams["eventiAggiunti"] as $evento){
+        $giaAcquistato = $dbh->checkAlreadyExistingBoughtEvent($_SESSION["IDutente"], $evento["IDevento"], $evento["giornata"]);
+        $dbh-> updateFreeChair($evento["quantità"], $evento["IDevento"], $evento["giornata"]);
+        if(count($giaAcquistato) != 0){
+            $dbh->updateQuantityBought($_SESSION["IDutente"], $evento["IDevento"], $evento["giornata"], $evento["quantità"]);
+            $dbh->deleteBoughtTicket($_SESSION["IDutente"], $evento["IDevento"], $evento["giornata"]);
+        } else {
+            $dbh->updateBought($_SESSION["IDutente"], $evento["IDevento"], $evento["giornata"]);
+        }
+       
+    }
+}
+
+
+
+$templateParams["eventiAcquistati"] =$dbh->getEventBoughtByIDutente($_SESSION["IDutente"]);
+
 if($SESSION_["tipoAccount"] != "amministratore"){
     $preferenze = $dbh->getPreferences($_SESSION["IDutente"]);
     $n = 0;

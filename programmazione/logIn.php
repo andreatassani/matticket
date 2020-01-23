@@ -5,7 +5,6 @@ if(isset($_POST["nickname"]) && isset($_POST["password"])){
     $login_result = $dbh->checkLogin($_POST["nickname"],$pass);
     if(count($login_result)==0){
         //Login fallito
-        //$templateParams["errorelogin"] = "";
         $templateParams["errore"]='notify("Errore! nickname o password non corretti")';
         $templateParams["notifica"] = "notificaErrore.php";
     }else{

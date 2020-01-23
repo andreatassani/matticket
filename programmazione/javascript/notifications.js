@@ -3,10 +3,10 @@
 function handleVisibilityChange() {
     if (document.hidden) {
       // Messaggio se la pagina è nascosta
-      notify('Sei andato via! :\('); 
+      notify('Alla prossima!'); 
     } else {
       // Messaggio se la pagina è visibile
-      notify('Grande! Sei tornato :\)'); 
+      notify('Bentornato su MatTicket!'); 
     }
   }
 

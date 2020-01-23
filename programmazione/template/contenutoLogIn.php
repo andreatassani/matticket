@@ -1,7 +1,4 @@
 <form action="#" method="POST">
-<?php if(isset($templateParams["errorelogin"])): ?>
-<p><?php echo $templateParams["errorelogin"]; ?></p>
-<?php endif; ?>
 <div>
     <ul id="intestazione">
         <li><a><h2>Accedi</h2></a></li>

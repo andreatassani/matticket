@@ -1,7 +1,4 @@
 <form action="#" method ="POST" enctype="multipart/form-data">
-<?php if(isset($templateParams["erroreSignIn"])): ?>
-<p><?php echo $templateParams["erroreSignIn"]; ?></p>
-<?php endif; ?>
 <div>
     <ul id="intestazione" id="formSignIn">
         <li><a><h2>Dati Personali</h2></a></li>

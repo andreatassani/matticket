@@ -95,6 +95,7 @@ var sticky = header.offsetTop;
 }
 
 function clickCerca() {
+  
   var xc = event.clientX;
   var yc = event.clientY;
   var elementMouseIsOver = document.elementFromPoint(xc, yc);
@@ -106,6 +107,12 @@ function clickCerca() {
 }
 
 function clickShowSelectCerca(){
+
+  if(document.getElementById("inputCerca").value != 'Cerca' && document.getElementById("inputCerca").value != ''){
+    $messaggio = document.getElementById("inputCerca").value;
+    window.location.replace("./risultatoRicerca.php?"+document.getElementById("select").value+"=1&messaggio="+$messaggio);
+  }
+
   var x = document.getElementById("ulHeader");
   var click = document.getElementById("inputCerca");
   if(x.className === "Cerca"){
@@ -113,5 +120,6 @@ function clickShowSelectCerca(){
   } else if(click.value == "Cerca"){
     x.className = "Cerca";
   }
+  
 }
 

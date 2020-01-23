@@ -1,11 +1,39 @@
 <?php
 require_once("dbh.php");
 
+error_reporting(E_ERROR|E_WARNING|E_PARSE);
+
 $templateParams["csss"] = $linkingCss->linkingCss("carrello");
 $templateParams["nomePagina"] = "CARRELLO";
 
 if(isset($_SESSION["nickname"])){
 $templateParams["contenuto"]="contenutoCarrello.php";
+
+if(isset($_GET["svuota"]) && $_GET["svuota"] == 1){
+    $dbh->removeEventByIDutente($_SESSION["IDutente"]);
+}
+
+if(isset($_GET["eliminaEvento"]) && isset($_GET["IDevento"]) && isset($_GET["giornata"])){
+    $dbh->deleteBoughtTicket($_SESSION["IDutente"], $_GET["IDevento"], $_GET["giornata"]);
+}
+
+
+if(isset($_GET["aggiungi"])){
+    $dbh->updateQuantity($_SESSION["IDutente"], $_GET["IDevento"], $_GET["giornata"], 1);
+}
+
+if(isset($_GET["togli"])){
+$quantità = ($dbh-> checkAlreadyExistingEventInCart($_SESSION["IDutente"], $_GET["IDevento"], $_GET["giornata"]));
+        $quantità = $quantità[0]["quantità"];
+    
+}
+
+if(isset($_GET["togli"]) && $quantità != 1){
+    $dbh->updateQuantity($_SESSION["IDutente"], $_GET["IDevento"], $_GET["giornata"], -1);
+}
+
+
+
 $templateParams["eventiAggiunti"] =$dbh-> getEventAddedOnCartByIDutente($_SESSION["IDutente"]);
 
 $preferenze = $dbh->getPreferences($_SESSION["IDutente"]);

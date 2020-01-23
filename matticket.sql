@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 21, 2020 alle 15:17
+-- Creato il: Gen 23, 2020 alle 09:59
 -- Versione del server: 10.4.8-MariaDB
 -- Versione PHP: 7.3.10
 
@@ -68,6 +68,27 @@ INSERT INTO `artista` (`nomeA`, `IDartista`, `descrizioneA`, `immagineA`, `sito`
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `carrello`
+--
+
+CREATE TABLE `carrello` (
+  `IDutenteC` int(11) NOT NULL,
+  `IDeventoC` int(11) NOT NULL,
+  `giornataC` date NOT NULL,
+  `quantità` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dump dei dati per la tabella `carrello`
+--
+
+INSERT INTO `carrello` (`IDutenteC`, `IDeventoC`, `giornataC`, `quantità`) VALUES
+(1, 9, '2020-10-24', 8),
+(1, 12, '2020-04-01', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `evento`
 --
 
@@ -80,7 +101,7 @@ CREATE TABLE `evento` (
   `immagineE` varchar(100) NOT NULL,
   `IDorganizzatore` int(100) NOT NULL,
   `descrizioneE` varchar(10000) NOT NULL DEFAULT 'Nessuna descrizione',
-  `prezzo` float NOT NULL
+  `prezzo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -134,7 +155,7 @@ CREATE TABLE `giorno` (
 --
 
 INSERT INTO `giorno` (`IDevento`, `giornata`, `luogo`, `città`, `orario`, `postiT`, `postiL`, `mappa`) VALUES
-(1, '2020-02-21', 'Autodromo', 'Imola', '21:00:00.000000', 190000, 13400, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11413.303370114827!2d11.710658694847355!3d44.344357067293814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b4a7474d71167%3A0x81177e3551c217a6!2sAutodromo%20Enzo%20e%20Dino%20Ferrari!5e0!3m2!1sit!2sit!4v1579274948397!5m2!1sit!2sit\" width=\"800\" height=\"600\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>'),
+(1, '2020-02-21', 'Autodromo', 'Imola', '21:00:00.000000', 190000, 13400, '<iframe src=\"http://maps.google.com/maps?q=Stadio+San+Siro&z=10&output=embed\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
 (1, '2020-02-29', 'San Siro', 'Milano', '21:00:00.000000', 110000, 12800, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11190.347931821096!2d9.11522869548651!3d45.478123267253046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c193fa23f19d%3A0x9c7d30c7aeff312!2sStadio%20San%20Siro!5e0!3m2!1sit!2sit!4v1579275004792!5m2!1sit!2sit\" width=\"800\" height=\"600\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>'),
 (2, '2020-01-12', 'Franchi', 'Firenze', '21:00:00.000000', 35000, 800, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11522.46299939021!2d11.27383839453441!3d43.780834567507924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5469122cf6a9%3A0xa36643abdf3ba3e7!2sStadio%20Artemio%20Franchi!5e0!3m2!1sit!2sit!4v1579275839363!5m2!1sit!2sit\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>'),
 (2, '2020-01-17', 'Allianz Stadium', 'Torino', '21:00:00.000000', 50000, 2366, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11263.309220882114!2d7.632531095277359!3d45.109568667209125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886c17f7814e37%3A0xe3be8084a88d8da5!2sAllianz%20Stadium!5e0!3m2!1sit!2sit!4v1579275191402!5m2!1sit!2sit\" width=\"800\" height=\"600\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>'),
@@ -189,23 +210,28 @@ INSERT INTO `giorno` (`IDevento`, `giornata`, `luogo`, `città`, `orario`, `post
 
 CREATE TABLE `preferenze` (
   `IDutente` int(100) NOT NULL,
-  `cabaret` tinyint(1) NOT NULL,
-  `musical` tinyint(1) NOT NULL,
-  `partite` tinyint(1) NOT NULL,
-  `manifestazioni` tinyint(1) NOT NULL,
-  `internazionale` tinyint(1) NOT NULL,
-  `italiana` tinyint(1) NOT NULL,
-  `fotogorafia` tinyint(1) NOT NULL,
-  `pittura` tinyint(1) NOT NULL
+  `cabaret` int(100) NOT NULL,
+  `musical` int(100) NOT NULL,
+  `partite` int(100) NOT NULL,
+  `manifestazioni` int(100) NOT NULL,
+  `internazionali` int(100) NOT NULL,
+  `italiane` int(100) NOT NULL,
+  `fotografia` int(100) NOT NULL,
+  `pittura` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dump dei dati per la tabella `preferenze`
 --
 
-INSERT INTO `preferenze` (`IDutente`, `cabaret`, `musical`, `partite`, `manifestazioni`, `internazionale`, `italiana`, `fotogorafia`, `pittura`) VALUES
+INSERT INTO `preferenze` (`IDutente`, `cabaret`, `musical`, `partite`, `manifestazioni`, `internazionali`, `italiane`, `fotografia`, `pittura`) VALUES
 (1, 1, 1, 1, 1, 1, 0, 1, 0),
-(2, 1, 1, 0, 0, 0, 1, 0, 1);
+(2, 1, 1, 0, 0, 0, 1, 0, 1),
+(41, 1, 0, 0, 0, 1, 1, 0, 0),
+(42, 1, 1, 0, 0, 0, 1, 0, 0),
+(43, 0, 1, 0, 1, 0, 1, 0, 0),
+(44, 0, 1, 0, 0, 0, 1, 0, 0),
+(45, 0, 1, 0, 0, 0, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -219,12 +245,12 @@ CREATE TABLE `utente` (
   `cognomeU` varchar(100) NOT NULL,
   `nickname` varchar(100) NOT NULL,
   `immagineU` varchar(1000) NOT NULL,
-  `dataregistrazione` date NOT NULL,
-  `tipoaccount` enum('cliente','organizzatore','amministratore') NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `puntiaccumulati` int(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `confermato` tinyint(1) NOT NULL DEFAULT 0
+  `dataregistrazione` date DEFAULT NULL,
+  `tipoaccount` varchar(1000) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `puntiaccumulati` int(100) DEFAULT 0,
+  `password` varchar(100) DEFAULT NULL,
+  `confermato` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -232,8 +258,9 @@ CREATE TABLE `utente` (
 --
 
 INSERT INTO `utente` (`IDutente`, `nomeU`, `cognomeU`, `nickname`, `immagineU`, `dataregistrazione`, `tipoaccount`, `email`, `puntiaccumulati`, `password`, `confermato`) VALUES
-(0, 'Andrea', 'Tassani', 'taax', 'taax.jpg', '2019-12-03', 'amministratore', 'tassocarpinello@live.it', 0, 'Tasso-96', 0),
-(1, 'Michele', 'Torroni', 'mic98', 'michi.jpg', '2019-12-03', 'cliente', 'micheletorroni98@gmail.com', 0, 'ciaociao', 0);
+(0, 'Andrea', 'Tassani', 'taax', 'taax.jpg', '2019-12-03', 'amministratore', 'tassocarpinello@live.it', 0, '8616bc66b47e90ead3bd815cefd8ac4d', 0),
+(1, 'Michele', 'Torroni', 'mic98', 'michi.jpg', '2019-12-03', 'cliente', 'micheletorroni98@gmail.com', 0, '0fe4f43e1dd173abc07ce508a74800e2', 0),
+(45, 'Mic', 'Tor', 'MicTor', 'IMG-20191016-WA0013.jpg', '2020-01-22', 'cliente', 'sadasd', 0, '16272a5dd83c63010e9f67977940e871', 0);
 
 --
 -- Indici per le tabelle scaricate
@@ -248,11 +275,16 @@ ALTER TABLE `artista`
   ADD UNIQUE KEY `IDartista_2` (`IDartista`);
 
 --
+-- Indici per le tabelle `carrello`
+--
+ALTER TABLE `carrello`
+  ADD PRIMARY KEY (`IDutenteC`,`IDeventoC`,`giornataC`);
+
+--
 -- Indici per le tabelle `evento`
 --
 ALTER TABLE `evento`
   ADD PRIMARY KEY (`IDeventoE`),
-  ADD UNIQUE KEY `IDartista` (`IDartistaE`),
   ADD KEY `IDevento` (`IDeventoE`);
 
 --
@@ -287,13 +319,13 @@ ALTER TABLE `artista`
 -- AUTO_INCREMENT per la tabella `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `IDeventoE` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `IDeventoE` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT per la tabella `utente`
 --
 ALTER TABLE `utente`
-  MODIFY `IDutente` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `IDutente` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

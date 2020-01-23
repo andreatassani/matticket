@@ -85,6 +85,20 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function getEventsBySubCat2($nomeSubCat) {
+        $stmt = $this->db->prepare("SELECT DISTINCT *
+                                    FROM artista, evento, giorno 
+                                    WHERE genere = ? 
+                                    AND IDartista = IDartistaE
+                                    AND IDeventoE = IDevento");
+        $stmt->bind_param('s', $nomeSubCat);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     
     public function getSubCatByCat($nomeCategoria, $pos) {
 

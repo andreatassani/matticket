@@ -14,6 +14,7 @@
                 case 'nuovoEvento' : return $csss = array("./css/utili/bottoni.css","./css/utili/inputImg.css","./css/nuovoEvento.css");
                 case 'carrello' : return $csss = array("./css/utili/bottoni.css","./css/utili/locandine.css","./css/utili/listaBiglietti.css");
                 case 'ricerca' : return $csss = array("./css/utili/listaBiglietti.css", "./css/utili/bottoni.css");
+                case 'genere' : return $csss = array("./css/utili/listaBiglietti.css");
             }
         }
     }

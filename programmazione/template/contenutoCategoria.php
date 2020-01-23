@@ -34,7 +34,7 @@
 </div>
 <div>
     <ul id="intestazione">
-        <li><h2><?php echo ucfirst($templateParams["nomeSubCat1"]) ?></h2></li>
+        <li id = "liSub"><a href=<?php echo "genere.php?genere=".$templateParams["nomeSubCat1"]?>><h2><?php echo ucfirst($templateParams["nomeSubCat1"]) ?></h2></a></li>
         <li id="liLogoSubCat"><img src = <?php echo "./img/icone/".$templateParams["nomeSubCat1"].".png"?> alt="immagine stilizzata di una maschera da teatro"/></li>
     </ul> 
     <ul id="oggetti">
@@ -52,7 +52,7 @@
 </div>
 <div>
     <ul id="intestazione">
-        <li><h2><?php echo ucfirst($templateParams["nomeSubCat2"]) ?></h2></li>
+        <li id = "liSub"><a href=<?php echo "genere.php?genere=".$templateParams["nomeSubCat2"]?>><h2><?php echo ucfirst($templateParams["nomeSubCat2"]) ?></h2></a></li>
         <li id="liLogoSubCat"><img src = <?php echo "./img/icone/".$templateParams["nomeSubCat2"].".png"?> alt="immagine stilizzata di una maschera da teatro"/></a></li>
     </ul> 
     <ul id="oggetti">

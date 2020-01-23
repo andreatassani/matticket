@@ -63,6 +63,9 @@ a{
     cursor: pointer !important;
 }
 
+#liSub h2:hover{
+    cursor: pointer !important;
+}
 /*FRECCE*/
 #liFrecciaSx {
     width:  5%;

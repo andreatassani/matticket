@@ -6,7 +6,7 @@
     <ul id="listaBiglietti">
     <?php foreach($templateParams["ris"] as $giornata): ?>
         <li class="liLocandina">
-            <a href= <?php echo "evento.php?dataEvento=".$giornata["giornata"]."&IDevento=".$giornata["IDeventoE"] ?>><img class = "locandina" src = <?php echo "./img/locandine/".$giornata["immagineE"].".png" ?> alt=<?php echo "locandina dell'evento ". $giornata["nomeE"]?>/></a>
+            <a href= <?php echo "evento.php?dataEvento=".$giornata["giornata"]."&IDevento=".$giornata["IDeventoE"] ?>><img class = "locandina" src = <?php echo "./img/locandine/".$giornata["immagineE"] ?> alt=<?php echo "locandina dell'evento ". $giornata["nomeE"]?>/></a>
             <p id="nomeEvento"><?php echo $giornata["nomeE"] ?></p><p><?php echo $giornata["giornata"] ?></p>
             <p id="città"><?php echo $giornata["città"]?></p>
         </li>

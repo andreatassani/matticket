@@ -1,7 +1,7 @@
 <div>
     <ul id="intestazione">
-        <li><h2><?php echo $templateParams["genere"]?></h2></li>
-        <li id="liLogoSubCat"><img src = <?php echo "./img/icone/".$templateParams["genere"].".png" ?> alt="immagine rappresentativa della categoria"/></a></li>
+        <li><h2>Ticket Community</h2></li>
+        <li id="liLogoSubCat"><img src = "./img/icone/Community.png" alt="immagine rappresentativa della community"/></a></li>
     </ul>
     <ul id="listaBiglietti">
     <?php foreach($templateParams["ris"] as $evento): ?>
@@ -10,10 +10,9 @@
             <p id="nomeEvento"><?php echo $evento["nomeE"] ?></p>
             <p id="artista"><a href=<?php echo "artista.php?IDartista=".$evento["IDartista"]?>><?php echo $evento["nomeA"]?></a></p>
             <p><?php echo $evento["giornata"] ?></p>
-            <p id="postiLiberi">Posti liberi: <?php echo $evento["postiL"] ?></p>
-           
-            <p><?php echo $evento["prezzo"] ?> €</p>
-        </li>
+            <p><?php echo "qtà: ".$evento["quantità"] ?></p>
+            <p><?php echo "TOT: ".$evento["prezzo"]*$evento["quantità"]/2 ?> €</p>
+            <a href= <?php echo "account.php?mercatino=1&IDevento=".$evento["IDevento"]."&giornata=".$evento["giornata"]."&IDvenditore=".$evento["IDvenditore"]?> ><img class = 'accetta' src='./img/icone/Acquisto.png' alt='icona di acquisto biglietto'></a></li>
     <?php endforeach; ?>
 </ul> 
 </div>

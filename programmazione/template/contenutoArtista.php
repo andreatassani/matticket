@@ -1,6 +1,6 @@
 <?php foreach($templateParams["infoArtista"] as $artista): ?>
 <?php
-    $img =  "./img/artisti/" . $artista["immagineA"] .".png";
+    $img =  "./img/artisti/" . $artista["immagineA"] ;
     $altImgA =  "immagine dell'artista " . $artista["nomeA"];
     $nomeArtista = $artista["nomeA"];
     $desc = $artista["descrizioneA"];
@@ -25,7 +25,7 @@
     </ul><ul id="oggetti">
         <?php foreach($templateParams ["eventiArtista"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"] ;
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $prezzo = $evento["prezzo"] . " €";
             $IDevento = $evento["IDeventoE"];

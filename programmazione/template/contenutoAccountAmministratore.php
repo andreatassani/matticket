@@ -29,7 +29,7 @@ $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuov
     <?php if($tipoAccount != "cliente"){ echo $nuovoEvento; }?>
 </div>
 <div>
-    <ul id="intestazione">
+<ul id="intestazione">
         <li><h2>Eventi acquistati</h2></li>
         <li id="liLogoSubCat"><img src = "./img/icone/ITuoiBiglietti.png" alt="immagine rappresentativa di una coppia di biglietti"/></a></li>
     </ul>
@@ -47,21 +47,19 @@ $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuov
     </ul>
 </div>
 <div>
-    <ul id="intestazione">
-        <li><h2>Consigliati</h2></a></li>
-        <li id="liLogoSubCat"><img src = "./img/icone/Preferenze.png" alt="immagine rappresentativa di un like"/></a></li>
-    </ul><ul id="oggetti">
-        <?php foreach($templateParams["locandine"] as $evento): ?>
-        <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] ;
-            $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
-            $prezzo = $evento["prezzo"] . " €";
-            $IDevento = $evento["IDeventoE"];
-            $IDartista = $evento["IDartistaE"];
-        ?>
-        <li id = "liLocandina"><a href= <?php echo "evento.php?IDevento=$IDevento" ?>><img src = <?php echo $img ?> alt= <?php echo $alt; ?>/></a> <a href= <?php echo "artista.php?IDartista=$IDartista" ?>><p class = "NomeArtista"><?php echo $evento["nomeA"]; ?></p></a><p><?php echo $evento["nomeE"]; ?><br><?php echo $prezzo; ?></p></li>
-        <?php endforeach; ?>
+<ul id='intestazione'>
+        <li><h2>Organizzatori</h2></li>
+        <li id='liLogoSubCat'><img src = './img/icone/Community.png' alt='immagine rappresentativa di un like'/></a></li>
     </ul>
+    <ul id='listaBiglietti'>
+    <?php foreach($templateParams["ris"] as $organizzatore): ?>
+        <li class='liLocandina'>
+            <img class = 'locandina' src = <?php echo './img/profilo/'.$organizzatore["immagineU"] ?> alt='immagine organizzatore'/>
+            <p id='nome'><?php echo ucfirst($organizzatore['nomeU']) ?></p>
+            <p id='cognome'><?php echo ucfirst($organizzatore['cognomeU']) ?></p>
+            <a href= <?php echo 'mailto:'.$organizzatore['email'].'?body=Siamo%20lieti%20di%20informarla%20che%20la%20sua%20richiesta%20di%20diventare%20organizzatore%20è%20stata%20accettata&subject=MatTicket%20-%20conferma%20accettazione' ?>><p id='Email'><?php echo $organizzatore['email'] ?></p></a>
+            <a href= <?php echo 'account.php?confermato=1&IDorganizzatore='.$organizzatore['IDutente']?> ><img class = 'accetta' src='./img/icone/Plus.png' alt='immagine stilizzata di un +'></a></li>
+    <?php endforeach; ?>
 </div>
 <div>
     <button class = "buttonMain"><a href="logout.php">Log Out</a></button>

@@ -2,7 +2,13 @@
 error_reporting(E_ERROR|E_WARNING|E_PARSE);
 require_once("dbh.php");
 
-$templateParams["contenuto"]="contenutoAccount.php";
+
+if($_SESSION["tipoAccount"] == "amministratore"){
+    $templateParams["contenuto"]="contenutoAccountAmministratore.php";
+} else {
+    $templateParams["contenuto"]="contenutoAccount.php";
+}
+
 $templateParams["nomePagina"] = "ACCOUNT";
 
 if(isset($_GET["acquistato"]) && $_GET["acquistato"] == 1){
@@ -18,6 +24,16 @@ if(isset($_GET["acquistato"]) && $_GET["acquistato"] == 1){
         }
        
     }
+}
+
+if(isset($_GET["confermato"])){
+    $dbh->addOrganizer($_GET["IDorganizzatore"]);
+}
+
+$templateParams["ris"]=$dbh->getOrganizers();
+
+if(isset($_GET["mercatino"])){
+    $dbh->updateMarket($_SESSION["IDutente"], $_GET["IDevento"], $_GET["giornata"], $_GET["IDvenditore"]);
 }
 
 

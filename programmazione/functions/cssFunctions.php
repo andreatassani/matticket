@@ -15,6 +15,7 @@
                 case 'carrello' : return $csss = array("./css/utili/bottoni.css","./css/utili/locandine.css","./css/utili/listaBiglietti.css");
                 case 'ricerca' : return $csss = array("./css/utili/listaBiglietti.css", "./css/utili/bottoni.css");
                 case 'genere' : return $csss = array("./css/utili/listaBiglietti.css");
+                case 'mercatino' : return $csss = array("./css/utili/listaBiglietti.css");
             }
         }
     }

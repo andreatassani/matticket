@@ -11,7 +11,7 @@
     </li>
     <li id = "liTendina"><img id = "Tendina" src="./img/icone/Tendina.png"alt="immagine rappresentativa di una tendina di oggetti"/></li>
     <li id = "liMenuAPanino"><img id = "MenuAPanino" src="./img/icone/MenuAPanino.png"alt="menù a panino"/></li>
-    <li id = "liMercatino" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="./html/mercatino.html"><h1>Mercatino</h1><img id = "Mercatino" src="./img/icone/Mercatino.png"alt="immagine stilizzata di una bancarella"/></a></li>
+    <li id = "liMercatino" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="mercatino.php"><h1>Mercatino</h1><img id = "Mercatino" src="./img/icone/Mercatino.png"alt="immagine stilizzata di una bancarella"/></a></li>
     <li id = "liNomePagina"><h1><?php echo $templateParams["nomePagina"]; ?></h1></li><li id = "liSelectEvento"><select id="select"><option id="optionEvento" value="evento">Evento</option><option value="artista">Artista</option><option value="città">Città</option></select></li><li id="liCerca"><fieldset form="form1"><input id="inputCerca" type="text" name="username" value="Cerca"></fieldset></li><li id="liLente"   onclick="clickShowSelectCerca();"><a><img id="porcoddio" src="./img/icone/Lente.png"alt="lente di ingrandimento per la ricerca"/></a></li>
     <li id = "liLogoAltoDx" ><a href="index.php"><img id = "LogoDx" src="./img/Logo.png"alt="logo MaTTicket"/></a></li>
     <li id = "liAccount" onmouseover="onHoverGenerico();" onmouseout="offHoverGenerico()"><a href="logIn.php"><h1>Account</h1><img id = "Account" src="./img/icone/Account.png"alt="immagine stilizzata di un omino"/></a></li>

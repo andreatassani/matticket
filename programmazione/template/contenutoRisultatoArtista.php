@@ -17,7 +17,7 @@
             $numeroEventi = count($numeroEventi);
         ?>
         <li class="liLocandina">
-            <a href= <?php echo "artista.php?IDartista=".$artista["IDartista"] ?>><img class = "locandina" src = <?php echo "./img/artisti/".$artista["immagineA"].".png" ?> alt=<?php echo "locandina dell'artista ". $artista["nomeA"]?>/></a>
+            <a href= <?php echo "artista.php?IDartista=".$artista["IDartista"] ?>><img class = "locandina" src = <?php echo "./img/artisti/".$artista["immagineA"] ?> alt=<?php echo "locandina dell'artista ". $artista["nomeA"]?>/></a>
             <p id="nomeEvento"><?php echo $artista["nomeA"] ?></p>
             <p id=artista class="artista"><a href=<?php echo $artista["sito"]?>>Sito web ufficiale: <?php echo $artista["sito"]?></a></p>
             <p>Eventi attivi: <?php echo $numeroEventi?></p>

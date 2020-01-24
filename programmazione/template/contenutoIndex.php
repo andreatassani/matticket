@@ -5,7 +5,7 @@
     </ul><ul id="oggetti">
         <?php foreach($templateParams ["eventiPiuRichiesti"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"] ;
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $prezzo = $evento["prezzo"] . " €";
             $IDevento = $evento["IDeventoE"];
@@ -22,7 +22,7 @@
     </ul><ul id="oggetti">
         <?php foreach($templateParams["eventiInScadenza"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"] ;
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $prezzo = $evento["prezzo"] . " €";
             $IDevento = $evento["IDeventoE"];
@@ -40,7 +40,7 @@
     <ul id="oggetti">
         <?php foreach($templateParams["eventiTeatro"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"] ;
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $prezzo = $evento["prezzo"] . " €";
             $IDevento = $evento["IDeventoE"];
@@ -58,7 +58,7 @@
     <ul id="oggetti">
         <?php foreach($templateParams["eventiSport"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"] ;
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $prezzo = $evento["prezzo"] . " €";
             $IDevento = $evento["IDeventoE"];
@@ -76,7 +76,7 @@
     <ul id="oggetti">
         <?php foreach($templateParams["eventiMusica"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"] ;
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $prezzo = $evento["prezzo"] . " €";
             $IDevento = $evento["IDeventoE"];
@@ -94,7 +94,7 @@
     <ul id="oggetti">
         <?php foreach($templateParams["eventiMostre"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"] ;
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $prezzo = $evento["prezzo"] . " €";
             $IDevento = $evento["IDeventoE"];

@@ -499,5 +499,92 @@ class DatabaseHelper{
             $stmt->bind_param('iis', $posti, $IDevento, $giornata);
             $stmt->execute();
     }
+
+    public function getOrganizers(){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM utente
+                                    WHERE tipoaccount='organizzatore'
+                                    AND confermato=0");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function addOrganizer($organizzatore){
+        $stmt = $this->db->prepare("UPDATE utente SET confermato=1
+                                    WHERE IDutente=?");
+        $stmt->bind_param('i', $organizzatore);
+        $stmt->execute();
+    }
+     
+    public function getIDutente($nickname){
+        $stmt = $this->db->prepare("SELECT IDutente
+                                    FROM utente
+                                    WHERE nickname=?");
+        $stmt->bind_param('s', $nickname);                
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function isAnOrganizer($IDutente){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM utente
+                                    WHERE tipoaccount='organizzatore'
+                                    AND IDutente=?");
+        $stmt->bind_param('i', $IDutente);                  
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+   
+
+    public function isAConfirmedOrganizer($IDorganizzatore){
+        $stmt = $this->db->prepare("SELECT confermato
+                                    FROM utente
+                                    WHERE IDutente=?");
+        $stmt->bind_param('i', $IDorganizzatore);                
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getEventsInMarket(){
+        $stmt = $this->db->prepare("SELECT *
+                                    FROM carrello, artista, evento, giorno
+                                    WHERE vendesi=1
+                                    AND IDeventoC = IDevento
+                                    AND IDevento = IDeventoE
+                                    AND IDartistaE = IDartista
+                                    AND giornataC = giornata");               
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function updateMarket($IDutente, $IDevento, $giornata, $IDvenditore){
+        $stmt = $this->db->prepare("UPDATE carrello SET IDutenteC=? ,acquistato=1 ,vendesi=0 ,IDvenditore=0
+                                    WHERE vendesi=1
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?
+                                    AND IDvenditore = ?");
+        $stmt->bind_param('iisi', $IDutente, $IDevento, $giornata, $IDvenditore);
+        $stmt->execute();
+    }
+
+    public function sellEventToTheCommunityThroughCommunity($IDutente, $IDevento, $giornata){
+        $stmt = $this->db->prepare("UPDATE carrello SET IDvenditore = ?, IDutenteC=-1 ,acquistato=0 ,vendesi=1
+                                    WHERE vendesi=0
+                                    AND IDeventoC = ?
+                                    AND giornataC = ?
+                                    AND IDutenteC = ?");
+        $stmt->bind_param('iisi', $IDutente, $IDevento, $giornata, $IDutente);
+        $stmt->execute();
+    }
 }
 ?>

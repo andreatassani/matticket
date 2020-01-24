@@ -13,7 +13,7 @@ $temp = 0;
                 $temp += $giornata["prezzo"]*$giornata["quantità"];
                 ?> 
                 <li class="liLocandina">
-                    <a href= <?php echo 'evento.php?IDevento='.$giornata["IDeventoE"] ?>><img class = "locandina" src = <?php echo "./img/locandine/".$giornata["immagineE"].".png" ?> alt=<?php echo "locandina dell'evento ". $giornata["immagineE"]."dell'artista ". $giornata["nomeA"]?>/></a>
+                    <a href= <?php echo 'evento.php?IDevento='.$giornata["IDeventoE"] ?>><img class = "locandina" src = <?php echo "./img/locandine/".$giornata["immagineE"] ?> alt=<?php echo "locandina dell'evento ". $giornata["immagineE"]."dell'artista ". $giornata["nomeA"]?>/></a>
                     <p id="nomeEvento"><?php echo $giornata["nomeE"] ?></p><p><?php echo $giornata["giornata"] ?></p>
                     <p><?php echo $giornata["prezzo"] ?> €</p>
                     <a href= <?php echo "carrello.php?togli=1&IDevento=".$giornata["IDevento"]."&giornata=".$giornata["giornata"]?>><img class = "cestino" src="./img/icone/Minus.png" alt="immagine stilizzata di un cestino dei rifiuti"></a>
@@ -36,7 +36,7 @@ $temp = 0;
 </ul><ul id="oggetti">
     <?php foreach($templateParams["locandine"] as $evento): ?>
     <?php
-        $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+        $img =  "./img/locandine/" . $evento["immagineE"] ;
         $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
         $prezzo = $evento["prezzo"] . " €";
         $IDevento = $evento["IDeventoE"];

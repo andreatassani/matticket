@@ -8,9 +8,30 @@ if(isset($_POST["nickname"]) && isset($_POST["password"])){
         $templateParams["errore"]='notify("Errore! nickname o password non corretti")';
         $templateParams["notifica"] = "notificaErrore.php";
     }else{
+        $IDutente=$dbh->getIDutente($_POST["nickname"]);
+        $IDutente = $IDutente[0]["IDutente"];
+        $isAnOrganizer=$dbh->isAnOrganizer($IDutente);
+        $isAnOrganizer = $isAnOrganizer[0]["tipoaccount"];
+         if($isAnOrganizer != "organizzatore"){
         $coockie->registerLoggedUser($login_result[0]);  
         $templateParams["notifica"] = NULL;
+        } else{
+            $confermato = $dbh->isAConfirmedOrganizer($IDutente);
+            $confermato = $confermato[0]["confermato"];
+            if($confermato == 1){
+                $coockie->registerLoggedUser($login_result[0]);  
+                $templateParams["notifica"] = NULL;
+            } else {
+                $templateParams["errore"]='notify("Errore! il suo account non è ancora stato accettato, la contatteremo per mail al momento della conferma ")';
+                $templateParams["notifica"] = "notificaErrore.php";
+            }
+        }
     }
+}
+
+if(isset($_GET["noMercatino"])){
+    $templateParams["errore"]='notify("Per visitare la pagina MERCATINO occorre effettuare il login")';
+    $templateParams["notifica"] = "notificaErrore.php";
 }
 
 if($coockie->isUserLoggedIn()){

@@ -9,7 +9,7 @@ $maggioriInfo3='" ><p>Maggiori Info</p></a></td>';
     <ul id="intestazione">
     <?php foreach($templateParams["infoEvento"] as $evento): ?>
         <?php
-            $img =  "./img/locandine/" . $evento["immagineE"] .".png";
+            $img =  "./img/locandine/" . $evento["immagineE"];
             $alt =  "locandina dell'evento " . $evento["nomeE"] . "dell'artista " . $evento["nomeA"];
             $descEvento = $evento["descrizioneE"];
             $nomeEvento = $evento["nomeE"];

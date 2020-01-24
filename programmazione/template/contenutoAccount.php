@@ -37,10 +37,11 @@ $nuovoEvento = '<button class = "buttonMain"><a href="nuovoEvento.php">Crea Nuov
         <?php foreach($templateParams["eventiAcquistati"] as $giornata): ?>
             <?php
             $temp += $giornata["prezzo"]*$giornata["quantità"];
+            $orario = str_replace(":00.000000", "", $giornata["orario"]);
             ?> 
             <li class="liLocandina">
                 <a href= <?php echo 'evento.php?IDevento='.$giornata["IDeventoE"] ?>><img class = "locandina" src = <?php echo "./img/locandine/".$giornata["immagineE"] ?> alt=<?php echo "locandina dell'evento ". $giornata["immagineE"]."dell'artista ". $giornata["nomeA"]?>/></a>
-                <p id="nomeEvento"><?php echo $giornata["nomeE"] ?></p><p><?php echo $giornata["giornata"] ?></p>
+                <p id="nomeEvento"><?php echo $giornata["nomeE"] ?></p><p><?php echo $giornata["giornata"]."   alle   ".$orario ?></p>
                 <p><?php echo $giornata["città"]." - ".$giornata["luogo"] ?></p><p>quantità: <?php echo $giornata["quantità"] ?></p>
                 <a href= <?php echo 'mercatino.php?vendesi=1&IDutente='.$_SESSION["IDutente"].'&IDevento='.$giornata["IDeventoE"].'&giornata='.$giornata["giornata"]?> ><img class = 'accetta' src='./img/icone/MercatinoArancione.png' alt='immagine stilizzata di un +'></a></li>
     <?php endforeach; ?> 

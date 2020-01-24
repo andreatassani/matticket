@@ -30,7 +30,7 @@ if(isset($_POST["insArtista"]) && isset($_POST["insGenere"]) &&
         $IDevento = $dbh->getIDfromEventNameANDIDutenteANDIDartista($IDartista[0]["IDartista"], $_POST["insTitolo"], $_SESSION["IDutente"]);
 
         $dbh->insertNewDay($IDevento[0]["IDeventoE"], $data, $_POST["insLuogo"], $_POST["insCittà"], $ora, $_POST["insPosti"], $mappa);
-        
+        header("location:account.php");
         //header("location: ./logIn.php");
       } else {
         $templateParams["erroreSignIn"] = "Errore! Trovato un account registrato con l'email o il nickname specificati!";

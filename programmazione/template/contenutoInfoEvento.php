@@ -11,7 +11,9 @@
             $luogo = $evento["luogo"];
             $mappa = $evento["mappa"];
             $giornata = $evento["giornata"];
+            $orario = $evento["orario"];
             $prezzo = $evento["prezzo"];
+            $orario = str_replace(":00.000000","",$orario);
         ?>
         <?php endforeach; ?>
     <ul id="intestazione">
@@ -19,7 +21,7 @@
         </ul><ul id="descrizione">
             <li><img src=<?php echo $img?> alt=<?php echo $alt?>></li>
             <li class="nome" ><p><?php echo $città?></p></li>
-            <li class="città"><p><?php echo $giornata?></p></li>
+            <li class="città"><p><?php echo $giornata."   alle   ".$orario?></p></li>
             <li class="data"><p><?php echo $prezzo." €"?></p></li>
     </ul>
 </div>

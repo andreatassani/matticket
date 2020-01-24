@@ -4,6 +4,7 @@
     $altImgA =  "immagine dell'artista " . $artista["nomeA"];
     $nomeArtista = $artista["nomeA"];
     $desc = $artista["descrizioneA"];
+    $sito = $artista["sito"];
 ?>
 <?php endforeach; ?>
 <div>
@@ -20,7 +21,7 @@
 </div>
 <div>
     <ul id="intestazione">
-        <li><a><h2>Eventi dell'Artista</h2></a></li>
+        <li><a><h2>Eventi</h2></a></li>
         <li id="liLogoSubCat"><img src = "./img/icone/Evento.png" alt="immagine rappresentativa di un ticket"/></a></li>
     </ul><ul id="oggetti">
         <?php foreach($templateParams ["eventiArtista"] as $evento): ?>
@@ -36,5 +37,5 @@
     </ul>
 </div>
 <div>
-    <button class = "buttonMain"><a href="">Sito Ufficiale di <?php echo $nomeArtista?></a></button>
+    <button class = "buttonMain"><a href= <?php echo $sito?>>Sito di <?php echo $nomeArtista?></a></button>
 </div>

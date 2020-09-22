@@ -1,7 +1,0 @@
-PROGRAMMAZIONE
--aggiunta scelta/creazione artista a 'nuovoEvento.html'
--aggiunta Data a 'nuovoEvento.html'
--aggiunta daltonie sign-in + utente
--togliere onHover/offHover dalla pagina specificata
-PHP
--aggiungere logica preferenze in account

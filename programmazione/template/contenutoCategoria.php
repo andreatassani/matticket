@@ -1,7 +1,7 @@
 <div>
     <ul id="intestazione">
         <li><h2>I più richiesti</h2></li>
-        <li id="liLogoSubCat"><img src = <?php echo "./img/icone/".$templateParams["nomeCategoria"].".png"?> alt="immagine rappresentativa di un like"/></a></li>
+        <li id="liLogoSubCat"><img src = <?php echo "./img/icone/iPiuRichiesti.png"?> alt="immagine rappresentativa di un like"/></a></li>
     </ul><ul id="oggetti">
         <?php foreach($templateParams ["eventiPiuRichiestiCategoria"] as $evento): ?>
         <?php
@@ -18,7 +18,7 @@
 <div>
     <ul id="intestazione">
         <li><h2>In Scadenza</h2></li>
-        <li id="liLogoSubCat"><img src = <?php echo "./img/icone/".$templateParams["nomeCategoria"].".png"?> alt="immagine rappresentativa di un like"/></a></li>
+        <li id="liLogoSubCat"><img src = <?php echo "./img/icone/iPiuRichiesti.png"?> alt="immagine rappresentativa di un like"/></a></li>
     </ul><ul id="oggetti">
         <?php foreach($templateParams["eventiInScadenzaCategoria"] as $evento): ?>
         <?php

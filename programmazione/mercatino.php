@@ -18,7 +18,7 @@ $templateParams["csss"] = $linkingCss->linkingCss("mercatino");
 
 } else {
     
-    header("location: ./login.php?noMercatino=1");
+    header("location: ./logIn.php?noMercatino=1");
 }
 require("template/base.php");
 ?>
